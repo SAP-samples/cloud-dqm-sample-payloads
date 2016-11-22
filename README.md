@@ -8,7 +8,7 @@ By using sample files with Google Chrome's Postman app, you can quickly get star
 Download Postman App
 --------------------
 
-Download the Postman app for Chrome at http://help.sap.com/disclaimer?site=https://www.getpostman.com
+Download the Postman app for Chrome at https://www.getpostman.com
 
 Download the Samples
 --------------------
@@ -56,27 +56,32 @@ Complete the following steps to substitute values for variables.
 ![sample7](/images/sample7.jpg)
 
 * Enter the application URL from your welcome email for the applicationURL variable.
-* If you are using OAuth authentication, enter the OAuth Access Token from your welcome email for the oauthAccessToken variable.
-* If you are using Basic authentication, complete these steps to obtain a token and enter it for the base64Credentials variable.
+* Enter the OAuth Access Token from your welcome email for the oauthAccessToken variable, if applicable.
 
-```
-To obtain a Basic authentication token, close the Manage Environments window and follow these steps. When you have the token, go back to the Manage Environments window and proceed with entering values for the variables.
-a.  Expand one of the collections and select any of the samples. (Do not click Save while in the sample. You are here to obtain a token only.)
+Obtaining a Basic Authentication token
+--------------------------------------
+NOTE: Skip to the next section if you are using oAuth.
+
+* Close the Manage Environments window. When you have the token, go back to the Manage Environments window and proceed with entering values for the variables.
+
+* Expand one of the collections and select any of the samples. (Do not click Save while in the sample. You are here to obtain a token only.)
 
 ![sample9](/images/sample9.jpg)
 
-b.  In the Authorization section, select Basic Auth in the Type combo box.
+* In the Authorization section, select Basic Auth in the Type combo box.
 
 ![sample10](/images/sample10.jpg)
 
-c.  Enter your SAP username and password, and click Update Request.
+* Enter your SAP username and password, and click Update Request.
 
 ![sample11](/images/sample11.jpg)
 
-d.  Go to the Headers section, copy the token from the first Authorization variable, without the word “Basic”. This is the value to insert as the value for the base64Credentials variable.
+* Go to the Headers section, copy the token from the first Authorization variable, without the word “Basic”. This is the value to insert as the value for the base64Credentials variable.
 
 ![sample12](/images/sample12.jpg)
-```
+
+Update your environment variables
+---------------------------------
 
 * When you have finished entering the application URL and the token, click Update.
 
@@ -94,20 +99,20 @@ If you are using Basic authentication, it looks like this:
 Send Sample Requests
 --------------------
 
-1.  In the environment combo box, select samplesEnvironment.
+* In the environment combo box, select samplesEnvironment.
 
 ![sample15](/images/sample15.jpg)
 
-2.  Expand one of the collections and select any of the samples.
+* Expand one of the collections and select any of the samples.
 
 ![sample16](/images/sample16.jpg)
 
-3.  If you are using OAuth authentication, skip this step. If you are using Basic authentication, go to the Headers section, comment out the OAuth authentication and uncomment the Basic authentication by clicking the check to the left of the first Authorization to uncheck it and click the circle to the left of the second Authorization to check it.
+* If you are using OAuth authentication, skip this step. If you are using Basic authentication, go to the Headers section, comment out the OAuth authentication and uncomment the Basic authentication by clicking the check to the left of the first Authorization to uncheck it and click the circle to the left of the second Authorization to check it.
 
 ![sample17](/images/sample17.jpg)
 
-4.  Go to the Body section to see the request payload. Click Send.
+* Go to the Body section to see the request payload. Click Send.
 
 ![sample18](/images/sample18.jpg)
 
-5.  You may make changes to the payload and send requests to test the service.
+* You may make changes to the payload and send requests to test the service.
