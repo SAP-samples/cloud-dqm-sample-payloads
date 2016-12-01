@@ -37,7 +37,7 @@ Import Collections
     * samplesAddressCleanse.postman_collection.json
     * samplesEnvironment.postman_environment.json
     * samplesReverseGeo.postman_collection.json
-Result: Two collections are added – samplesAddressCleanse and samplesReverseGeo. Click the collection name to expand it. The samplesAddressCleanse has multiple folders, therefore click a folder name to expand it. Click one of the sample names.
+    * Result: Two collections are added – samplesAddressCleanse and samplesReverseGeo. Click the collection name to expand it. The samplesAddressCleanse has multiple folders, therefore click a folder name to expand it. Click one of the sample names.
 
 ![sample3](/images/sample3.jpg)
 
