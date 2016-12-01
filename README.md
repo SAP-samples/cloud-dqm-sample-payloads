@@ -1,10 +1,17 @@
 # cloud-dqm-sample-payloads
-Sample JSON payloads for Data Quality Management, microservices for location data
+This repository contains sample Postman (www.getpostman.com) Collections as examples for testing the Data Quality Management, microservices for location data service on SAP HANA Cloud Platform. 
+
+You can find more information about how to get a free trial account here:
+https://blogs.sap.com/2016/06/21/new-hcp-service-beta-sap-data-quality-management-microservices-for-location-data/
+
+Formal documenation for the serivce can be found here: https://uacp2.hana.ondemand.com/viewer/product/SAP_Data_Quality_Management_microservices_for_location_data/latest/en-US
+
 
 Quick start
 -----------
 
-By using sample files with Google Chrome's Postman app, you can quickly get started testing Data Quality Management microservices.
+By using these sample collections for the Postman app, you can quickly get started testing Data Quality Management, microservices.
+
 Download Postman App
 --------------------
 
@@ -42,11 +49,12 @@ Insert Values for Variables
 ---------------------------
 The samples come with three variables, and you will have to substitute two of them to send requests:
 * One variable applicationURL is in the post request URL for each sample.
-* Two variables, oauthAccessToken and base64Credentials, are in the header section for each sample. You only need to substitute a value for one of these, depending on whether you are using OAuth or Basic authentication.
+* Two variables, oauthAccessToken and base64Credentials, are in the header section for each sample. You only need to substitute a value for one of these, depending on whether you are using OAuth or Basic authentication with our service.
 
 ![sample5](/images/sample5.jpg)
 
 Complete the following steps to substitute values for variables.
+
 * Expand the environment combo box in the upper right and select Manage Environments.
 
 ![sample6](/images/sample6.jpg)
@@ -55,14 +63,23 @@ Complete the following steps to substitute values for variables.
 
 ![sample7](/images/sample7.jpg)
 
-* Enter the application URL from your welcome email for the applicationURL variable.
-* Enter the OAuth Access Token from your welcome email for the oauthAccessToken variable, if applicable.
+* Enter the application URL for your HCP account. You find this URL for our service for your HCP account by:
+   *  Pre-requisite: You've already enabled our service (Data Quality Microservices) in the HCP Services Cockpit...
+   *  Select "Subscriptions" in the left hand menu in the HCP Cockpit
+   *  Select the "dqmmicro" Application link under the "Subscribed Java Applications" section of the page. 
+   *  You'll find the application URL for your account on this page.  Copy and past that into this variable. 
+* Enter the OAuth Access Token into the variable "oauthAccessToken" (by default all examples are setup to use OAuth in the headers)  
+   *  NOTE:  You can find instructions in the documentation for how to setup your OAuth Client in HCP and how to generate a token to use in Postman.  See this section:  https://uacp2.hana.ondemand.com/viewer/1e649b6da162465db21c818291f7ed3a/latest/en-US/f891afcaae9b40d3aa23d7be8ae08371.html
 
-Obtaining a Basic Authentication token
+Obtaining a Basic Authentication Variable Value (IF you want to use Basic Authentication instead of OAuth)
 --------------------------------------
-NOTE: Skip to the next section if you are using oAuth.
+NOTE: Skip to the next section if you are using OAuth.
 
-* Close the Manage Environments window. When you have the token, go back to the Manage Environments window and proceed with entering values for the variables.
+NOTE:  The HANA Cloud Platform, and thus our service, by default uses the SAP ID Service as it's identity provider. So that means for basic authentication with our service you would use your:
+   *  Customer/Partner:  S-user or P-user ID and password.   If you don't have one or don't know, you can create an account here: http://scn.sap.com/welcome -> there is a “Join Us” link
+   *  SAP Employee:  user your internal network ID (E.g. I or D number and password)
+
+NOTE (wow there's a lot of notes):  Basic Authentication requires that a base-64 encoded string, based on your username and password, are supplied in the header.  So to keep things relatively simple the instructions here tell you how to use Postman to generate the base-64 encoded variable value you'll use in your variable. 
 
 * Expand one of the collections and select any of the samples. (Do not click Save while in the sample. You are here to obtain a token only.)
 
@@ -72,18 +89,18 @@ NOTE: Skip to the next section if you are using oAuth.
 
 ![sample10](/images/sample10.jpg)
 
-* Enter your SAP username and password, and click Update Request.
+* Enter your SAP ID Service username and password (remember your S/P-user or SAP I/D number), and click Update Request.
 
 ![sample11](/images/sample11.jpg)
 
-* Go to the Headers section, copy the token from the first Authorization variable, without the word “Basic”. This is the value to insert as the value for the base64Credentials variable.
+* Go to the Headers section, copy the value from the first Authorization variable, without the word “Basic”. This is the value to insert as the value for the base64Credentials variable.
 
 ![sample12](/images/sample12.jpg)
 
 Update your environment variables
 ---------------------------------
 
-* When you have finished entering the application URL and the token, click Update.
+* When you have finished entering the application URL and the variable value, click Update.
 
 ![sample8](/images/sample8.jpg)
 
