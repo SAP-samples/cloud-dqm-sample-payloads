@@ -1,10 +1,10 @@
 # cloud-dqm-sample-payloads
-This repository contains sample Postman (www.getpostman.com) Collections as examples for testing the Data Quality Management, microservices for location data service on SAP HANA Cloud Platform. 
+This repository contains sample Postman (www.getpostman.com) Collections as examples for testing the Data Quality Management, microservices for location data service on SAP Cloud Platform. 
 
 You can find more information about how to get a free trial account here:
-https://blogs.sap.com/2016/06/21/new-hcp-service-beta-sap-data-quality-management-microservices-for-location-data/
+https://blogs.sap.com/2017/03/19/sap-data-quality-management-microservices-generally-available-to-customers/
 
-Formal documenation for the serivce can be found here: https://uacp2.hana.ondemand.com/viewer/product/SAP_Data_Quality_Management_microservices_for_location_data/latest/en-US
+Formal documenation for the serivce can be found here: https://help.sap.com/viewer/d95546360fea44988eb614718ff7e959/Cloud/en-US
 
 
 Quick start
@@ -50,6 +50,9 @@ Insert Values for Variables
 The samples come with three variables, and you will have to substitute two of them to send requests:
 * One variable applicationURL is in the post request URL for each sample.
 * Two variables, oauthAccessToken and base64Credentials, are in the header section for each sample. You only need to substitute a value for one of these, depending on whether you are using OAuth or Basic authentication with our service.
+```
+NOTE: Basic Auth is only available on SAP Cloud Platform Developer Edition
+```
 
 ![sample5](/images/sample5.jpg)
 
@@ -63,19 +66,21 @@ Complete the following steps to substitute values for variables.
 
 ![sample7](/images/sample7.jpg)
 
-* Enter the application URL for your HCP account. You find this URL for our service for your HCP account by:
-   *  Pre-requisite: You've already enabled our service (Data Quality Microservices) in the HCP Services Cockpit...
-   *  Select "Subscriptions" in the left hand menu in the HCP Cockpit
+* Enter the application URL for your SAP Cloud Platform account. You find this URL for our service for your SAP Cloud Platform account by:
+   *  Pre-requisite: You've already enabled our service (Data Quality Microservices) in the SAP CP Services Cockpit...
+   *  Select "Subscriptions" in the left hand menu in the SAP Cloud Platform Cockpit
    *  Select the "dqmmicro" Application link under the "Subscribed Java Applications" section of the page. 
    *  You'll find the application URL for your account on this page.  Copy and past that into this variable. 
 * Enter the OAuth Access Token into the variable "oauthAccessToken" (by default all examples are setup to use OAuth in the headers)  
-   *  NOTE:  You can find instructions in the documentation for how to setup your OAuth Client in HCP and how to generate a token to use in Postman.  See this section:  https://uacp2.hana.ondemand.com/viewer/1e649b6da162465db21c818291f7ed3a/latest/en-US/f891afcaae9b40d3aa23d7be8ae08371.html
+   *  NOTE:  You can find instructions in the documentation for how to setup your OAuth Client in SAP Cloud Platform and how to generate a token to use in Postman.  See this section:  https://help.sap.com/viewer/d95546360fea44988eb614718ff7e959/Cloud/en-US/f891afcaae9b40d3aa23d7be8ae08371.html
 
 Obtaining a Basic Authentication Variable Value (IF you want to use Basic Authentication instead of OAuth)
 --------------------------------------
-NOTE: Skip to the next section if you are using OAuth.
+```
+NOTE: Basic Auth is only available on SAP Cloud Platform Developer Edition. Skip to the next section if you are using OAuth.
+```
 
-NOTE:  The HANA Cloud Platform, and thus our service, by default uses the SAP ID Service as it's identity provider. So that means for basic authentication with our service you would use your:
+NOTE:  The SAP Cloud Platform, and thus our service, by default uses the SAP ID Service as it's identity provider. So that means for basic authentication with our service you would use your:
    *  Customer/Partner:  S-user or P-user ID and password.   If you don't have one or don't know, you can create an account here: http://scn.sap.com/welcome -> there is a “Join Us” link
    *  SAP Employee:  user your internal network ID (E.g. I or D number and password)
 
