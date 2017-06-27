@@ -33,11 +33,12 @@ Import Collections
 
 ![sample2](/images/sample2.jpg)
 
-* Browse for the three .json files that were downloaded and extracted in the previous step, and click Open.
+* Browse for the four .json files that were downloaded and extracted in the previous step, and click Open.
     * samplesAddressCleanse.postman_collection.json
+    * samplesAdminTasks.postman_collection.json
     * samplesEnvironment.postman_environment.json
     * samplesReverseGeo.postman_collection.json
-    * Result: Two collections are added – samplesAddressCleanse and samplesReverseGeo. Click the collection name to expand it. The samplesAddressCleanse has multiple folders, therefore click a folder name to expand it. Click one of the sample names.
+    * Result: Three collections are added – samplesAddressCleanse, samplesAdminTasks, and samplesReverseGeo. Click the collection name to expand it. The samplesAddressCleanse has multiple folders, therefore click a folder name to expand it. Click one of the sample names.
 
 ![sample3](/images/sample3.jpg)
 
@@ -51,7 +52,7 @@ The samples come with three variables, and you will have to substitute two of th
 * One variable applicationURL is in the post request URL for each sample.
 * Two variables, oauthAccessToken and base64Credentials, are in the header section for each sample. You only need to substitute a value for one of these, depending on whether you are using OAuth or Basic authentication with our service.
 ```
-NOTE: Basic Auth is only available on SAP Cloud Platform Developer Edition
+NOTE: Basic Auth is only available on SAP Cloud Platform Trial Edition
 ```
 
 ![sample5](/images/sample5.jpg)
@@ -77,14 +78,15 @@ Complete the following steps to substitute values for variables.
 Obtaining a Basic Authentication Variable Value (IF you want to use Basic Authentication instead of OAuth)
 --------------------------------------
 ```
-NOTE: Basic Auth is only available on SAP Cloud Platform Developer Edition. Skip to the next section if you are using OAuth.
+NOTE: Basic Auth is only available on SAP Cloud Platform Trial Edition. 
+    Skip to the next section if you are using OAuth.
 ```
 
 NOTE:  The SAP Cloud Platform, and thus our service, by default uses the SAP ID Service as it's identity provider. So that means for basic authentication with our service you would use your:
    *  Customer/Partner:  S-user or P-user ID and password.   If you don't have one or don't know, you can create an account here: http://scn.sap.com/welcome -> there is a “Join Us” link
    *  SAP Employee:  user your internal network ID (E.g. I or D number and password)
 
-NOTE (wow there's a lot of notes):  Basic Authentication requires that a base-64 encoded string, based on your username and password, are supplied in the header.  So to keep things relatively simple the instructions here tell you how to use Postman to generate the base-64 encoded variable value you'll use in your variable. 
+NOTE: (Wow there are a lot of notes):  Basic Authentication requires that a base-64 encoded string, based on your username and password, are supplied in the header.  So to keep things relatively simple the instructions here tell you how to use Postman to generate the base-64 encoded variable value you'll use in your variable. 
 
 * Expand one of the collections and select any of the samples. (Do not click Save while in the sample. You are here to obtain a token only.)
 
@@ -125,7 +127,7 @@ Send Sample Requests
 
 ![sample15](/images/sample15.jpg)
 
-* Expand one of the collections and select any of the samples.
+* Click one of the collections to expand it. If you select the samplesAddressCleanse collection, then click one of the folders to expand it. Select one of the POST requests in the list.
 
 ![sample16](/images/sample16.jpg)
 
