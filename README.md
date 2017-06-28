@@ -72,14 +72,38 @@ Complete the following steps to substitute values for variables.
    *  Select "Subscriptions" in the left hand menu in the SAP Cloud Platform Cockpit
    *  Select the "dqmmicro" Application link under the "Subscribed Java Applications" section of the page. 
    *  You'll find the application URL for your account on this page.  Copy and past that into this variable. 
-* Enter the OAuth Access Token into the variable "oauthAccessToken" (by default all examples are setup to use OAuth in the headers)  
-   *  NOTE:  You can find instructions in the documentation for how to setup your OAuth Client in SAP Cloud Platform and how to generate a token to use in Postman.  See this section:  https://help.sap.com/viewer/d95546360fea44988eb614718ff7e959/Cloud/en-US/f891afcaae9b40d3aa23d7be8ae08371.html
+* Enter the OAuth Access Token into the variable "oauthAccessToken" (by default all examples are setup to use OAuth in the headers)
+
+Requesting an OAuth Token
+--------------------------------------
+* In the samplesAdminTasks collection, the “Request oAuth token” request has two special variables that you must substitute values from your account. One is in the URL, and the other is the value for the Authorization header.
+![oauth1] (/images/oauth1.jpg)
+* Follow these steps to obtain the value for the {ReplaceWithOAuthTokenEndpoint} and {ReplaceWithBasicAuthToken} variables.
+   * Log into the SAP Cloud Platform cockpit and select the appropriate account.
+   * In the Navigation, navigate to Security > OAuth.
+   * Copy the URL for Token Endpoint, and use this as the value for the {ReplaceWithOAuthTokenEndpoint} variable.
+   ![oauth2] (/images/oauth2.jpg)
+   * Open the Clients tab and click Register New Client
+   * Fill out the name field and select the dqmmicro app from the Subscription dropdown.
+   * Select Client Credentials for the Authorization Grant type, and provide a Secret password.
+   * Adjust the token lifetime if desired
+     * NOTE: requesting refresh tokens is not covered in this guide.
+   * Save the Client and copy the Client ID for use in Postman.
+   * Expand the samplesAdminTasks collection and select the “Request oAuth token” sample.
+   ![oauth3] (/images/oauth3.jpg)
+   * 2.	In the Authorization tab, select “Basic Auth” in the Type combo box, add the Client ID to the username field and the Secret you chose above to the password field.
+   * Click the Update Request button.
+   ![oauth4] (/images/oauth4.jpg)
+   * Result: Go the Headers tab, and you will see the value for the Authorization variable was automatically completed with “Basic” followed by a token.
+   * After replacing both variables with values from your account, you may send the “Request oAuth token” request.
+
+   *  NOTE:  More details on obtaining an OAuth token can be found here:  https://help.sap.com/viewer/d95546360fea44988eb614718ff7e959/Cloud/en-US/f891afcaae9b40d3aa23d7be8ae08371.html
 
 Obtaining a Basic Authentication Variable Value (IF you want to use Basic Authentication instead of OAuth)
 --------------------------------------
 ```
 NOTE: Basic Auth is only available on SAP Cloud Platform Trial Edition. 
-    Skip to the next section if you are using OAuth.
+      Skip to the next section if you are using OAuth.
 ```
 
 NOTE:  The SAP Cloud Platform, and thus our service, by default uses the SAP ID Service as it's identity provider. So that means for basic authentication with our service you would use your:
