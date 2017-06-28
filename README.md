@@ -77,12 +77,16 @@ Complete the following steps to substitute values for variables.
 Requesting an OAuth Token
 --------------------------------------
 * In the samplesAdminTasks collection, the “Request oAuth token” request has two special variables that you must substitute values from your account. One is in the URL, and the other is the value for the Authorization header.
+
 ![oauth1] (/images/oauth1.jpg)
+
 * Follow these steps to obtain the value for the {ReplaceWithOAuthTokenEndpoint} and {ReplaceWithBasicAuthToken} variables.
    * Log into the SAP Cloud Platform cockpit and select the appropriate account.
    * In the Navigation, navigate to Security > OAuth.
    * Copy the URL for Token Endpoint, and use this as the value for the {ReplaceWithOAuthTokenEndpoint} variable.
-   ![oauth2] (/images/oauth2.jpg)
+   
+![oauth2] (/images/oauth2.jpg)
+
    * Open the Clients tab and click Register New Client
    * Fill out the name field and select the dqmmicro app from the Subscription dropdown.
    * Select Client Credentials for the Authorization Grant type, and provide a Secret password.
@@ -90,10 +94,14 @@ Requesting an OAuth Token
      * NOTE: requesting refresh tokens is not covered in this guide.
    * Save the Client and copy the Client ID for use in Postman.
    * Expand the samplesAdminTasks collection and select the “Request oAuth token” sample.
-   ![oauth3] (/images/oauth3.jpg)
+   
+![oauth3] (/images/oauth3.jpg)
+
    * 2.	In the Authorization tab, select “Basic Auth” in the Type combo box, add the Client ID to the username field and the Secret you chose above to the password field.
    * Click the Update Request button.
-   ![oauth4] (/images/oauth4.jpg)
+   
+![oauth4] (/images/oauth4.jpg)
+
    * Result: Go the Headers tab, and you will see the value for the Authorization variable was automatically completed with “Basic” followed by a token.
    * After replacing both variables with values from your account, you may send the “Request oAuth token” request.
 
