@@ -20,11 +20,11 @@ Download the Postman app for Chrome at https://www.getpostman.com
 Download the Samples
 --------------------
 * Download the SamplePostmanRequests.zip file above.
-* Extract the three sample .json files to your file system.
+* Extract the four sample .json files to your file system.
 
 Import Collections
 ------------------
-* Launch the Postman app from Chrome.
+* Launch the Postman app.
 * Click the Import button in the upper left.
 
 ![sample1](/images/sample1.jpg)
@@ -68,10 +68,10 @@ Complete the following steps to substitute values for variables.
 ![sample7](/images/sample7.jpg)
 
 * Enter the application URL for your SAP Cloud Platform account. You find this URL for our service for your SAP Cloud Platform account by:
-   *  Pre-requisite: You've already enabled our service (Data Quality Microservices) in the SAP CP Services Cockpit...
-   *  Select "Subscriptions" in the left hand menu in the SAP Cloud Platform Cockpit
+   *  Pre-requisite: You have already enabled our service (Data Quality Microservices) in the SAP Cloud Platform Services Cockpit.
+   *  Select "Subscriptions" in the left hand menu in the SAP Cloud Platform Cockpit.
    *  Select the "dqmmicro" Application link under the "Subscribed Java Applications" section of the page. 
-   *  You'll find the application URL for your account on this page.  Copy and past that into this variable. 
+   *  You will find the application URL for your account on this page.  Copy and past that into this variable. 
 * Enter the OAuth Access Token into the variable "oauthAccessToken" (by default all examples are setup to use OAuth in the headers)
 
 Requesting an OAuth Token
@@ -87,17 +87,17 @@ Requesting an OAuth Token
 
     ![oauth2](/images/oauth2.jpg)
 
-   * Open the Clients tab and click Register New Client
+   * Open the Clients tab and click Register New Client.
    * Fill out the name field and select the dqmmicro app from the Subscription dropdown.
    * Select Client Credentials for the Authorization Grant type, and provide a Secret password.
-   * Adjust the token lifetime if desired
+   * Adjust the token lifetime if desired.
      * NOTE: requesting refresh tokens is not covered in this guide.
    * Save the Client and copy the Client ID for use in Postman.
    * Expand the samplesAdminTasks collection and select the “Request oAuth token” sample.
 
     ![oauth3](/images/oauth3.jpg)
 
-   * 2.	In the Authorization tab, select “Basic Auth” in the Type combo box, add the Client ID to the username field and the Secret you chose above to the password field.
+   * In the Authorization tab, select “Basic Auth” in the Type combo box, add the Client ID to the username field and the Secret you chose above to the password field.
    * Click the Update Request button.
 
     ![oauth4](/images/oauth4.jpg)
@@ -107,18 +107,18 @@ Requesting an OAuth Token
 
    *  NOTE:  More details on obtaining an OAuth token can be found here:  https://help.sap.com/viewer/d95546360fea44988eb614718ff7e959/Cloud/en-US/f891afcaae9b40d3aa23d7be8ae08371.html
 
-Obtaining a Basic Authentication Variable Value (IF you want to use Basic Authentication instead of OAuth)
+Obtaining a Basic Authentication Variable Value (If you want to use Basic Authentication instead of OAuth)
 --------------------------------------
 ```
 NOTE: Basic Auth is only available on SAP Cloud Platform Trial Edition. 
       Skip to the next section if you are using OAuth.
 ```
 
-NOTE:  The SAP Cloud Platform, and thus our service, by default uses the SAP ID Service as it's identity provider. So that means for basic authentication with our service you would use your:
-   *  Customer/Partner:  S-user or P-user ID and password.   If you don't have one or don't know, you can create an account here: http://scn.sap.com/welcome -> there is a “Join Us” link
+NOTE:  The SAP Cloud Platform, and thus our service, by default uses the SAP ID Service as it's identity provider. For basic authentication with our service you would use your:
+   *  Customer/Partner:  S-user or P-user ID and password.   If you don't have one or don't know, you can create an account here: http://scn.sap.com/welcome -> click on the “Join Us” link
    *  SAP Employee:  user your internal network ID (E.g. I or D number and password)
 
-NOTE: (Wow there are a lot of notes):  Basic Authentication requires that a base-64 encoded string, based on your username and password, are supplied in the header.  So to keep things relatively simple the instructions here tell you how to use Postman to generate the base-64 encoded variable value you'll use in your variable. 
+NOTE: Basic Authentication requires that a base-64 encoded string, based on your username and password, are supplied in the header.  So to keep things relatively simple the instructions here tell you how to use Postman to generate the base-64 encoded variable value you'll use in your variable. 
 
 * Expand one of the collections and select any of the samples. (Do not click Save while in the sample. You are here to obtain a token only.)
 
