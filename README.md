@@ -40,7 +40,7 @@ Import Collections
     Click the collection name to expand it. The samplesAddressCleanse has multiple folders, therefore click a folder name to expand it. 
     Click one of the sample names.
 
-![sample3](postman3.jpg)
+![sample](postman3.jpg)
 
 An environment is also added in the top right corner. In the dropdown of the environment combo box, samplesEnvironment is now included.
 
