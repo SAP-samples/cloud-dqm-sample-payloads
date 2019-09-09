@@ -27,11 +27,9 @@ Import Collections
 1. Launch the Postman app.
 2. Click the Import button in the upper left.
 
-
+![sample1](/images/postman1.jpg)
 
 3. Click Choose Files.
-
-![sample2](/images/sample2.jpg)
 
 * Browse for the four .json files that were downloaded and extracted in the previous step, and click Open.
     * samplesAddressCleanse.postman_collection.json
@@ -42,52 +40,25 @@ Import Collections
     Click the collection name to expand it. The samplesAddressCleanse has multiple folders, therefore click a folder name to expand it. 
     Click one of the sample names.
 
-![sample3](/images/sample3.jpg)
+![sample3](postman3.jpg)
 
 An environment is also added in the top right corner. In the dropdown of the environment combo box, samplesEnvironment is now included.
 
-![sample4](/images/sample4.jpg)
+![sample4](/images/postman4.jpg)
 
-Insert Values for Variables
----------------------------
-The samples come with three variables, and you will have to substitute two of them to send requests:
-* One variable is the applicationURL that is in the post request URL for each sample.
-* The other two variables, oauthAccessToken and base64Credentials, are in the header section for each sample. You only need to substitute a value for one of these, depending on whether you are using OAuth or Basic authentication with our service.
-```
-NOTE: Basic Auth is only available on SAP Cloud Platform Trial Edition
-```
-
-![sample5](/images/sample5.jpg)
-
-Complete the following steps to substitute values for variables.
-
-1. Expand the environment combo box in the upper right and select Manage Environments.
-
-![sample6](/images/sample6.jpg)
-
-* Click samplesEnvironment.
-
-![sample7](/images/sample7.jpg)
-
-* Enter the application URL for your SAP Cloud Platform account. You find this URL for our service for your SAP Cloud Platform account by:
-   *  Pre-requisite: You have already enabled our service (Data Quality Microservices) in the SAP Cloud Platform Services Cockpit.
-   *  Select "Subscriptions" in the left hand menu in the SAP Cloud Platform Cockpit.
-   *  Select the "dqmmicro" Application link under the "Subscribed Java Applications" section of the page. 
-   *  You will find the application URL for your account on this page.  Copy and past that into this variable. 
-* Enter the OAuth Access Token into the variable "oauthAccessToken" (by default all examples are setup to use OAuth in the headers)
 
 Requesting an OAuth Token
 --------------------------------------
 * In the samplesAdminTasks collection, the “Request oAuth token” request has two special variables that you must substitute values from your account. One is in the URL, and the other is the value for the Authorization header.
 
-![oauth1](/images/oauth1.jpg)
+![oauth1](/images/postman6.jpg)
 
 * Follow these steps to obtain the value for the {ReplaceWithOAuthTokenEndpoint} and {ReplaceWithBasicAuthToken} variables.
    1. Log into the SAP Cloud Platform cockpit and select the appropriate account.
    2. In the Navigation, navigate to Security > OAuth.
    3. Copy the URL for Token Endpoint, and use this as the value for the {ReplaceWithOAuthTokenEndpoint} variable.
 
-    ![oauth2](/images/oauth2.jpg)
+    ![oauth2](/images/postman7.jpg)
 
    4. Open the Clients tab and click Register New Client.
    5. Fill out the name field and select the dqmmicro app from the Subscription dropdown.
@@ -98,14 +69,17 @@ Requesting an OAuth Token
      * Note: You may change the ID to something else. For instance, the name you selected in step 5. 
    9. Expand the samplesAdminTasks collection and select the “Request oAuth token” sample.
 
-    ![oauth3](/images/oauth3.jpg)
+    ![oauth3](/images/postman8.jpg)
 
    * In the Authorization tab, select “Basic Auth” in the Type combo box, add the Client ID to the username field and the Secret you chose above to the password field.
-   * Click the Update Request button.
+   * Click the Preview Request button.
 
-    ![oauth4](/images/oauth4.jpg)
+    ![oauth4](/images/postman9.jpg)
 
-   * Result: Go the Headers tab, and you will see the value for the Authorization variable was automatically completed with “Basic” followed by a token.
+   * Result: Go to the Headers tab, and you will see an expandable Temporary Headers with the Authorization variable Value was automatically completed with “Basic” followed by a token.
+   
+    ![oauth4](/images/postman12.jpg)
+   
    * After replacing both variables with values from your account, you may send the “Request oAuth token” request.
 
    *  NOTE:  More details on obtaining an OAuth token can be found here:  https://help.sap.com/viewer/d95546360fea44988eb614718ff7e959/Cloud/en-US/f891afcaae9b40d3aa23d7be8ae08371.html
@@ -131,13 +105,39 @@ NOTE: Basic Authentication requires that a base-64 encoded string, based on your
 
 ![sample10](/images/sample10.jpg)
 
-* Enter your SAP ID Service username and password (remember your S/P-user or SAP I/D number), and click Update Request.
+* Enter your SAP ID Service username and password (remember your S/P-user or SAP I/D number), and click Preview Request.
 
 ![sample11](/images/sample11.jpg)
 
-* Go to the Headers section, copy the value from the first Authorization variable, without the word “Basic”. This is the value to insert as the value for the base64Credentials variable.
+* Go to the Headers section and expand the Temporary Headers. Copy the value from the Authorization variable, without the word “Basic”. This is the value to insert as the value for the base64Credentials variable.
 
-![sample12](/images/sample12.jpg)
+![sample12](/images/postman13.jpg)
+
+Insert Values for Variables
+---------------------------
+The samples come with three variables, and you will need to substitute two of them to send requests:
+* One variable is the applicationURL that is in the post request URL for each sample.
+* The other two variables, oauthAccessToken and base64Credentials, are in the header section for each sample. You only need to substitute a value for one of these, depending on whether you are using OAuth or Basic authentication with our service.
+```
+NOTE: Basic Auth is only available on SAP Cloud Platform Trial Edition
+```
+
+Complete the following steps to substitute values for variables.
+
+1. In the upper right corner, select the gear icon to Manage Environments.
+
+![sample6](/images/postman10.jpg)
+
+* Click samplesEnvironment.
+
+![sample7](/images/postman11.jpg)
+
+* Enter the application URL for your SAP Cloud Platform account. You find this URL for our service for your SAP Cloud Platform account by:
+   *  Pre-requisite: You have already enabled our service (Data Quality Microservices) in the SAP Cloud Platform Services Cockpit.
+   *  Navigate to Applications > Subscriptions in the left hand menu in the SAP Cloud Platform Cockpit.
+     * Click the "dqmmicro" Application link under the "Subscribed Java Applications" section of the page. 
+      *  You will find the application URL for your account on this page.  Copy and past that into this variable. 
+* Enter the OAuth Access Token into the variable "oauthAccessToken" (by default all examples are setup to use OAuth in the headers)
 
 Update your environment variables
 ---------------------------------
