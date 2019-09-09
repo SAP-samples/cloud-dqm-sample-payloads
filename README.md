@@ -24,12 +24,12 @@ Download the Samples
 
 Import Collections
 ------------------
-* Launch the Postman app.
-* Click the Import button in the upper left.
+1. Launch the Postman app.
+2. Click the Import button in the upper left.
 
-![sample1](/images/sample1.jpg)
 
-* With Import File active, click Choose Files.
+
+3. Click Choose Files.
 
 ![sample2](/images/sample2.jpg)
 
@@ -38,19 +38,21 @@ Import Collections
     * samplesAdminTasks.postman_collection.json
     * samplesEnvironment.postman_environment.json
     * samplesReverseGeo.postman_collection.json
-    * Result: Three collections are added – samplesAddressCleanse, samplesAdminTasks, and samplesReverseGeo. Click the collection name to expand it. The samplesAddressCleanse has multiple folders, therefore click a folder name to expand it. Click one of the sample names.
+    * Result: Three collections are added – samplesAddressCleanse, samplesAdminTasks, and samplesReverseGeo. 
+    Click the collection name to expand it. The samplesAddressCleanse has multiple folders, therefore click a folder name to expand it. 
+    Click one of the sample names.
 
 ![sample3](/images/sample3.jpg)
 
-An environment is also added. The environment combo box includes samplesEnvironment.
+An environment is also added in the top right corner. In the dropdown of the environment combo box, samplesEnvironment is now included.
 
 ![sample4](/images/sample4.jpg)
 
 Insert Values for Variables
 ---------------------------
 The samples come with three variables, and you will have to substitute two of them to send requests:
-* One variable applicationURL is in the post request URL for each sample.
-* Two variables, oauthAccessToken and base64Credentials, are in the header section for each sample. You only need to substitute a value for one of these, depending on whether you are using OAuth or Basic authentication with our service.
+* One variable is the applicationURL that is in the post request URL for each sample.
+* The other two variables, oauthAccessToken and base64Credentials, are in the header section for each sample. You only need to substitute a value for one of these, depending on whether you are using OAuth or Basic authentication with our service.
 ```
 NOTE: Basic Auth is only available on SAP Cloud Platform Trial Edition
 ```
@@ -59,7 +61,7 @@ NOTE: Basic Auth is only available on SAP Cloud Platform Trial Edition
 
 Complete the following steps to substitute values for variables.
 
-* Expand the environment combo box in the upper right and select Manage Environments.
+1. Expand the environment combo box in the upper right and select Manage Environments.
 
 ![sample6](/images/sample6.jpg)
 
@@ -81,19 +83,20 @@ Requesting an OAuth Token
 ![oauth1](/images/oauth1.jpg)
 
 * Follow these steps to obtain the value for the {ReplaceWithOAuthTokenEndpoint} and {ReplaceWithBasicAuthToken} variables.
-   * Log into the SAP Cloud Platform cockpit and select the appropriate account.
-   * In the Navigation, navigate to Security > OAuth.
-   * Copy the URL for Token Endpoint, and use this as the value for the {ReplaceWithOAuthTokenEndpoint} variable.
+   1. Log into the SAP Cloud Platform cockpit and select the appropriate account.
+   2. In the Navigation, navigate to Security > OAuth.
+   3. Copy the URL for Token Endpoint, and use this as the value for the {ReplaceWithOAuthTokenEndpoint} variable.
 
     ![oauth2](/images/oauth2.jpg)
 
-   * Open the Clients tab and click Register New Client.
-   * Fill out the name field and select the dqmmicro app from the Subscription dropdown.
-   * Select Client Credentials for the Authorization Grant type, and provide a Secret password.
-   * Adjust the token lifetime if desired.
+   4. Open the Clients tab and click Register New Client.
+   5. Fill out the name field and select the dqmmicro app from the Subscription dropdown.
+   6. Select Client Credentials for the Authorization Grant type, and provide a Secret password.
+   7. Adjust the token lifetime if desired.
      * NOTE: requesting refresh tokens is not covered in this guide.
-   * Save the Client and copy the Client ID for use in Postman.
-   * Expand the samplesAdminTasks collection and select the “Request oAuth token” sample.
+   8. Save the Client and copy the Client ID for use in Postman.
+     * Note: You may change the ID to something else. For instance, the name you selected in step 5. 
+   9. Expand the samplesAdminTasks collection and select the “Request oAuth token” sample.
 
     ![oauth3](/images/oauth3.jpg)
 
