@@ -21,9 +21,9 @@ Download the Samples
 --------------------
 * Download the SamplePostmanRequests.zip file 
 
-![sample1](/images/postmanFirst.jpg)
+![sample1](/images/postman.jpg)
 
-![sample1](/images/postmanSecond.jpg)
+![sample1](/images/postmanTwo.jpg)
 
 * Extract the four sample .json files to your file system.
 
@@ -122,9 +122,6 @@ Update your Environment Variables
 
 When you have finished entering the application URL and the variable value, click Update.
 
-![sample8](/images/sample8.jpg)
-
-
 Send Sample Requests
 --------------------
 
@@ -138,4 +135,4 @@ Send Sample Requests
 
 ![sample18](/images/sample18.jpg)
 
-* You may make changes to the payload and send requests to test the service.
+ You may make changes to the payload and send requests to test the service.
