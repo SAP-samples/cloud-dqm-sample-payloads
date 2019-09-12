@@ -120,7 +120,7 @@ Complete the following steps to substitute values for these variables.
 Update your Environment Variables
 ---------------------------------
 
-* When you have finished entering the application URL and the variable value, click Update.
+When you have finished entering the application URL and the variable value, click Update.
 
 ![sample8](/images/sample8.jpg)
 
