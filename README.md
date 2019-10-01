@@ -71,16 +71,16 @@ In the samplesAdminTasks collection, the “Request oAuth token” request has t
      * Note: You may change the ID to something else. For instance, the name you selected in step 5. 
    9. Expand the samplesAdminTasks collection and select the “Request oAuth token” sample.
 
-    ![sample8](/images/postman8.jpg)
+   ![sample8](/images/postman8.jpg)
 
    10. In the Authorization tab, select “Basic Auth” in the Type combo box, add the Client ID to the username field and the Secret you chose above to the password field.
    * Click the Preview Request button.
 
-    ![sample9](/images/postman9.jpg)
+   ![sample9](/images/postman9.jpg)
 
    * Result: Go to the Headers tab, and you will see an expandable Temporary Headers section. Copy the variable from the Temporary Headers Authorization Value (excluding the word "Basic") and paste it into the "{ReplaceWithBasicAuthToken}" value above. 
    
-    ![sample12](/images/postman12.jpg)
+   ![sample12](/images/postman12.jpg)
    
    11. After replacing both variables with values from your account, you may send the “Request oAuth token” request.
    
