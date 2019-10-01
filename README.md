@@ -41,11 +41,11 @@ Import Collections
     * samplesAdminTasks.postman_collection.json
     * samplesEnvironment.postman_environment.json
     * samplesReverseGeo.postman_collection.json
-    * Result: Three collections are added – samplesAddressCleanse, samplesAdminTasks, and samplesReverseGeo. 
+   Result: Three collections are added – samplesAddressCleanse, samplesAdminTasks, and samplesReverseGeo. 
     Click the collection name to expand it. The samplesAddressCleanse has multiple folders, therefore click a folder name to expand it. 
     Click one of the sample names.
 
-![sample1](/images/postman3.jpg)
+![sample3](/images/postman3.jpg)
 
 * Result: In the environment box in the upper right corner, samplesEnvironment is now included.
 
@@ -71,16 +71,16 @@ In the samplesAdminTasks collection, the “Request oAuth token” request has t
      * Note: You may change the ID to something else. For instance, the name you selected in step 5. 
    9. Expand the samplesAdminTasks collection and select the “Request oAuth token” sample.
 
-    ![sample1](/images/postman8.jpg)
+    ![sample8](/images/postman8.jpg)
 
    10. In the Authorization tab, select “Basic Auth” in the Type combo box, add the Client ID to the username field and the Secret you chose above to the password field.
    * Click the Preview Request button.
 
-    ![sample1](/images/postman9.jpg)
+    ![sample9](/images/postman9.jpg)
 
    * Result: Go to the Headers tab, and you will see an expandable Temporary Headers section. Copy the variable from the Temporary Headers Authorization Value (excluding the word "Basic") and paste it into the "{ReplaceWithBasicAuthToken}" value above. 
    
-    ![sample1](/images/postman12.jpg)
+    ![sample12](/images/postman12.jpg)
    
    11. After replacing both variables with values from your account, you may send the “Request oAuth token” request.
    
@@ -91,7 +91,7 @@ In the samplesAdminTasks collection, the “Request oAuth token” request has t
 
 
 
-Insert Values for Variables
+Update your Environment Variables
 ---------------------------
 The samples come with two variables that you will need to substitute in order to send requests:
 * One variable is the applicationURL that is in the post request URL for each sample.
@@ -106,32 +106,28 @@ Complete the following steps to substitute values for these variables.
 
 ![sample6](/images/postman10.jpg)
 
-* Click samplesEnvironment.
+2. Click samplesEnvironment.
 
 ![sample7](/images/postman11.jpg)
 
-* Enter the application URL for your SAP Cloud Platform account. You find this URL for our service for your SAP Cloud Platform account by:
-   *  Pre-requisite: You have already enabled our service (Data Quality Microservices) in the SAP Cloud Platform Services Cockpit.
-   *  Navigate to Applications > Subscriptions in the left hand menu in the SAP Cloud Platform Cockpit.
-     * Click the "dqmmicro" Application link under the "Subscribed Java Applications" section of the page. 
-      *  You will find the application URL for your account on this page.  Copy and past that into this variable. 
-* Enter the OAuth Access Token that you recieved from step 11 into the variable "oauthAccessToken" (by default all examples are setup to use OAuth in the headers)
+3. To obtain the application URL, navigate to Applications > Subscriptions in the left-hand menu in the SAP Cloud Platform Cockpit and click the "dqmmicro" Application link under the "Subscribed Java Applications" section of the page. Copy and paste the application URL into the "applicationURL" variable. 
 
-Update your Environment Variables
----------------------------------
+Note: You will need to have enabled our service, Data Quality Management in the SAP Cloud Platform Services Cockpit.
+     
+4. Enter the OAuth Access Token that you recieved from step 11 into the variable "oauthAccessToken" (by default all examples are setup to use OAuth in the headers)
 
-When you have finished entering the application URL and the variable value, click Update.
+5. Click Update and close the Manage Environments window.
+
+6. In the environment combo box, select samplesEnvironment.
+
+![sample15](/images/postman4.jpg)
 
 Send Sample Requests
 --------------------
 
-1. In the environment combo box, select samplesEnvironment.
+1. Click one of the collections to expand it. If you select the samplesAddressCleanse collection, then click one of the folders to expand it. Select one of the POST requests in the list.
 
-![sample15](/images/postman4.jpg)
-
-2. Click one of the collections to expand it. If you select the samplesAddressCleanse collection, then click one of the folders to expand it. Select one of the POST requests in the list.
-
-3. Go to the Body section to see the request payload. Click Send.
+2. Go to the Body section to see the request payload. Click Send.
 
 ![sample18](/images/sample18.jpg)
 
