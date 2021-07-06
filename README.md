@@ -96,7 +96,7 @@ Send Sample Requests
 --------------------
 
 1. Select Collections in the navigation panel, expand the samplesAddressCleanse collection and then expand the Address Cleanse folder. Select one of the sample requests. You may see the body of the request in the Body tab.
-![sample18](/images/SampleReq1.jpg)
+![sample18](/images/SampleReqStep1.jpg)
 
 2. Select the Send button. The response is returned in the lower pane of Postman.
 3. You may change the address in the addressInput object and send the request to test other addresses.
