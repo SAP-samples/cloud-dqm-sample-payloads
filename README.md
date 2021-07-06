@@ -19,13 +19,13 @@ Download the Postman app for Chrome at https://www.getpostman.com
 
 Download the Samples
 --------------------
-* Download the SamplePostmanRequests.zip file 
+1. Download the SamplePostmanRequests.zip file 
 
 ![sample1](/images/postman.jpg)
 
 ![sample1](/images/postmanTwo.jpg)
 
-* Extract the four sample .json files to your file system.
+2. Extract the four sample .json files to your file system.
 
 Import Collections
 ------------------
