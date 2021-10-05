@@ -1,5 +1,5 @@
 # cloud-dqm-sample-payloads
-This repository contains sample Postman (www.getpostman.com) Collections as examples for testing the Data Quality Management, microservices for location data service on SAP Cloud Platform. 
+This repository contains sample Postman (www.getpostman.com) Collections as examples for testing the Data Quality Management, microservices for location data service on SAP Business Technology Platform. 
 
 You can find more information about different service plans here:
 https://help.sap.com/viewer/d95546360fea44988eb614718ff7e959/Cloud/en-US/a7352caca1a64474b9d98725421b86bf.html
