@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-dqm-sample-payloads)](https://api.reuse.software/info/github.com/SAP-samples/cloud-dqm-sample-payloads)
+
 # cloud-dqm-sample-payloads
 This repository contains sample Postman (www.getpostman.com) Collections as examples for testing the Data Quality Management, microservices for location data service on SAP Business Technology Platform. 
 
