@@ -1,26 +1,23 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-dqm-sample-payloads)](https://api.reuse.software/info/github.com/SAP-samples/cloud-dqm-sample-payloads)
 
-# cloud-dqm-sample-payloads
-This repository contains sample Postman (www.getpostman.com) Collections as examples for testing the Data Quality Management, microservices for location data service on SAP Business Technology Platform. 
+# Sample Payloads for SAP Data Quality Management, microservices for location data
+This repository contains sample Postman (www.getpostman.com) Collections as examples for testing the SAP Data Quality Management, microservices for location data service on SAP Business Technology Platform. 
 
 You can find more information about different service plans here:
 https://help.sap.com/viewer/d95546360fea44988eb614718ff7e959/Cloud/en-US/a7352caca1a64474b9d98725421b86bf.html
 
 Formal documenation for the serivce can be found here: https://help.sap.com/viewer/d95546360fea44988eb614718ff7e959/Cloud/en-US
 
-
-Quick start
------------
+## Quick Start
 
 By using these sample collections for the Postman app, you can quickly get started testing Data Quality Management, microservices.
 
-Download Postman App
---------------------
+## Download Postman App
 
 Download the Postman app for Chrome at https://www.getpostman.com
 
-Download the Samples
---------------------
+## Download the Samples
+
 1. Download the SamplePostmanRequests.zip file 
 
 ![sample1](/images/postman.jpg)
@@ -29,8 +26,8 @@ Download the Samples
 
 2. Extract the four sample .json files to your file system.
 
-Import Collections
-------------------
+## Import Collections
+
 1. Launch the Postman app.
 2. Click the Import button.
 
@@ -43,7 +40,7 @@ Import Collections
     * samplesEnvironment.postman_environment.json
     * samplesReverseGeo.postman_collection.json
 
-# Result
+## Result
 Three collections are added: 
    * samplesAddressCleanse 
    * samplesAdminTasks
@@ -63,8 +60,8 @@ The samplesEnvironment environment is also available to select in the active env
 ![sample4](/images/Result3.jpg)
 
 
-Update Environment Variables
---------------------------------------
+## Update Environment Variables
+
 You must update both variables in the samplesEnvironment environment.
 
 1. On the SAP Business Technology Platform, navigate into your subaccount and access the Credentials window that includes the contents of the service key. If you are not familiar with how to do this, see the instructions or the video on the Accessing DQM Microservices page of the SAP Help Portal.
@@ -94,11 +91,16 @@ You must update both variables in the samplesEnvironment environment.
 ![oauth1](/images/EnvironmentStep9.jpg)
 
 
-Send Sample Requests
---------------------
+## Send Sample Requests
 
 1. Select Collections in the navigation panel, expand the samplesAddressCleanse collection and then expand the Address Cleanse folder. Select one of the sample requests. You may see the body of the request in the Body tab.
 ![sample18](/images/SampleReqStep1.jpg)
 
 2. Select the Send button. The response is returned in the lower pane of Postman.
 3. You may change the address in the addressInput object and send the request to test other addresses.
+
+## How to obtain support
+SAP does not provide support for the sample code, but you can discuss the tool with other users on the [SAP Community](https://answers.sap.com/questions/ask.html).
+
+## License
+Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
