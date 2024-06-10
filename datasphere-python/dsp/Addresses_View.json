@@ -1,0 +1,182 @@
+{
+  "definitions": {
+    "Addresses_View": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "@EndUserText.label": "ID",
+          "type": "cds.Integer64"
+        },
+        "LOCALITY": {
+          "@EndUserText.label": "LOCALITY",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "POSTCODE": {
+          "@EndUserText.label": "POSTCODE",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "MIXED": {
+          "@EndUserText.label": "MIXED",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "COUNTRY": {
+          "@EndUserText.label": "COUNTRY",
+          "type": "cds.String",
+          "length": 5000
+        }
+      },
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "Addresses"
+            ]
+          },
+          "columns": [
+            {
+              "as": "ID",
+              "ref": [
+                "ADDRESSID"
+              ]
+            },
+            {
+              "as": "LOCALITY",
+              "ref": [
+                "CITY"
+              ]
+            },
+            {
+              "as": "POSTCODE",
+              "ref": [
+                "POSTALCODE"
+              ]
+            },
+            {
+              "as": "MIXED",
+              "ref": [
+                "STREET"
+              ]
+            },
+            {
+              "ref": [
+                "COUNTRY"
+              ]
+            }
+          ]
+        }
+      },
+      "@EndUserText.label": "Addresses_View",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.consumption.external": true,
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "Addresses": {
+      "kind": "entity",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.dataSource.schema": "HN_RMS#WRG_HYE65HAQ94CFXBYU",
+      "@DataWarehouse.dataSource.entity": "sap.dataset.conf_834055ae-e096-4a94-8a60-4d1993ec9921_view",
+      "@EndUserText.label": "Addresses",
+      "elements": {
+        "ADDRESSID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "ADDRESSID"
+        },
+        "CITY": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "CITY"
+        },
+        "POSTALCODE": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "POSTALCODE"
+        },
+        "STREET": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "STREET"
+        },
+        "BUILDING": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "BUILDING"
+        },
+        "COUNTRY": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "COUNTRY"
+        },
+        "REGION": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "REGION"
+        },
+        "ADDRESSTYPE": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "ADDRESSTYPE"
+        },
+        "VALIDITY_STARTDATE": {
+          "type": "cds.Date",
+          "@EndUserText.label": "VALIDITY_STARTDATE"
+        },
+        "VALIDITY_ENDDATE": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "VALIDITY_ENDDATE"
+        },
+        "LATITUDE": {
+          "type": "cds.Decimal",
+          "precision": 38,
+          "scale": 19,
+          "@EndUserText.label": "LATITUDE"
+        },
+        "LONGITUDE": {
+          "type": "cds.Decimal",
+          "precision": 38,
+          "scale": 19,
+          "@EndUserText.label": "LONGITUDE"
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "editorSettings": {
+    "Addresses_View": {
+      "editor": {
+        "lastModifier": "GRAPHICALVIEWBUILDER",
+        "default": "GRAPHICALVIEWBUILDER"
+      },
+      "uiModel": "{\"contents\":{\"dd61212f-0a71-4e87-a5cd-8df7a05c6807\":{\"classDefinition\":\"sap.cdw.querybuilder.Model\",\"name\":\"Addresses_View\",\"label\":\"Addresses_View\",\"modificationDate\":0,\"deploymentDate\":0,\"#objectStatus\":0,\"output\":\"ff29b4d1-d8d1-44bd-a00d-040d19f917d7\",\"nodes\":{\"ff29b4d1-d8d1-44bd-a00d-040d19f917d7\":{\"name\":\"Addresses_View\"},\"efd55e18-eb23-4eca-8f78-cca424fef688\":{\"name\":\"Addresses\"},\"a629dd49-b4a4-4d5b-ba8d-11b9e6fe4d9b\":{\"name\":\"Projection 1\"}},\"diagrams\":{\"e64e96b1-f5e2-4708-8ae9-133a1378a5ea\":{}}},\"ff29b4d1-d8d1-44bd-a00d-040d19f917d7\":{\"classDefinition\":\"sap.cdw.querybuilder.Output\",\"name\":\"Addresses_View\",\"type\":\"graphicView\",\"isPinToMemoryEnabled\":false,\"modificationDate\":0,\"deploymentDate\":0,\"#objectStatus\":0,\"elements\":{\"6a006837-6fcc-41e4-b939-632e5668e964\":{\"name\":\"ADDRESSID\"},\"970eba46-80d3-4d1b-a95f-4e5adeaad8ff\":{\"name\":\"CITY\"},\"5af34ed7-e9c6-40c7-9de1-4013d4035f0a\":{\"name\":\"POSTALCODE\"},\"65b320f7-b3f8-4dc8-bf17-c5d7829ec049\":{\"name\":\"STREET\"},\"cb2cca55-9816-4325-8fc4-409c207e1bbf\":{\"name\":\"COUNTRY\"}}},\"e64e96b1-f5e2-4708-8ae9-133a1378a5ea\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.Diagram\",\"symbols\":{\"82d5ce01-73ec-4feb-b67e-7b54fab42612\":{},\"aad9062f-3430-4503-8841-880ab4af2893\":{\"name\":\"Entity Symbol 1\"},\"96ddbe4a-e8ab-4df9-8efe-a8366aae9ccc\":{},\"c7c72cc8-aced-4e67-a827-33899325ff23\":{},\"8ecc584a-21ef-4cef-aa32-035e4e8ed23d\":{}}},\"82d5ce01-73ec-4feb-b67e-7b54fab42612\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.OutputSymbol\",\"x\":96,\"y\":-20,\"width\":140,\"height\":40,\"object\":\"ff29b4d1-d8d1-44bd-a00d-040d19f917d7\"},\"efd55e18-eb23-4eca-8f78-cca424fef688\":{\"classDefinition\":\"sap.cdw.querybuilder.Entity\",\"name\":\"Addresses\",\"label\":\"Addresses\",\"type\":9,\"isPinToMemoryEnabled\":false,\"isAllowConsumption\":false,\"isHiddenInUi\":false,\"modificationDate\":0,\"deploymentDate\":1716324339000,\"#objectStatus\":\"1\",\"elements\":{\"0535b5c8-23be-42a2-98a8-ea2b8e157276\":{\"name\":\"ADDRESSID\"},\"0f276384-8fdb-4734-b30c-23f79a53b38a\":{\"name\":\"CITY\"},\"807f336d-e281-4a00-b8b7-afb02a3d6261\":{\"name\":\"POSTALCODE\"},\"eee82292-8a68-4853-8ea4-010440543e78\":{\"name\":\"STREET\"},\"01e05a31-20da-4136-8a4d-4a90dbc4c848\":{\"name\":\"BUILDING\"},\"127e4eba-1356-479c-b3e4-0e731448fb03\":{\"name\":\"COUNTRY\"},\"ba4b2d34-4def-4085-a1f2-ce8d4cae5fa5\":{\"name\":\"REGION\"},\"f723a2cb-f9c8-48e1-b519-c898cb4f7eb6\":{\"name\":\"ADDRESSTYPE\"},\"67635837-90c3-4dc0-916e-f2a851f060ad\":{\"name\":\"VALIDITY_STARTDATE\"},\"534431fb-d70a-48ee-81ed-159bd27406ff\":{\"name\":\"VALIDITY_ENDDATE\"},\"b26fc02b-77c7-45bc-849d-587f45226cb9\":{\"name\":\"LATITUDE\"},\"ba0d0d75-8740-4cd6-bbca-3af3f67c6807\":{\"name\":\"LONGITUDE\"}},\"successorNode\":\"a629dd49-b4a4-4d5b-ba8d-11b9e6fe4d9b\"},\"0535b5c8-23be-42a2-98a8-ea2b8e157276\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"c34deed2-26ee-445a-be8a-dfa576c2c914\"},\"0f276384-8fdb-4734-b30c-23f79a53b38a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CITY\",\"label\":\"CITY\",\"newName\":\"CITY\",\"indexOrder\":1,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"b097c41e-aa31-4f64-820f-faad1c3cfefd\"},\"807f336d-e281-4a00-b8b7-afb02a3d6261\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"POSTALCODE\",\"label\":\"POSTALCODE\",\"newName\":\"POSTALCODE\",\"indexOrder\":2,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"8f0ac52a-5368-4d74-92fa-386ed32f152f\"},\"eee82292-8a68-4853-8ea4-010440543e78\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"STREET\",\"label\":\"STREET\",\"newName\":\"STREET\",\"indexOrder\":3,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"f9a74f5e-9adc-4647-876e-b92ea4475a60\"},\"01e05a31-20da-4136-8a4d-4a90dbc4c848\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"BUILDING\",\"label\":\"BUILDING\",\"newName\":\"BUILDING\",\"indexOrder\":4,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"4f54f08b-a812-46dd-be19-82162860487a\"},\"127e4eba-1356-479c-b3e4-0e731448fb03\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COUNTRY\",\"label\":\"COUNTRY\",\"newName\":\"COUNTRY\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"7f381c5f-91fc-4498-a1aa-eaa8454fc767\"},\"ba4b2d34-4def-4085-a1f2-ce8d4cae5fa5\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"REGION\",\"label\":\"REGION\",\"newName\":\"REGION\",\"indexOrder\":6,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"d1a7d61a-2db4-4000-8df7-8447a1846052\"},\"f723a2cb-f9c8-48e1-b519-c898cb4f7eb6\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSTYPE\",\"label\":\"ADDRESSTYPE\",\"newName\":\"ADDRESSTYPE\",\"indexOrder\":7,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"9d42ff53-8ba4-4e3c-b5d1-39df28adb62a\"},\"67635837-90c3-4dc0-916e-f2a851f060ad\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"VALIDITY_STARTDATE\",\"label\":\"VALIDITY_STARTDATE\",\"newName\":\"VALIDITY_STARTDATE\",\"indexOrder\":8,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"fe2bc393-5419-42f6-8c51-e08b92db3a60\"},\"534431fb-d70a-48ee-81ed-159bd27406ff\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"VALIDITY_ENDDATE\",\"label\":\"VALIDITY_ENDDATE\",\"newName\":\"VALIDITY_ENDDATE\",\"indexOrder\":9,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"f8fb2a5e-f5b2-429e-9803-17596fb89a81\"},\"b26fc02b-77c7-45bc-849d-587f45226cb9\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATITUDE\",\"label\":\"LATITUDE\",\"newName\":\"LATITUDE\",\"indexOrder\":10,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19,\"successorElement\":\"67ddcb51-2c22-4890-8a7f-8b09ae4e30f6\"},\"ba0d0d75-8740-4cd6-bbca-3af3f67c6807\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LONGITUDE\",\"label\":\"LONGITUDE\",\"newName\":\"LONGITUDE\",\"indexOrder\":11,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19,\"successorElement\":\"3969ebb6-ad01-4666-811c-41952eae4c4a\"},\"aad9062f-3430-4503-8841-880ab4af2893\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.EntitySymbol\",\"name\":\"Entity Symbol 1\",\"x\":-212,\"y\":-20,\"width\":160,\"displayName\":\"Entity Symbol 1\",\"object\":\"efd55e18-eb23-4eca-8f78-cca424fef688\"},\"6a006837-6fcc-41e4-b939-632e5668e964\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ID\",\"newName\":\"ID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"970eba46-80d3-4d1b-a95f-4e5adeaad8ff\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CITY\",\"label\":\"LOCALITY\",\"newName\":\"LOCALITY\",\"indexOrder\":1,\"length\":5000,\"precision\":0,\"scale\":0},\"5af34ed7-e9c6-40c7-9de1-4013d4035f0a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"POSTALCODE\",\"label\":\"POSTCODE\",\"newName\":\"POSTCODE\",\"indexOrder\":2,\"length\":5000,\"precision\":0,\"scale\":0},\"65b320f7-b3f8-4dc8-bf17-c5d7829ec049\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"STREET\",\"label\":\"MIXED\",\"newName\":\"MIXED\",\"indexOrder\":3,\"length\":5000,\"precision\":0,\"scale\":0},\"cb2cca55-9816-4325-8fc4-409c207e1bbf\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COUNTRY\",\"label\":\"COUNTRY\",\"newName\":\"COUNTRY\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0},\"a629dd49-b4a4-4d5b-ba8d-11b9e6fe4d9b\":{\"classDefinition\":\"sap.cdw.querybuilder.RenameElements\",\"_isProjectionNode\":false,\"name\":\"Projection 1\",\"elements\":{\"c34deed2-26ee-445a-be8a-dfa576c2c914\":{\"name\":\"ADDRESSID\"},\"b097c41e-aa31-4f64-820f-faad1c3cfefd\":{\"name\":\"CITY\"},\"8f0ac52a-5368-4d74-92fa-386ed32f152f\":{\"name\":\"POSTALCODE\"},\"f9a74f5e-9adc-4647-876e-b92ea4475a60\":{\"name\":\"STREET\"},\"4f54f08b-a812-46dd-be19-82162860487a\":{\"name\":\"BUILDING\"},\"7f381c5f-91fc-4498-a1aa-eaa8454fc767\":{\"name\":\"COUNTRY\"},\"d1a7d61a-2db4-4000-8df7-8447a1846052\":{\"name\":\"REGION\"},\"9d42ff53-8ba4-4e3c-b5d1-39df28adb62a\":{\"name\":\"ADDRESSTYPE\"},\"fe2bc393-5419-42f6-8c51-e08b92db3a60\":{\"name\":\"VALIDITY_STARTDATE\"},\"f8fb2a5e-f5b2-429e-9803-17596fb89a81\":{\"name\":\"VALIDITY_ENDDATE\"},\"67ddcb51-2c22-4890-8a7f-8b09ae4e30f6\":{\"name\":\"LATITUDE\"},\"3969ebb6-ad01-4666-811c-41952eae4c4a\":{\"name\":\"LONGITUDE\"}},\"successorNode\":\"ff29b4d1-d8d1-44bd-a00d-040d19f917d7\"},\"c34deed2-26ee-445a-be8a-dfa576c2c914\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ID\",\"newName\":\"ID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"6a006837-6fcc-41e4-b939-632e5668e964\"},\"b097c41e-aa31-4f64-820f-faad1c3cfefd\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CITY\",\"label\":\"LOCALITY\",\"newName\":\"LOCALITY\",\"indexOrder\":1,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"970eba46-80d3-4d1b-a95f-4e5adeaad8ff\"},\"8f0ac52a-5368-4d74-92fa-386ed32f152f\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"POSTALCODE\",\"label\":\"POSTCODE\",\"newName\":\"POSTCODE\",\"indexOrder\":2,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"5af34ed7-e9c6-40c7-9de1-4013d4035f0a\"},\"f9a74f5e-9adc-4647-876e-b92ea4475a60\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"STREET\",\"label\":\"MIXED\",\"newName\":\"MIXED\",\"indexOrder\":3,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"65b320f7-b3f8-4dc8-bf17-c5d7829ec049\"},\"4f54f08b-a812-46dd-be19-82162860487a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"BUILDING\",\"label\":\"BUILDING\",\"newName\":\"BUILDING\",\"isRemoved\":true,\"indexOrder\":4,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"7f381c5f-91fc-4498-a1aa-eaa8454fc767\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COUNTRY\",\"label\":\"COUNTRY\",\"newName\":\"COUNTRY\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"cb2cca55-9816-4325-8fc4-409c207e1bbf\"},\"d1a7d61a-2db4-4000-8df7-8447a1846052\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"REGION\",\"label\":\"REGION\",\"newName\":\"REGION\",\"isRemoved\":true,\"indexOrder\":6,\"length\":5000,\"precision\":0,\"scale\":0},\"9d42ff53-8ba4-4e3c-b5d1-39df28adb62a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSTYPE\",\"label\":\"ADDRESSTYPE\",\"newName\":\"ADDRESSTYPE\",\"isRemoved\":true,\"indexOrder\":7,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"fe2bc393-5419-42f6-8c51-e08b92db3a60\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"VALIDITY_STARTDATE\",\"label\":\"VALIDITY_STARTDATE\",\"newName\":\"VALIDITY_STARTDATE\",\"isRemoved\":true,\"indexOrder\":8,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0},\"f8fb2a5e-f5b2-429e-9803-17596fb89a81\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"VALIDITY_ENDDATE\",\"label\":\"VALIDITY_ENDDATE\",\"newName\":\"VALIDITY_ENDDATE\",\"isRemoved\":true,\"indexOrder\":9,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"67ddcb51-2c22-4890-8a7f-8b09ae4e30f6\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATITUDE\",\"label\":\"LATITUDE\",\"newName\":\"LATITUDE\",\"isRemoved\":true,\"indexOrder\":10,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19},\"3969ebb6-ad01-4666-811c-41952eae4c4a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LONGITUDE\",\"label\":\"LONGITUDE\",\"newName\":\"LONGITUDE\",\"isRemoved\":true,\"indexOrder\":11,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19},\"96ddbe4a-e8ab-4df9-8efe-a8366aae9ccc\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.RenameSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":-2,\"y\":-16,\"object\":\"a629dd49-b4a4-4d5b-ba8d-11b9e6fe4d9b\"},\"c7c72cc8-aced-4e67-a827-33899325ff23\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"-52,0 -2,0\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"aad9062f-3430-4503-8841-880ab4af2893\",\"targetSymbol\":\"96ddbe4a-e8ab-4df9-8efe-a8366aae9ccc\"},\"8ecc584a-21ef-4cef-aa32-035e4e8ed23d\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"46,0 96,0\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"96ddbe4a-e8ab-4df9-8efe-a8366aae9ccc\",\"targetSymbol\":\"82d5ce01-73ec-4feb-b67e-7b54fab42612\"}}}"
+    }
+  },
+  "$version": "1.0"
+}

@@ -1,0 +1,1645 @@
+{
+  "definitions": {
+    "SalesOrders_Model": {
+      "kind": "entity",
+      "@EndUserText.label": "SalesOrders_Model",
+      "elements": {
+        "COMPANYNAME": {
+          "@EndUserText.label": "COMPANYNAME",
+          "@ObjectModel.foreignKey.association": {
+            "=": "_Addresses∞0"
+          }
+        },
+        "_Addresses∞0": {
+          "type": "cds.Association",
+          "on": [
+            {
+              "ref": [
+                "COMPANYNAME"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "_Addresses∞0",
+                "COMPANYNAME"
+              ]
+            }
+          ],
+          "target": "Addresses_Location",
+          "@EndUserText.label": "COMPANYNAME"
+        },
+        "SALESORDERID": {
+          "@EndUserText.label": "SALESORDERID"
+        },
+        "CREATEDBY": {
+          "@EndUserText.label": "CREATEDBY"
+        },
+        "CREATEDAT": {
+          "@EndUserText.label": "CREATEDAT"
+        },
+        "CHANGEDBY": {
+          "@EndUserText.label": "CHANGEDBY"
+        },
+        "CHANGEDAT": {
+          "@EndUserText.label": "CHANGEDAT"
+        },
+        "FISCVARIANT": {
+          "@EndUserText.label": "FISCVARIANT"
+        },
+        "FISCALYEARPERIOD": {
+          "@EndUserText.label": "FISCALYEARPERIOD"
+        },
+        "NOTEID": {
+          "@EndUserText.label": "NOTEID"
+        },
+        "PARTNERID": {
+          "@EndUserText.label": "PARTNERID"
+        },
+        "SALESORG": {
+          "@EndUserText.label": "SALESORG"
+        },
+        "CURRENCY": {
+          "@EndUserText.label": "CURRENCY"
+        },
+        "TAXAMOUNT": {
+          "@EndUserText.label": "TAXAMOUNT"
+        },
+        "LIFECYCLESTATUS": {
+          "@EndUserText.label": "LIFECYCLESTATUS"
+        },
+        "BILLINGSTATUS": {
+          "@EndUserText.label": "BILLINGSTATUS"
+        },
+        "DELIVERYSTATUS": {
+          "@EndUserText.label": "DELIVERYSTATUS"
+        },
+        "PARTNERROLE": {
+          "@EndUserText.label": "PARTNERROLE"
+        },
+        "EMAILADDRESS": {
+          "@EndUserText.label": "EMAILADDRESS"
+        },
+        "PHONENUMBER": {
+          "@EndUserText.label": "PHONENUMBER"
+        },
+        "FAXNUMBER": {
+          "@EndUserText.label": "FAXNUMBER"
+        },
+        "WEBADDRESS": {
+          "@EndUserText.label": "WEBADDRESS"
+        },
+        "ADDRESSID": {
+          "@EndUserText.label": "ADDRESSID"
+        },
+        "LEGALFORM": {
+          "@EndUserText.label": "LEGALFORM"
+        },
+        "ID": {
+          "@EndUserText.label": "ID",
+          "@Analytics.navigationAttributeRef": [
+            "_Addresses∞0",
+            "ID"
+          ]
+        },
+        "LATLONG": {
+          "@EndUserText.label": "LATLONG",
+          "@Analytics.navigationAttributeRef": [
+            "_Addresses∞0",
+            "LATLONG"
+          ]
+        },
+        "LATITUDE": {
+          "@EndUserText.label": "LATITUDE",
+          "@Analytics.navigationAttributeRef": [
+            "_Addresses∞0",
+            "LATITUDE"
+          ]
+        },
+        "LONGITUDE": {
+          "@EndUserText.label": "LONGITUDE",
+          "@Analytics.navigationAttributeRef": [
+            "_Addresses∞0",
+            "LONGITUDE"
+          ]
+        },
+        "GEO_ASMT_LEVEL": {
+          "@EndUserText.label": "GEO_ASMT_LEVEL",
+          "@Analytics.navigationAttributeRef": [
+            "_Addresses∞0",
+            "GEO_ASMT_LEVEL"
+          ]
+        },
+        "PARTNERID1": {
+          "@EndUserText.label": "PARTNERID",
+          "@Analytics.navigationAttributeRef": [
+            "_Addresses∞0",
+            "PARTNERID"
+          ]
+        },
+        "ADDRESSID1": {
+          "@EndUserText.label": "ADDRESSID",
+          "@Analytics.navigationAttributeRef": [
+            "_Addresses∞0",
+            "ADDRESSID"
+          ]
+        },
+        "LATLONG_2": {
+          "@EndUserText.label": "LATLONG_2",
+          "@Analytics.navigationAttributeRef": [
+            "_Addresses∞0",
+            "LATLONG_2"
+          ]
+        },
+        "GROSSAMOUNT": {
+          "@EndUserText.label": "GROSSAMOUNT",
+          "@AnalyticsDetails.measureType": {
+            "#": "BASE"
+          }
+        },
+        "NETAMOUNT": {
+          "@EndUserText.label": "NETAMOUNT",
+          "@AnalyticsDetails.measureType": {
+            "#": "BASE"
+          }
+        }
+      },
+      "@ObjectModel.modelingPattern": {
+        "#": "ANALYTICAL_CUBE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "ANALYTICAL_PROVIDER"
+        }
+      ],
+      "@DataWarehouse.editorType": {
+        "#": "DWCQueryModelEditor"
+      },
+      "@DataWarehouse.hanaCatalog.viewType": {
+        "#": "CALCULATION_VIEW"
+      },
+      "@DataWarehouse.consumption.external": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "SalesOrders_View"
+            ],
+            "as": "SalesOrders_View"
+          },
+          "columns": [
+            {
+              "ref": [
+                "SalesOrders_View",
+                "COMPANYNAME"
+              ],
+              "as": "COMPANYNAME"
+            },
+            {
+              "ref": [
+                "_Addresses∞0"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "SALESORDERID"
+              ],
+              "as": "SALESORDERID"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "CREATEDBY"
+              ],
+              "as": "CREATEDBY"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "CREATEDAT"
+              ],
+              "as": "CREATEDAT"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "CHANGEDBY"
+              ],
+              "as": "CHANGEDBY"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "CHANGEDAT"
+              ],
+              "as": "CHANGEDAT"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "FISCVARIANT"
+              ],
+              "as": "FISCVARIANT"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "FISCALYEARPERIOD"
+              ],
+              "as": "FISCALYEARPERIOD"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "NOTEID"
+              ],
+              "as": "NOTEID"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "PARTNERID"
+              ],
+              "as": "PARTNERID"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "SALESORG"
+              ],
+              "as": "SALESORG"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "CURRENCY"
+              ],
+              "as": "CURRENCY"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "TAXAMOUNT"
+              ],
+              "as": "TAXAMOUNT"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "LIFECYCLESTATUS"
+              ],
+              "as": "LIFECYCLESTATUS"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "BILLINGSTATUS"
+              ],
+              "as": "BILLINGSTATUS"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "DELIVERYSTATUS"
+              ],
+              "as": "DELIVERYSTATUS"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "PARTNERROLE"
+              ],
+              "as": "PARTNERROLE"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "EMAILADDRESS"
+              ],
+              "as": "EMAILADDRESS"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "PHONENUMBER"
+              ],
+              "as": "PHONENUMBER"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "FAXNUMBER"
+              ],
+              "as": "FAXNUMBER"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "WEBADDRESS"
+              ],
+              "as": "WEBADDRESS"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "ADDRESSID"
+              ],
+              "as": "ADDRESSID"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "LEGALFORM"
+              ],
+              "as": "LEGALFORM"
+            },
+            {
+              "ref": [
+                "_Addresses∞0",
+                "ID"
+              ],
+              "as": "ID"
+            },
+            {
+              "ref": [
+                "_Addresses∞0",
+                "LATLONG"
+              ],
+              "as": "LATLONG"
+            },
+            {
+              "ref": [
+                "_Addresses∞0",
+                "LATITUDE"
+              ],
+              "as": "LATITUDE"
+            },
+            {
+              "ref": [
+                "_Addresses∞0",
+                "LONGITUDE"
+              ],
+              "as": "LONGITUDE"
+            },
+            {
+              "ref": [
+                "_Addresses∞0",
+                "GEO_ASMT_LEVEL"
+              ],
+              "as": "GEO_ASMT_LEVEL"
+            },
+            {
+              "ref": [
+                "_Addresses∞0",
+                "PARTNERID"
+              ],
+              "as": "PARTNERID1"
+            },
+            {
+              "ref": [
+                "_Addresses∞0",
+                "ADDRESSID"
+              ],
+              "as": "ADDRESSID1"
+            },
+            {
+              "ref": [
+                "_Addresses∞0",
+                "LATLONG_2"
+              ],
+              "as": "LATLONG_2"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "GROSSAMOUNT"
+              ],
+              "as": "GROSSAMOUNT"
+            },
+            {
+              "ref": [
+                "SalesOrders_View",
+                "NETAMOUNT"
+              ],
+              "as": "NETAMOUNT"
+            }
+          ],
+          "mixin": {
+            "_Addresses∞0": {
+              "type": "cds.Association",
+              "on": [
+                {
+                  "ref": [
+                    "$projection",
+                    "COMPANYNAME"
+                  ]
+                },
+                "=",
+                {
+                  "ref": [
+                    "_Addresses∞0",
+                    "COMPANYNAME"
+                  ]
+                }
+              ],
+              "target": "Addresses_Location",
+              "@EndUserText.label": "COMPANYNAME"
+            }
+          }
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "BusinessPartners": {
+      "kind": "entity",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.dataSource.schema": "HN_RMS#WRG_HYE65HAQ94CFXBYU",
+      "@DataWarehouse.dataSource.entity": "sap.dataset.conf_b8feaf71-2460-4cbe-8978-4411a1f62ed3_view",
+      "@EndUserText.label": "BusinessPartners",
+      "elements": {
+        "PARTNERID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "PARTNERID"
+        },
+        "PARTNERROLE": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "PARTNERROLE"
+        },
+        "EMAILADDRESS": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "EMAILADDRESS"
+        },
+        "PHONENUMBER": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "PHONENUMBER"
+        },
+        "FAXNUMBER": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "FAXNUMBER"
+        },
+        "WEBADDRESS": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "WEBADDRESS"
+        },
+        "ADDRESSID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "ADDRESSID"
+        },
+        "COMPANYNAME": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "COMPANYNAME"
+        },
+        "LEGALFORM": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "LEGALFORM"
+        },
+        "CREATEDBY": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "CREATEDBY"
+        },
+        "CREATEDAT": {
+          "type": "cds.Date",
+          "@EndUserText.label": "CREATEDAT"
+        },
+        "CHANGEDBY": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "CHANGEDBY"
+        },
+        "CHANGEDAT": {
+          "type": "cds.Date",
+          "@EndUserText.label": "CHANGEDAT"
+        },
+        "CURRENCY": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "CURRENCY"
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "Addresses_View_GEO": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "ID"
+        },
+        "LATLONG": {
+          "type": "cds.hana.ST_GEOMETRY",
+          "srid": 3857,
+          "@EndUserText.label": "LATLONG"
+        },
+        "LATITUDE": {
+          "type": "cds.Double",
+          "@EndUserText.label": "LATITUDE"
+        },
+        "LONGITUDE": {
+          "type": "cds.Double",
+          "@EndUserText.label": "LONGITUDE"
+        },
+        "GEO_ASMT_LEVEL": {
+          "type": "cds.String",
+          "length": 4,
+          "@EndUserText.label": "GEO_ASMT_LEVEL"
+        }
+      },
+      "@DataWarehouse.external.schema": "HN_RMS#DQMM",
+      "@DataWarehouse.external.entity": "Addresses_View_GEO",
+      "@EndUserText.label": "Addresses_View_GEO",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "Addresses_Location": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "@EndUserText.label": "ID",
+          "type": "cds.Integer64"
+        },
+        "LATLONG": {
+          "@DataWarehouse.spatial.resultOnError": {
+            "#": "NULL"
+          },
+          "@EndUserText.label": "LATLONG",
+          "srid": 3857,
+          "type": "cds.hana.ST_GEOMETRY",
+          "@Analytics.dimension": true
+        },
+        "LATITUDE": {
+          "@EndUserText.label": "LATITUDE",
+          "type": "cds.Double"
+        },
+        "LONGITUDE": {
+          "@EndUserText.label": "LONGITUDE",
+          "type": "cds.Double"
+        },
+        "GEO_ASMT_LEVEL": {
+          "@EndUserText.label": "GEO_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 4,
+          "@Analytics.dimension": true
+        },
+        "PARTNERID": {
+          "@EndUserText.label": "PARTNERID",
+          "type": "cds.Integer64"
+        },
+        "ADDRESSID": {
+          "@EndUserText.label": "ADDRESSID",
+          "type": "cds.Integer64"
+        },
+        "COMPANYNAME": {
+          "@EndUserText.label": "COMPANYNAME",
+          "type": "cds.String",
+          "length": 5000,
+          "key": true,
+          "@Analytics.dimension": true,
+          "notNull": true
+        },
+        "LATLONG_2": {
+          "@DataWarehouse.spatial.resultOnError": {
+            "#": "NULL"
+          },
+          "@EndUserText.label": "LATLONG_2",
+          "srid": 4326,
+          "type": "cds.hana.ST_GEOMETRY"
+        }
+      },
+      "query": {
+        "SELECT": {
+          "from": {
+            "join": "inner",
+            "args": [
+              {
+                "SELECT": {
+                  "from": {
+                    "ref": [
+                      "Addresses_View_GEO"
+                    ]
+                  },
+                  "columns": [
+                    {
+                      "ref": [
+                        "Addresses_View_GEO",
+                        "ID"
+                      ]
+                    },
+                    {
+                      "ref": [
+                        "Addresses_View_GEO",
+                        "LATLONG"
+                      ]
+                    },
+                    {
+                      "ref": [
+                        "Addresses_View_GEO",
+                        "LATITUDE"
+                      ]
+                    },
+                    {
+                      "ref": [
+                        "Addresses_View_GEO",
+                        "LONGITUDE"
+                      ]
+                    },
+                    {
+                      "ref": [
+                        "Addresses_View_GEO",
+                        "GEO_ASMT_LEVEL"
+                      ]
+                    }
+                  ],
+                  "where": [
+                    {
+                      "ref": [
+                        "Addresses_View_GEO",
+                        "LATLONG"
+                      ]
+                    },
+                    "is",
+                    "not",
+                    "null"
+                  ]
+                },
+                "as": "Filter 1"
+              },
+              {
+                "ref": [
+                  "BusinessPartners"
+                ]
+              }
+            ],
+            "on": [
+              {
+                "ref": [
+                  "Filter 1",
+                  "ID"
+                ]
+              },
+              "=",
+              {
+                "ref": [
+                  "BusinessPartners",
+                  "ADDRESSID"
+                ]
+              }
+            ]
+          },
+          "columns": [
+            {
+              "as": "ID",
+              "ref": [
+                "Filter 1",
+                "ID"
+              ]
+            },
+            {
+              "as": "LATLONG",
+              "ref": [
+                "Filter 1",
+                "LATLONG"
+              ]
+            },
+            {
+              "as": "LATITUDE",
+              "ref": [
+                "Filter 1",
+                "LATITUDE"
+              ]
+            },
+            {
+              "as": "LONGITUDE",
+              "ref": [
+                "Filter 1",
+                "LONGITUDE"
+              ]
+            },
+            {
+              "as": "GEO_ASMT_LEVEL",
+              "ref": [
+                "Filter 1",
+                "GEO_ASMT_LEVEL"
+              ]
+            },
+            {
+              "as": "PARTNERID",
+              "ref": [
+                "BusinessPartners",
+                "PARTNERID"
+              ]
+            },
+            {
+              "as": "ADDRESSID",
+              "ref": [
+                "BusinessPartners",
+                "ADDRESSID"
+              ]
+            },
+            {
+              "as": "COMPANYNAME",
+              "key": true,
+              "ref": [
+                "BusinessPartners",
+                "COMPANYNAME"
+              ]
+            },
+            {
+              "as": "LATLONG_2",
+              "func": "ST_GeomFromText",
+              "args": [
+                {
+                  "xpr": [
+                    {
+                      "val": "POINT("
+                    },
+                    "||",
+                    {
+                      "ref": [
+                        "Filter 1",
+                        "LONGITUDE"
+                      ]
+                    },
+                    "||",
+                    {
+                      "val": " "
+                    },
+                    "||",
+                    {
+                      "ref": [
+                        "Filter 1",
+                        "LATITUDE"
+                      ]
+                    },
+                    "||",
+                    {
+                      "val": ")"
+                    }
+                  ]
+                },
+                {
+                  "val": 4326
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "ANALYTICAL_DIMENSION"
+        }
+      ],
+      "@EndUserText.label": "Addresses_Location",
+      "@ObjectModel.modelingPattern": {
+        "#": "ANALYTICAL_DIMENSION"
+      },
+      "@DataWarehouse.consumption.external": false,
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "SalesOrders": {
+      "kind": "entity",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.dataSource.schema": "HN_RMS#WRG_HYE65HAQ94CFXBYU",
+      "@DataWarehouse.dataSource.entity": "sap.dataset.conf_91980af5-61bb-46f7-87e0-4bf551221be8_view",
+      "@EndUserText.label": "SalesOrders",
+      "elements": {
+        "SALESORDERID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "SALESORDERID"
+        },
+        "CREATEDBY": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "CREATEDBY"
+        },
+        "CREATEDAT": {
+          "type": "cds.Date",
+          "@EndUserText.label": "CREATEDAT"
+        },
+        "CHANGEDBY": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "CHANGEDBY"
+        },
+        "CHANGEDAT": {
+          "type": "cds.Date",
+          "@EndUserText.label": "CHANGEDAT"
+        },
+        "FISCVARIANT": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "FISCVARIANT"
+        },
+        "FISCALYEARPERIOD": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "FISCALYEARPERIOD"
+        },
+        "NOTEID": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "NOTEID"
+        },
+        "PARTNERID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "PARTNERID"
+        },
+        "SALESORG": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "SALESORG"
+        },
+        "CURRENCY": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "CURRENCY"
+        },
+        "GROSSAMOUNT": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "GROSSAMOUNT"
+        },
+        "NETAMOUNT": {
+          "type": "cds.Decimal",
+          "precision": 38,
+          "scale": 19,
+          "@EndUserText.label": "NETAMOUNT"
+        },
+        "TAXAMOUNT": {
+          "type": "cds.Decimal",
+          "precision": 38,
+          "scale": 19,
+          "@EndUserText.label": "TAXAMOUNT"
+        },
+        "LIFECYCLESTATUS": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "LIFECYCLESTATUS"
+        },
+        "BILLINGSTATUS": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "BILLINGSTATUS"
+        },
+        "DELIVERYSTATUS": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "DELIVERYSTATUS"
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "SalesOrders_View": {
+      "kind": "entity",
+      "elements": {
+        "SALESORDERID": {
+          "@EndUserText.label": "SALESORDERID",
+          "type": "cds.Integer64"
+        },
+        "CREATEDBY": {
+          "@EndUserText.label": "CREATEDBY",
+          "type": "cds.Integer64"
+        },
+        "CREATEDAT": {
+          "@EndUserText.label": "CREATEDAT",
+          "type": "cds.Date"
+        },
+        "CHANGEDBY": {
+          "@EndUserText.label": "CHANGEDBY",
+          "type": "cds.Integer64"
+        },
+        "CHANGEDAT": {
+          "@EndUserText.label": "CHANGEDAT",
+          "type": "cds.Date"
+        },
+        "FISCVARIANT": {
+          "@EndUserText.label": "FISCVARIANT",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "FISCALYEARPERIOD": {
+          "@EndUserText.label": "FISCALYEARPERIOD",
+          "type": "cds.Integer64"
+        },
+        "NOTEID": {
+          "@EndUserText.label": "NOTEID",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "PARTNERID": {
+          "@EndUserText.label": "PARTNERID",
+          "type": "cds.Integer64"
+        },
+        "SALESORG": {
+          "@EndUserText.label": "SALESORG",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "CURRENCY": {
+          "@EndUserText.label": "CURRENCY",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "GROSSAMOUNT": {
+          "@EndUserText.label": "GROSSAMOUNT",
+          "type": "cds.Integer64",
+          "@AnalyticsDetails.measureType": {
+            "#": "BASE"
+          },
+          "@Aggregation.default": {
+            "#": "SUM"
+          }
+        },
+        "NETAMOUNT": {
+          "@EndUserText.label": "NETAMOUNT",
+          "precision": 38,
+          "scale": 19,
+          "type": "cds.Decimal",
+          "@AnalyticsDetails.measureType": {
+            "#": "BASE"
+          },
+          "@Aggregation.default": {
+            "#": "SUM"
+          }
+        },
+        "TAXAMOUNT": {
+          "@EndUserText.label": "TAXAMOUNT",
+          "precision": 38,
+          "scale": 19,
+          "type": "cds.Decimal"
+        },
+        "LIFECYCLESTATUS": {
+          "@EndUserText.label": "LIFECYCLESTATUS",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "BILLINGSTATUS": {
+          "@EndUserText.label": "BILLINGSTATUS",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "DELIVERYSTATUS": {
+          "@EndUserText.label": "DELIVERYSTATUS",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "PARTNERROLE": {
+          "@EndUserText.label": "PARTNERROLE",
+          "type": "cds.Integer64"
+        },
+        "EMAILADDRESS": {
+          "@EndUserText.label": "EMAILADDRESS",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "PHONENUMBER": {
+          "@EndUserText.label": "PHONENUMBER",
+          "type": "cds.Integer64"
+        },
+        "FAXNUMBER": {
+          "@EndUserText.label": "FAXNUMBER",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "WEBADDRESS": {
+          "@EndUserText.label": "WEBADDRESS",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "ADDRESSID": {
+          "@EndUserText.label": "ADDRESSID",
+          "type": "cds.Integer64"
+        },
+        "COMPANYNAME": {
+          "@EndUserText.label": "COMPANYNAME",
+          "type": "cds.String",
+          "length": 5000,
+          "@ObjectModel.foreignKey.association": {
+            "=": "_Addresses"
+          }
+        },
+        "LEGALFORM": {
+          "@EndUserText.label": "LEGALFORM",
+          "type": "cds.String",
+          "length": 5000
+        },
+        "_Addresses": {
+          "type": "cds.Association",
+          "on": [
+            {
+              "ref": [
+                "COMPANYNAME"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "_Addresses",
+                "COMPANYNAME"
+              ]
+            }
+          ],
+          "target": "Addresses_Location",
+          "@EndUserText.label": "View 1 to Addresses_Location"
+        }
+      },
+      "query": {
+        "SELECT": {
+          "from": {
+            "join": "inner",
+            "args": [
+              {
+                "ref": [
+                  "SalesOrders"
+                ]
+              },
+              {
+                "ref": [
+                  "BusinessPartners"
+                ]
+              }
+            ],
+            "on": [
+              {
+                "ref": [
+                  "SalesOrders",
+                  "PARTNERID"
+                ]
+              },
+              "=",
+              {
+                "ref": [
+                  "BusinessPartners",
+                  "PARTNERID"
+                ]
+              }
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "SalesOrders",
+                "SALESORDERID"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "CREATEDBY"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "CREATEDAT"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "CHANGEDBY"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "CHANGEDAT"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "FISCVARIANT"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "FISCALYEARPERIOD"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "NOTEID"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "PARTNERID"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "SALESORG"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "CURRENCY"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "GROSSAMOUNT"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "NETAMOUNT"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "TAXAMOUNT"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "LIFECYCLESTATUS"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "BILLINGSTATUS"
+              ]
+            },
+            {
+              "ref": [
+                "SalesOrders",
+                "DELIVERYSTATUS"
+              ]
+            },
+            {
+              "ref": [
+                "BusinessPartners",
+                "PARTNERROLE"
+              ]
+            },
+            {
+              "ref": [
+                "BusinessPartners",
+                "EMAILADDRESS"
+              ]
+            },
+            {
+              "ref": [
+                "BusinessPartners",
+                "PHONENUMBER"
+              ]
+            },
+            {
+              "ref": [
+                "BusinessPartners",
+                "FAXNUMBER"
+              ]
+            },
+            {
+              "ref": [
+                "BusinessPartners",
+                "WEBADDRESS"
+              ]
+            },
+            {
+              "ref": [
+                "BusinessPartners",
+                "ADDRESSID"
+              ]
+            },
+            {
+              "ref": [
+                "BusinessPartners",
+                "COMPANYNAME"
+              ]
+            },
+            {
+              "ref": [
+                "BusinessPartners",
+                "LEGALFORM"
+              ]
+            },
+            {
+              "ref": [
+                "_Addresses"
+              ]
+            }
+          ],
+          "mixin": {
+            "_Addresses": {
+              "type": "cds.Association",
+              "@EndUserText.label": "View 1 to Addresses_Location",
+              "on": [
+                {
+                  "ref": [
+                    "$projection",
+                    "COMPANYNAME"
+                  ]
+                },
+                "=",
+                {
+                  "ref": [
+                    "_Addresses",
+                    "COMPANYNAME"
+                  ]
+                }
+              ],
+              "target": "Addresses_Location"
+            }
+          }
+        }
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@EndUserText.label": "SalesOrders_View",
+      "@ObjectModel.modelingPattern": {
+        "#": "ANALYTICAL_FACT"
+      },
+      "@DataWarehouse.consumption.external": false,
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "businessLayerDefinitions": {
+    "SalesOrders_Model": {
+      "identifier": {
+        "key": "SalesOrders_Model"
+      },
+      "text": "SalesOrders_Model",
+      "sourceModel": {
+        "factSources": {
+          "0": {
+            "text": "SalesOrders_View",
+            "dataEntity": {
+              "key": "SalesOrders_View"
+            }
+          }
+        },
+        "dimensionSources": {
+          "0": {
+            "text": "COMPANYNAME",
+            "dataEntity": {
+              "key": "Addresses_Location"
+            },
+            "associationContexts": [
+              {
+                "sourceKey": "0",
+                "sourceType": "AnalyticModelSourceType.Fact",
+                "associationSteps": [
+                  "_Addresses"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "exposedAssociations": {},
+      "attributes": {
+        "SALESORDERID": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "SALESORDERID"
+            }
+          },
+          "text": "SALESORDERID"
+        },
+        "CREATEDBY": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "CREATEDBY"
+            }
+          },
+          "text": "CREATEDBY"
+        },
+        "CREATEDAT": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "CREATEDAT"
+            }
+          },
+          "text": "CREATEDAT"
+        },
+        "CHANGEDBY": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "CHANGEDBY"
+            }
+          },
+          "text": "CHANGEDBY"
+        },
+        "CHANGEDAT": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "CHANGEDAT"
+            }
+          },
+          "text": "CHANGEDAT"
+        },
+        "FISCVARIANT": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "FISCVARIANT"
+            }
+          },
+          "text": "FISCVARIANT"
+        },
+        "FISCALYEARPERIOD": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "FISCALYEARPERIOD"
+            }
+          },
+          "text": "FISCALYEARPERIOD"
+        },
+        "NOTEID": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "NOTEID"
+            }
+          },
+          "text": "NOTEID"
+        },
+        "PARTNERID": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "PARTNERID"
+            }
+          },
+          "text": "PARTNERID"
+        },
+        "SALESORG": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "SALESORG"
+            }
+          },
+          "text": "SALESORG"
+        },
+        "CURRENCY": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "CURRENCY"
+            }
+          },
+          "text": "CURRENCY"
+        },
+        "TAXAMOUNT": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "TAXAMOUNT"
+            }
+          },
+          "text": "TAXAMOUNT"
+        },
+        "LIFECYCLESTATUS": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "LIFECYCLESTATUS"
+            }
+          },
+          "text": "LIFECYCLESTATUS"
+        },
+        "BILLINGSTATUS": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "BILLINGSTATUS"
+            }
+          },
+          "text": "BILLINGSTATUS"
+        },
+        "DELIVERYSTATUS": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "DELIVERYSTATUS"
+            }
+          },
+          "text": "DELIVERYSTATUS"
+        },
+        "PARTNERROLE": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "PARTNERROLE"
+            }
+          },
+          "text": "PARTNERROLE"
+        },
+        "EMAILADDRESS": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "EMAILADDRESS"
+            }
+          },
+          "text": "EMAILADDRESS"
+        },
+        "PHONENUMBER": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "PHONENUMBER"
+            }
+          },
+          "text": "PHONENUMBER"
+        },
+        "FAXNUMBER": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "FAXNUMBER"
+            }
+          },
+          "text": "FAXNUMBER"
+        },
+        "WEBADDRESS": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "WEBADDRESS"
+            }
+          },
+          "text": "WEBADDRESS"
+        },
+        "ADDRESSID": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "ADDRESSID"
+            }
+          },
+          "text": "ADDRESSID"
+        },
+        "COMPANYNAME": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "COMPANYNAME"
+            }
+          },
+          "text": "COMPANYNAME"
+        },
+        "LEGALFORM": {
+          "attributeType": "AnalyticModelAttributeType.FactSourceAttribute",
+          "attributeMapping": {
+            "0": {
+              "key": "LEGALFORM"
+            }
+          },
+          "text": "LEGALFORM"
+        },
+        "ID": {
+          "attributeType": "AnalyticModelAttributeType.DimensionSourceAttribute",
+          "sourceKey": "0",
+          "key": "ID",
+          "text": "ID"
+        },
+        "LATLONG": {
+          "attributeType": "AnalyticModelAttributeType.DimensionSourceAttribute",
+          "sourceKey": "0",
+          "key": "LATLONG",
+          "text": "LATLONG"
+        },
+        "LATITUDE": {
+          "attributeType": "AnalyticModelAttributeType.DimensionSourceAttribute",
+          "sourceKey": "0",
+          "key": "LATITUDE",
+          "text": "LATITUDE"
+        },
+        "LONGITUDE": {
+          "attributeType": "AnalyticModelAttributeType.DimensionSourceAttribute",
+          "sourceKey": "0",
+          "key": "LONGITUDE",
+          "text": "LONGITUDE"
+        },
+        "GEO_ASMT_LEVEL": {
+          "attributeType": "AnalyticModelAttributeType.DimensionSourceAttribute",
+          "sourceKey": "0",
+          "key": "GEO_ASMT_LEVEL",
+          "text": "GEO_ASMT_LEVEL"
+        },
+        "PARTNERID1": {
+          "attributeType": "AnalyticModelAttributeType.DimensionSourceAttribute",
+          "sourceKey": "0",
+          "key": "PARTNERID",
+          "text": "PARTNERID"
+        },
+        "ADDRESSID1": {
+          "attributeType": "AnalyticModelAttributeType.DimensionSourceAttribute",
+          "sourceKey": "0",
+          "key": "ADDRESSID",
+          "text": "ADDRESSID"
+        },
+        "LATLONG_2": {
+          "attributeType": "AnalyticModelAttributeType.DimensionSourceAttribute",
+          "sourceKey": "0",
+          "key": "LATLONG_2",
+          "text": "LATLONG_2"
+        }
+      },
+      "measures": {
+        "GROSSAMOUNT": {
+          "measureType": "AnalyticModelMeasureType.FactSourceMeasure",
+          "sourceKey": "0",
+          "text": "GROSSAMOUNT",
+          "key": "GROSSAMOUNT",
+          "isAuxiliary": false
+        },
+        "NETAMOUNT": {
+          "measureType": "AnalyticModelMeasureType.FactSourceMeasure",
+          "sourceKey": "0",
+          "text": "NETAMOUNT",
+          "key": "NETAMOUNT",
+          "isAuxiliary": false
+        }
+      },
+      "version": "1.3.1",
+      "supportedCapabilities": {},
+      "variables": {}
+    }
+  },
+  "editorSettings": {
+    "Addresses_Location": {
+      "editor": {
+        "lastModifier": "GRAPHICALVIEWBUILDER",
+        "default": "GRAPHICALVIEWBUILDER"
+      },
+      "uiModel": "{\"contents\":{\"bb829dc7-a244-4fbe-b9d0-d1de17d4b6f7\":{\"classDefinition\":\"sap.cdw.querybuilder.Model\",\"name\":\"Addresses_Location\",\"label\":\"Addresses_Location\",\"modificationDate\":1716333563375,\"deploymentDate\":1716330257871,\"#objectStatus\":\"2\",\"output\":\"83ced7fc-47cf-4333-811b-d2bc12cc4b73\",\"nodes\":{\"83ced7fc-47cf-4333-811b-d2bc12cc4b73\":{\"name\":\"Addresses_Location\"},\"29573387-9423-4a98-b57b-b3f38a401af1\":{\"name\":\"Addresses_View_GEO\"},\"eb5a5580-b5de-4c52-9c46-b3de6089e0f3\":{\"name\":\"Filter 1\"},\"001687f9-69ea-4fee-8c2e-2e7d3181a3c4\":{\"name\":\"BusinessPartners\"},\"85e649df-ffd9-45b3-b7d2-888ac0ee6ae8\":{\"name\":\"Projection 1\"},\"3c9bf55d-9c40-4d94-8f64-258ddb4c4291\":{\"name\":\"Join 2\"},\"45373d91-d849-4e49-906e-30adc426f194\":{\"name\":\"Calculated Columns 1\"}},\"diagrams\":{\"fd8edd94-11ef-46b2-8583-03918553399d\":{}}},\"83ced7fc-47cf-4333-811b-d2bc12cc4b73\":{\"classDefinition\":\"sap.cdw.querybuilder.Output\",\"name\":\"Addresses_Location\",\"type\":\"graphicView\",\"isPinToMemoryEnabled\":false,\"dataCategory\":\"DIMENSION\",\"isAllowConsumption\":false,\"modificationDate\":1716333563375,\"deploymentDate\":1716330257871,\"#objectStatus\":\"2\",\"packageValue\":\"DQMM_GEO\",\"elements\":{\"3d0ed836-2eae-48ce-a45a-d1604db80c44\":{\"name\":\"ID\"},\"5335f993-8b74-4582-a24d-fb2da636c44c\":{\"name\":\"LATLONG\"},\"6ca97c03-95c4-4229-8ef4-32de2cc8f631\":{\"name\":\"LATITUDE\"},\"f2ac3f40-5694-40ad-82fd-1603155ec437\":{\"name\":\"LONGITUDE\"},\"dfdb0313-abd3-403a-956e-c85aecb99cfa\":{\"name\":\"GEO_ASMT_LEVEL\"},\"fa72eabf-1e14-411f-b353-5088cf7c6440\":{\"name\":\"PARTNERID\"},\"d23ca1b7-f23b-4cca-b843-b907a82cab02\":{\"name\":\"ADDRESSID\"},\"d2cdf7ba-85e0-40c0-b3b3-32b18e9deda4\":{\"name\":\"COMPANYNAME\"},\"cb307f9f-49e8-4d85-906f-c7b1fb176ecf\":{\"name\":\"Location\"}}},\"29573387-9423-4a98-b57b-b3f38a401af1\":{\"classDefinition\":\"sap.cdw.querybuilder.Entity\",\"name\":\"Addresses_View_GEO\",\"label\":\"Addresses_View_GEO\",\"type\":9,\"localSchema\":{\"schema\":\"HN_RMS#DQMM\",\"table\":\"Addresses_View_GEO\"},\"isPinToMemoryEnabled\":false,\"isHiddenInUi\":false,\"modificationDate\":1716324949684,\"deploymentDate\":1716324958412,\"#objectStatus\":\"1\",\"packageValue\":\"DQMM_GEO\",\"elements\":{\"b345446d-bf4a-443a-8d8a-04317b5050fc\":{\"name\":\"ID\"},\"c8e45666-3842-4a29-9836-6bbf5de3bde1\":{\"name\":\"LATLONG\"},\"2cd984c6-e2d9-4fc7-a0d1-0566906ace2b\":{\"name\":\"LATITUDE\"},\"84f55aba-eebc-4281-b027-8aecb7db1a12\":{\"name\":\"LONGITUDE\"},\"30ca06bc-a97b-47b7-8485-5ebdae65dd4e\":{\"name\":\"GEO_ASMT_LEVEL\"}},\"successorNode\":\"eb5a5580-b5de-4c52-9c46-b3de6089e0f3\"},\"eb5a5580-b5de-4c52-9c46-b3de6089e0f3\":{\"classDefinition\":\"sap.cdw.querybuilder.Filter\",\"condition\":\"LATLONG IS NOT NULL\",\"name\":\"Filter 1\",\"elements\":{\"8b1dc21b-b705-48a6-bfb9-23880fccb9ba\":{\"name\":\"ID\"},\"b902014e-56d9-409d-8313-009c1a2dac74\":{\"name\":\"LATLONG\"},\"70aa72e0-b00b-4d32-a953-532d05c1b874\":{\"name\":\"LATITUDE\"},\"994bf417-bb3f-4564-8f80-24e7fca77345\":{\"name\":\"LONGITUDE\"},\"83d5b305-d9f2-4da8-9e93-d3c2ed212169\":{\"name\":\"GEO_ASMT_LEVEL\"}},\"successorNode\":\"3c9bf55d-9c40-4d94-8f64-258ddb4c4291\"},\"001687f9-69ea-4fee-8c2e-2e7d3181a3c4\":{\"classDefinition\":\"sap.cdw.querybuilder.Entity\",\"name\":\"BusinessPartners\",\"label\":\"BusinessPartners\",\"type\":9,\"isPinToMemoryEnabled\":false,\"isAllowConsumption\":false,\"isHiddenInUi\":false,\"modificationDate\":1716324397768,\"deploymentDate\":1716324405633,\"#objectStatus\":\"1\",\"packageValue\":\"DQMM_GEO\",\"elements\":{\"c36a40df-7e4c-4ee9-a8e9-bb4cd3e91a49\":{\"name\":\"PARTNERID\"},\"edb51f5d-117f-4d3f-a8cf-870b66143988\":{\"name\":\"PARTNERROLE\"},\"a09fe456-de91-4e7c-a47c-e498e829edd3\":{\"name\":\"EMAILADDRESS\"},\"90f8b378-d77c-438d-9306-e1bc79d327f1\":{\"name\":\"PHONENUMBER\"},\"76abce45-2a45-409e-a602-4a8ee89f6d12\":{\"name\":\"FAXNUMBER\"},\"d8450294-05aa-4ad7-999e-42999eb6503f\":{\"name\":\"WEBADDRESS\"},\"e13d94e5-a362-4344-b869-573dce1c00e5\":{\"name\":\"ADDRESSID\"},\"00a69a5c-aa4c-40b6-93b8-fd7d14422db4\":{\"name\":\"COMPANYNAME\"},\"5f79b967-4b1d-4a21-95bd-d9b483c28679\":{\"name\":\"LEGALFORM\"},\"40c33edb-8a64-4d92-9180-1d4bd1d5931f\":{\"name\":\"CREATEDBY\"},\"41c26803-0609-4ef3-8324-08ec1bdd8020\":{\"name\":\"CREATEDAT\"},\"c144c10e-32a7-4b80-8485-31de58b07bfa\":{\"name\":\"CHANGEDBY\"},\"82461df5-76b5-434f-a1c5-75c7383a0701\":{\"name\":\"CHANGEDAT\"},\"17bd3587-c214-43ed-baaa-85bbcd45fe9a\":{\"name\":\"CURRENCY\"}},\"successorNode\":\"85e649df-ffd9-45b3-b7d2-888ac0ee6ae8\"},\"85e649df-ffd9-45b3-b7d2-888ac0ee6ae8\":{\"classDefinition\":\"sap.cdw.querybuilder.RenameElements\",\"_isProjectionNode\":false,\"name\":\"Projection 1\",\"elements\":{\"5278b664-32c0-40a1-8bf1-4924abe8c807\":{\"name\":\"PARTNERID\"},\"9c65bdb0-f84e-4af2-b39c-58f3587c96a7\":{\"name\":\"PARTNERROLE\"},\"425926fb-7f7a-4c71-8e46-4040bcb5ded1\":{\"name\":\"EMAILADDRESS\"},\"1933f09d-cfe6-4288-a9f7-5d06073af035\":{\"name\":\"PHONENUMBER\"},\"bc482156-e8a2-47aa-a841-7674c8be64c5\":{\"name\":\"FAXNUMBER\"},\"c914a856-0abd-4eac-af19-7e2651c5162e\":{\"name\":\"WEBADDRESS\"},\"cc65ecda-fc7f-4574-aa3d-5d179f0451cc\":{\"name\":\"ADDRESSID\"},\"968efb56-71a7-42ba-a69c-9946cd02b421\":{\"name\":\"COMPANYNAME\"},\"ef7d1a24-5f9e-45f8-8501-2033a24d47d2\":{\"name\":\"LEGALFORM\"},\"7161373a-9f54-4611-978e-85523905b8a2\":{\"name\":\"CREATEDBY\"},\"ffcc772b-c406-410a-a507-e75d0c147fe4\":{\"name\":\"CREATEDAT\"},\"39914347-e5ae-418a-abe3-bd76cca9ac12\":{\"name\":\"CHANGEDBY\"},\"e92b4f51-1be7-4a1a-8270-891fc4d4b233\":{\"name\":\"CHANGEDAT\"},\"822262d0-320f-445b-82ce-4626f47d7396\":{\"name\":\"CURRENCY\"}},\"successorNode\":\"3c9bf55d-9c40-4d94-8f64-258ddb4c4291\"},\"3c9bf55d-9c40-4d94-8f64-258ddb4c4291\":{\"classDefinition\":\"sap.cdw.querybuilder.Join\",\"name\":\"Join 2\",\"mappings\":{\"0ab99f34-cedb-404d-84ac-6c651a9b75fd\":{}},\"leftInput\":\"eb5a5580-b5de-4c52-9c46-b3de6089e0f3\",\"rightInput\":\"85e649df-ffd9-45b3-b7d2-888ac0ee6ae8\",\"elements\":{\"c1586393-420a-486f-b067-9536a8523461\":{\"name\":\"ID\"},\"64ea12c3-30cb-4711-8bca-4d2c92ccdd55\":{\"name\":\"LATLONG\"},\"d94b1ae3-d5da-442f-a718-b6352f419fb5\":{\"name\":\"LATITUDE\"},\"195622c0-196c-43d3-922f-65ff6d1abfcd\":{\"name\":\"LONGITUDE\"},\"7564b9e6-09d1-4896-9478-6b95daf10b4b\":{\"name\":\"GEO_ASMT_LEVEL\"},\"c952c3b1-5059-4f85-a893-e2276af9d1c7\":{\"name\":\"PARTNERID\"},\"02fe9bfa-363d-4f4f-818b-bee1c3fc3fa2\":{\"name\":\"ADDRESSID\"},\"199e528a-e627-4bf3-8593-0843cd6009e3\":{\"name\":\"COMPANYNAME\"}},\"successorNode\":\"45373d91-d849-4e49-906e-30adc426f194\"},\"45373d91-d849-4e49-906e-30adc426f194\":{\"classDefinition\":\"sap.cdw.querybuilder.CalculatedElements\",\"name\":\"Calculated Columns 1\",\"elements\":{\"4bb4fd59-b423-4669-814a-2bcb2b3423fc\":{\"name\":\"ID\"},\"5e25df7f-02fa-409b-a8b0-c09af8eb7f47\":{\"name\":\"LATLONG\"},\"ad276a09-ba9c-4f98-aa5c-0f31e40ae3a0\":{\"name\":\"LATITUDE\"},\"0c425e5f-f12e-4f3f-83e4-3a129d59bf8b\":{\"name\":\"LONGITUDE\"},\"6b4843c7-f54b-4e34-b4d9-21b3a16be811\":{\"name\":\"GEO_ASMT_LEVEL\"},\"3da2479c-86b1-45e6-95e2-5b4237575949\":{\"name\":\"PARTNERID\"},\"db737cd5-9e46-4323-883b-178c55a9b1dc\":{\"name\":\"ADDRESSID\"},\"e079f0fd-c4c8-4676-90d6-61b95028be0a\":{\"name\":\"COMPANYNAME\"},\"be01b26b-9f44-4747-a246-8d0b6699ee5f\":{\"name\":\"Location\"}},\"successorNode\":\"83ced7fc-47cf-4333-811b-d2bc12cc4b73\"},\"fd8edd94-11ef-46b2-8583-03918553399d\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.Diagram\",\"symbols\":{\"631f7bb6-c8cf-48ed-80ea-447932083921\":{},\"126d3633-f339-49d4-ac84-4da334f5da6f\":{},\"2545f5cb-4984-44ec-a053-f836a9f6e161\":{\"name\":\"Entity Symbol 1\"},\"70838123-bcc3-4e1f-8055-e64efe555c21\":{},\"ac35e395-03e0-4c2e-a247-cdebe953088f\":{},\"cd6d4b00-8b4a-44ba-a46f-f7a0f89584e4\":{\"name\":\"Entity Symbol 2\"},\"c0497377-622a-4575-ac10-cab6ea0bdb36\":{},\"b986b1e4-b8ca-44bd-a676-8ec9cd1e56f0\":{},\"7dc2f37c-c7fc-4431-8919-a668b606a80a\":{},\"f6e8f534-90e4-4a62-88ee-345d8732ac51\":{},\"db593c8f-44b7-4f93-9906-754fb6f4adfc\":{},\"c4497c80-0bea-47d6-9b68-2af7e380e993\":{},\"5d17450c-4dc8-4bdd-b78d-1a3a30b64895\":{},\"3e2b7642-c282-4497-9ab1-46b75d333b7d\":{},\"32b1691c-ba77-4e7f-9426-4e0693c294ae\":{}}},\"3d0ed836-2eae-48ce-a45a-d1604db80c44\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ID\",\"label\":\"ID\",\"newName\":\"ID\",\"indexOrder\":0,\"isCalculated\":true,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"5335f993-8b74-4582-a24d-fb2da636c44c\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATLONG\",\"label\":\"LATLONG\",\"newName\":\"LATLONG\",\"indexOrder\":1,\"isCalculated\":true,\"dataType\":\"cds.hana.ST_GEOMETRY\",\"length\":0,\"precision\":0,\"scale\":0,\"srid\":3857,\"isDimension\":true},\"6ca97c03-95c4-4229-8ef4-32de2cc8f631\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATITUDE\",\"label\":\"LATITUDE\",\"newName\":\"LATITUDE\",\"indexOrder\":2,\"isCalculated\":true,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0},\"f2ac3f40-5694-40ad-82fd-1603155ec437\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LONGITUDE\",\"label\":\"LONGITUDE\",\"newName\":\"LONGITUDE\",\"indexOrder\":3,\"isCalculated\":true,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0},\"dfdb0313-abd3-403a-956e-c85aecb99cfa\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GEO_ASMT_LEVEL\",\"label\":\"GEO_ASMT_LEVEL\",\"newName\":\"GEO_ASMT_LEVEL\",\"indexOrder\":4,\"isCalculated\":true,\"length\":4,\"precision\":0,\"scale\":0,\"isDimension\":true},\"fa72eabf-1e14-411f-b353-5088cf7c6440\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":5,\"isCalculated\":true,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"d23ca1b7-f23b-4cca-b843-b907a82cab02\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":6,\"isCalculated\":true,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"d2cdf7ba-85e0-40c0-b3b3-32b18e9deda4\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":7,\"isCalculated\":true,\"isKey\":true,\"length\":5000,\"precision\":0,\"scale\":0,\"isDimension\":true,\"isNotNull\":true},\"cb307f9f-49e8-4d85-906f-c7b1fb176ecf\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"Location\",\"label\":\"LATLONG_2\",\"newName\":\"LATLONG_2\",\"indexOrder\":8,\"expression\":\"\",\"isCalculated\":true,\"dataType\":\"cds.hana.ST_GEOMETRY\",\"length\":0,\"precision\":0,\"scale\":0,\"precisionsTable\":\"SAP.CURRENCY.VIEW.TCURX\",\"configurationTable\":\"SAP.CURRENCY.VIEW.TCURV\",\"prefactorsTable\":\"SAP.CURRENCY.VIEW.TCURF\",\"ratesTable\":\"SAP.CURRENCY.VIEW.TCURR\",\"notationsTable\":\"SAP.CURRENCY.VIEW.TCURN\",\"conversionCodesTable\":\"SAP.CURRENCY.VIEW.TCURC\"},\"b345446d-bf4a-443a-8d8a-04317b5050fc\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ID\",\"label\":\"ID\",\"newName\":\"ID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"8b1dc21b-b705-48a6-bfb9-23880fccb9ba\"},\"c8e45666-3842-4a29-9836-6bbf5de3bde1\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATLONG\",\"label\":\"LATLONG\",\"newName\":\"LATLONG\",\"indexOrder\":1,\"dataType\":\"cds.hana.ST_GEOMETRY\",\"length\":0,\"precision\":0,\"scale\":0,\"srid\":3857,\"successorElement\":\"b902014e-56d9-409d-8313-009c1a2dac74\"},\"2cd984c6-e2d9-4fc7-a0d1-0566906ace2b\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATITUDE\",\"label\":\"LATITUDE\",\"newName\":\"LATITUDE\",\"indexOrder\":2,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"70aa72e0-b00b-4d32-a953-532d05c1b874\"},\"84f55aba-eebc-4281-b027-8aecb7db1a12\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LONGITUDE\",\"label\":\"LONGITUDE\",\"newName\":\"LONGITUDE\",\"indexOrder\":3,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"994bf417-bb3f-4564-8f80-24e7fca77345\"},\"30ca06bc-a97b-47b7-8485-5ebdae65dd4e\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GEO_ASMT_LEVEL\",\"label\":\"GEO_ASMT_LEVEL\",\"newName\":\"GEO_ASMT_LEVEL\",\"indexOrder\":4,\"length\":4,\"precision\":0,\"scale\":0,\"successorElement\":\"83d5b305-d9f2-4da8-9e93-d3c2ed212169\"},\"8b1dc21b-b705-48a6-bfb9-23880fccb9ba\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ID\",\"label\":\"ID\",\"newName\":\"ID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"c1586393-420a-486f-b067-9536a8523461\"},\"b902014e-56d9-409d-8313-009c1a2dac74\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATLONG\",\"label\":\"LATLONG\",\"newName\":\"LATLONG\",\"indexOrder\":1,\"dataType\":\"cds.hana.ST_GEOMETRY\",\"length\":0,\"precision\":0,\"scale\":0,\"srid\":3857,\"successorElement\":\"64ea12c3-30cb-4711-8bca-4d2c92ccdd55\"},\"70aa72e0-b00b-4d32-a953-532d05c1b874\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATITUDE\",\"label\":\"LATITUDE\",\"newName\":\"LATITUDE\",\"indexOrder\":2,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"d94b1ae3-d5da-442f-a718-b6352f419fb5\"},\"994bf417-bb3f-4564-8f80-24e7fca77345\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LONGITUDE\",\"label\":\"LONGITUDE\",\"newName\":\"LONGITUDE\",\"indexOrder\":3,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"195622c0-196c-43d3-922f-65ff6d1abfcd\"},\"83d5b305-d9f2-4da8-9e93-d3c2ed212169\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GEO_ASMT_LEVEL\",\"label\":\"GEO_ASMT_LEVEL\",\"newName\":\"GEO_ASMT_LEVEL\",\"indexOrder\":4,\"length\":4,\"precision\":0,\"scale\":0,\"successorElement\":\"7564b9e6-09d1-4896-9478-6b95daf10b4b\"},\"c36a40df-7e4c-4ee9-a8e9-bb4cd3e91a49\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"5278b664-32c0-40a1-8bf1-4924abe8c807\"},\"edb51f5d-117f-4d3f-a8cf-870b66143988\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERROLE\",\"label\":\"PARTNERROLE\",\"newName\":\"PARTNERROLE\",\"indexOrder\":1,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"9c65bdb0-f84e-4af2-b39c-58f3587c96a7\"},\"a09fe456-de91-4e7c-a47c-e498e829edd3\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"EMAILADDRESS\",\"label\":\"EMAILADDRESS\",\"newName\":\"EMAILADDRESS\",\"indexOrder\":2,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"425926fb-7f7a-4c71-8e46-4040bcb5ded1\"},\"90f8b378-d77c-438d-9306-e1bc79d327f1\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PHONENUMBER\",\"label\":\"PHONENUMBER\",\"newName\":\"PHONENUMBER\",\"indexOrder\":3,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"1933f09d-cfe6-4288-a9f7-5d06073af035\"},\"76abce45-2a45-409e-a602-4a8ee89f6d12\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FAXNUMBER\",\"label\":\"FAXNUMBER\",\"newName\":\"FAXNUMBER\",\"indexOrder\":4,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"bc482156-e8a2-47aa-a841-7674c8be64c5\"},\"d8450294-05aa-4ad7-999e-42999eb6503f\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"WEBADDRESS\",\"label\":\"WEBADDRESS\",\"newName\":\"WEBADDRESS\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"c914a856-0abd-4eac-af19-7e2651c5162e\"},\"e13d94e5-a362-4344-b869-573dce1c00e5\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"cc65ecda-fc7f-4574-aa3d-5d179f0451cc\"},\"00a69a5c-aa4c-40b6-93b8-fd7d14422db4\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":7,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"968efb56-71a7-42ba-a69c-9946cd02b421\"},\"5f79b967-4b1d-4a21-95bd-d9b483c28679\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LEGALFORM\",\"label\":\"LEGALFORM\",\"newName\":\"LEGALFORM\",\"indexOrder\":8,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"ef7d1a24-5f9e-45f8-8501-2033a24d47d2\"},\"40c33edb-8a64-4d92-9180-1d4bd1d5931f\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDBY\",\"label\":\"CREATEDBY\",\"newName\":\"CREATEDBY\",\"indexOrder\":9,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"7161373a-9f54-4611-978e-85523905b8a2\"},\"41c26803-0609-4ef3-8324-08ec1bdd8020\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDAT\",\"label\":\"CREATEDAT\",\"newName\":\"CREATEDAT\",\"indexOrder\":10,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"ffcc772b-c406-410a-a507-e75d0c147fe4\"},\"c144c10e-32a7-4b80-8485-31de58b07bfa\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDBY\",\"label\":\"CHANGEDBY\",\"newName\":\"CHANGEDBY\",\"indexOrder\":11,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"39914347-e5ae-418a-abe3-bd76cca9ac12\"},\"82461df5-76b5-434f-a1c5-75c7383a0701\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDAT\",\"label\":\"CHANGEDAT\",\"newName\":\"CHANGEDAT\",\"indexOrder\":12,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"e92b4f51-1be7-4a1a-8270-891fc4d4b233\"},\"17bd3587-c214-43ed-baaa-85bbcd45fe9a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CURRENCY\",\"label\":\"CURRENCY\",\"newName\":\"CURRENCY\",\"indexOrder\":13,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"822262d0-320f-445b-82ce-4626f47d7396\"},\"5278b664-32c0-40a1-8bf1-4924abe8c807\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"c952c3b1-5059-4f85-a893-e2276af9d1c7\"},\"9c65bdb0-f84e-4af2-b39c-58f3587c96a7\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERROLE\",\"label\":\"PARTNERROLE\",\"newName\":\"PARTNERROLE\",\"isRemoved\":true,\"indexOrder\":1,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"425926fb-7f7a-4c71-8e46-4040bcb5ded1\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"EMAILADDRESS\",\"label\":\"EMAILADDRESS\",\"newName\":\"EMAILADDRESS\",\"isRemoved\":true,\"indexOrder\":2,\"length\":5000,\"precision\":0,\"scale\":0},\"1933f09d-cfe6-4288-a9f7-5d06073af035\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PHONENUMBER\",\"label\":\"PHONENUMBER\",\"newName\":\"PHONENUMBER\",\"isRemoved\":true,\"indexOrder\":3,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"bc482156-e8a2-47aa-a841-7674c8be64c5\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FAXNUMBER\",\"label\":\"FAXNUMBER\",\"newName\":\"FAXNUMBER\",\"isRemoved\":true,\"indexOrder\":4,\"length\":5000,\"precision\":0,\"scale\":0},\"c914a856-0abd-4eac-af19-7e2651c5162e\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"WEBADDRESS\",\"label\":\"WEBADDRESS\",\"newName\":\"WEBADDRESS\",\"isRemoved\":true,\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0},\"cc65ecda-fc7f-4574-aa3d-5d179f0451cc\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"02fe9bfa-363d-4f4f-818b-bee1c3fc3fa2\"},\"968efb56-71a7-42ba-a69c-9946cd02b421\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":7,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"199e528a-e627-4bf3-8593-0843cd6009e3\"},\"ef7d1a24-5f9e-45f8-8501-2033a24d47d2\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LEGALFORM\",\"label\":\"LEGALFORM\",\"newName\":\"LEGALFORM\",\"isRemoved\":true,\"indexOrder\":8,\"length\":5000,\"precision\":0,\"scale\":0},\"7161373a-9f54-4611-978e-85523905b8a2\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDBY\",\"label\":\"CREATEDBY\",\"newName\":\"CREATEDBY\",\"isRemoved\":true,\"indexOrder\":9,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"ffcc772b-c406-410a-a507-e75d0c147fe4\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDAT\",\"label\":\"CREATEDAT\",\"newName\":\"CREATEDAT\",\"isRemoved\":true,\"indexOrder\":10,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0},\"39914347-e5ae-418a-abe3-bd76cca9ac12\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDBY\",\"label\":\"CHANGEDBY\",\"newName\":\"CHANGEDBY\",\"isRemoved\":true,\"indexOrder\":11,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"e92b4f51-1be7-4a1a-8270-891fc4d4b233\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDAT\",\"label\":\"CHANGEDAT\",\"newName\":\"CHANGEDAT\",\"isRemoved\":true,\"indexOrder\":12,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0},\"822262d0-320f-445b-82ce-4626f47d7396\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CURRENCY\",\"label\":\"CURRENCY\",\"newName\":\"CURRENCY\",\"isRemoved\":true,\"indexOrder\":13,\"length\":5000,\"precision\":0,\"scale\":0},\"0ab99f34-cedb-404d-84ac-6c651a9b75fd\":{\"classDefinition\":\"sap.cdw.commonmodel.ElementMapping\",\"source\":\"8b1dc21b-b705-48a6-bfb9-23880fccb9ba\",\"target\":\"cc65ecda-fc7f-4574-aa3d-5d179f0451cc\"},\"c1586393-420a-486f-b067-9536a8523461\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ID\",\"label\":\"ID\",\"newName\":\"ID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"4bb4fd59-b423-4669-814a-2bcb2b3423fc\"},\"64ea12c3-30cb-4711-8bca-4d2c92ccdd55\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATLONG\",\"label\":\"LATLONG\",\"newName\":\"LATLONG\",\"indexOrder\":2,\"dataType\":\"cds.hana.ST_GEOMETRY\",\"length\":0,\"precision\":0,\"scale\":0,\"srid\":3857,\"successorElement\":\"5e25df7f-02fa-409b-a8b0-c09af8eb7f47\"},\"d94b1ae3-d5da-442f-a718-b6352f419fb5\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATITUDE\",\"label\":\"LATITUDE\",\"newName\":\"LATITUDE\",\"indexOrder\":3,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"ad276a09-ba9c-4f98-aa5c-0f31e40ae3a0\"},\"195622c0-196c-43d3-922f-65ff6d1abfcd\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LONGITUDE\",\"label\":\"LONGITUDE\",\"newName\":\"LONGITUDE\",\"indexOrder\":4,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"0c425e5f-f12e-4f3f-83e4-3a129d59bf8b\"},\"7564b9e6-09d1-4896-9478-6b95daf10b4b\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GEO_ASMT_LEVEL\",\"label\":\"GEO_ASMT_LEVEL\",\"newName\":\"GEO_ASMT_LEVEL\",\"indexOrder\":5,\"length\":4,\"precision\":0,\"scale\":0,\"successorElement\":\"6b4843c7-f54b-4e34-b4d9-21b3a16be811\"},\"c952c3b1-5059-4f85-a893-e2276af9d1c7\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":1,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"3da2479c-86b1-45e6-95e2-5b4237575949\"},\"02fe9bfa-363d-4f4f-818b-bee1c3fc3fa2\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"db737cd5-9e46-4323-883b-178c55a9b1dc\"},\"199e528a-e627-4bf3-8593-0843cd6009e3\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":7,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"e079f0fd-c4c8-4676-90d6-61b95028be0a\"},\"631f7bb6-c8cf-48ed-80ea-447932083921\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.OutputSymbol\",\"x\":203.99999940395355,\"y\":-43.42346277798326,\"width\":140,\"height\":40,\"object\":\"83ced7fc-47cf-4333-811b-d2bc12cc4b73\"},\"126d3633-f339-49d4-ac84-4da334f5da6f\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.JoinSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":7.999999403953552,\"y\":-21.92018118357113,\"isHidden\":true},\"2545f5cb-4984-44ec-a053-f836a9f6e161\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.EntitySymbol\",\"name\":\"Entity Symbol 1\",\"x\":-319.99999940395355,\"y\":26.465903014873078,\"width\":160,\"displayName\":\"Entity Symbol 1\",\"object\":\"29573387-9423-4a98-b57b-b3f38a401af1\"},\"70838123-bcc3-4e1f-8055-e64efe555c21\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.FilterSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":-109.99999940395355,\"y\":30.465903014873078,\"object\":\"eb5a5580-b5de-4c52-9c46-b3de6089e0f3\"},\"ac35e395-03e0-4c2e-a247-cdebe953088f\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"-159.99999940395355,46.46590301487308 -109.99999940395355,46.46590301487308\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"2545f5cb-4984-44ec-a053-f836a9f6e161\",\"targetSymbol\":\"70838123-bcc3-4e1f-8055-e64efe555c21\"},\"cd6d4b00-8b4a-44ba-a46f-f7a0f89584e4\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.EntitySymbol\",\"name\":\"Entity Symbol 2\",\"x\":-319.99999940395355,\"y\":-66.46590301487308,\"width\":160,\"displayName\":\"Entity Symbol 2\",\"object\":\"001687f9-69ea-4fee-8c2e-2e7d3181a3c4\"},\"c0497377-622a-4575-ac10-cab6ea0bdb36\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.RenameSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":-109.99999940395355,\"y\":-62.46590301487308,\"object\":\"85e649df-ffd9-45b3-b7d2-888ac0ee6ae8\"},\"b986b1e4-b8ca-44bd-a676-8ec9cd1e56f0\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"-159.99999940395355,-46.46590301487308 -109.99999940395355,-46.46590301487308\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"cd6d4b00-8b4a-44ba-a46f-f7a0f89584e4\",\"targetSymbol\":\"c0497377-622a-4575-ac10-cab6ea0bdb36\"},\"7dc2f37c-c7fc-4431-8919-a668b606a80a\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.JoinSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":-24,\"y\":-107.35053763763004,\"isHidden\":true},\"f6e8f534-90e4-4a62-88ee-345d8732ac51\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.JoinSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":7.999999403953552,\"y\":-39.42346277798326,\"object\":\"3c9bf55d-9c40-4d94-8f64-258ddb4c4291\"},\"db593c8f-44b7-4f93-9906-754fb6f4adfc\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"-61.99999940395355,46.46590301487308 -27,46.46590301487308 -27,-18.090129444649932 7.999999403953552,-18.090129444649932\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"70838123-bcc3-4e1f-8055-e64efe555c21\",\"targetSymbol\":\"f6e8f534-90e4-4a62-88ee-345d8732ac51\",\"object\":\"3c9bf55d-9c40-4d94-8f64-258ddb4c4291\"},\"c4497c80-0bea-47d6-9b68-2af7e380e993\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"isLeftInput\":false,\"points\":\"-61.99999940395355,-46.46590301487308 -27,-46.46590301487308 -27,-28.75679611131659 7.999999403953552,-28.75679611131659\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"c0497377-622a-4575-ac10-cab6ea0bdb36\",\"targetSymbol\":\"f6e8f534-90e4-4a62-88ee-345d8732ac51\",\"object\":\"3c9bf55d-9c40-4d94-8f64-258ddb4c4291\"},\"5d17450c-4dc8-4bdd-b78d-1a3a30b64895\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.CalculatedSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":105.99999940395355,\"y\":-39.42346277798326,\"object\":\"45373d91-d849-4e49-906e-30adc426f194\"},\"3e2b7642-c282-4497-9ab1-46b75d333b7d\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"55.99999940395355,-23.42346277798326 105.99999940395355,-23.42346277798326\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"f6e8f534-90e4-4a62-88ee-345d8732ac51\",\"targetSymbol\":\"5d17450c-4dc8-4bdd-b78d-1a3a30b64895\"},\"32b1691c-ba77-4e7f-9426-4e0693c294ae\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"153.99999940395355,-23.42346277798326 203.99999940395355,-23.42346277798326\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"5d17450c-4dc8-4bdd-b78d-1a3a30b64895\",\"targetSymbol\":\"631f7bb6-c8cf-48ed-80ea-447932083921\"},\"4bb4fd59-b423-4669-814a-2bcb2b3423fc\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ID\",\"label\":\"ID\",\"newName\":\"ID\",\"indexOrder\":0,\"expression\":\"ID\",\"isCalculated\":true,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"3d0ed836-2eae-48ce-a45a-d1604db80c44\"},\"5e25df7f-02fa-409b-a8b0-c09af8eb7f47\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATLONG\",\"label\":\"LATLONG\",\"newName\":\"LATLONG\",\"indexOrder\":2,\"expression\":\"LATLONG\",\"isCalculated\":true,\"dataType\":\"cds.hana.ST_GEOMETRY\",\"length\":0,\"precision\":0,\"scale\":0,\"srid\":3857,\"successorElement\":\"5335f993-8b74-4582-a24d-fb2da636c44c\"},\"ad276a09-ba9c-4f98-aa5c-0f31e40ae3a0\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATITUDE\",\"label\":\"LATITUDE\",\"newName\":\"LATITUDE\",\"indexOrder\":3,\"expression\":\"LATITUDE\",\"isCalculated\":true,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"6ca97c03-95c4-4229-8ef4-32de2cc8f631\"},\"0c425e5f-f12e-4f3f-83e4-3a129d59bf8b\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LONGITUDE\",\"label\":\"LONGITUDE\",\"newName\":\"LONGITUDE\",\"indexOrder\":4,\"expression\":\"LONGITUDE\",\"isCalculated\":true,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"f2ac3f40-5694-40ad-82fd-1603155ec437\"},\"6b4843c7-f54b-4e34-b4d9-21b3a16be811\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GEO_ASMT_LEVEL\",\"label\":\"GEO_ASMT_LEVEL\",\"newName\":\"GEO_ASMT_LEVEL\",\"indexOrder\":5,\"expression\":\"GEO_ASMT_LEVEL\",\"isCalculated\":true,\"length\":4,\"precision\":0,\"scale\":0,\"successorElement\":\"dfdb0313-abd3-403a-956e-c85aecb99cfa\"},\"3da2479c-86b1-45e6-95e2-5b4237575949\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":1,\"expression\":\"PARTNERID\",\"isCalculated\":true,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"fa72eabf-1e14-411f-b353-5088cf7c6440\"},\"db737cd5-9e46-4323-883b-178c55a9b1dc\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":6,\"expression\":\"ADDRESSID\",\"isCalculated\":true,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"d23ca1b7-f23b-4cca-b843-b907a82cab02\"},\"e079f0fd-c4c8-4676-90d6-61b95028be0a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":7,\"expression\":\"COMPANYNAME\",\"isCalculated\":true,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"d2cdf7ba-85e0-40c0-b3b3-32b18e9deda4\"},\"be01b26b-9f44-4747-a246-8d0b6699ee5f\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"Location\",\"label\":\"LATLONG_2\",\"newName\":\"LATLONG_2\",\"indexOrder\":8,\"expression\":\"ST_GeomFromText('POINT(' || \\\"LONGITUDE\\\" || ' ' || \\\"LATITUDE\\\" || ')', 4326)\",\"isCalculated\":true,\"dataType\":\"cds.hana.ST_GEOMETRY\",\"length\":0,\"precision\":0,\"scale\":0,\"simpleCalculation\":true,\"precisionsTable\":\"SAP.CURRENCY.VIEW.TCURX\",\"configurationTable\":\"SAP.CURRENCY.VIEW.TCURV\",\"prefactorsTable\":\"SAP.CURRENCY.VIEW.TCURF\",\"ratesTable\":\"SAP.CURRENCY.VIEW.TCURR\",\"notationsTable\":\"SAP.CURRENCY.VIEW.TCURN\",\"conversionCodesTable\":\"SAP.CURRENCY.VIEW.TCURC\",\"successorElement\":\"cb307f9f-49e8-4d85-906f-c7b1fb176ecf\",\"latitudeElement\":\"ad276a09-ba9c-4f98-aa5c-0f31e40ae3a0\",\"longitudeElement\":\"0c425e5f-f12e-4f3f-83e4-3a129d59bf8b\"}}}"
+    },
+    "SalesOrders_View": {
+      "editor": {
+        "lastModifier": "GRAPHICALVIEWBUILDER",
+        "default": "GRAPHICALVIEWBUILDER"
+      },
+      "uiModel": "{\"contents\":{\"d4f1c238-cb13-483c-aa55-c3b0435cb1d4\":{\"classDefinition\":\"sap.cdw.querybuilder.Model\",\"name\":\"SalesOrders_View\",\"label\":\"SalesOrders_View\",\"modificationDate\":1716474574948,\"deploymentDate\":0,\"#objectStatus\":\"0\",\"output\":\"b119b0dc-f919-4bc1-89a0-825de70c29f2\",\"nodes\":{\"b119b0dc-f919-4bc1-89a0-825de70c29f2\":{\"name\":\"SalesOrders_View\"},\"4cec35cb-72e0-4be8-8920-68f9ae5ab8b0\":{\"name\":\"SalesOrders\"},\"3ba7a976-5a15-4708-bcfd-74da01452ef4\":{\"name\":\"BusinessPartners\"},\"2f853a4d-5b42-4b65-b3b4-f5d24ae477cc\":{\"name\":\"Join 1\"},\"63228232-e42b-4beb-9534-f7bd111fa403\":{\"name\":\"Projection 1\"},\"8a3fae20-07a9-4d1b-bcd4-f805826d30ba\":{\"name\":\"Addresses_Location\"}},\"associations\":{\"48a37316-ae97-451d-902a-dc322d54ea13\":{\"name\":\"_Addresses\"}},\"diagrams\":{\"f3f95a78-3a16-4453-9181-3377d2e0c0e6\":{}}},\"b119b0dc-f919-4bc1-89a0-825de70c29f2\":{\"classDefinition\":\"sap.cdw.querybuilder.Output\",\"name\":\"SalesOrders_View\",\"type\":\"graphicView\",\"isPinToMemoryEnabled\":false,\"dataCategory\":\"SQLFACT\",\"isAllowConsumption\":false,\"modificationDate\":1716474574948,\"deploymentDate\":0,\"#objectStatus\":\"0\",\"elements\":{\"380e087f-95e8-4343-bf96-37d2c5e7067f\":{\"name\":\"SALESORDERID\"},\"e8a9643c-1030-4f99-ba98-e5e10ab36d80\":{\"name\":\"CREATEDBY\"},\"a1f00a77-0287-4438-ae43-99796a8aad04\":{\"name\":\"CREATEDAT\"},\"a5979023-e141-4085-af73-4598fa65df23\":{\"name\":\"CHANGEDBY\"},\"8a566912-d427-4ad6-bdab-915639c4b288\":{\"name\":\"CHANGEDAT\"},\"9fa5bed6-bc89-44a7-86de-3626ae345ebc\":{\"name\":\"FISCVARIANT\"},\"71dd00fc-a42e-4273-8d25-9e52e5e333f6\":{\"name\":\"FISCALYEARPERIOD\"},\"a992e108-9dcb-446b-aca7-fc13bb78c6fa\":{\"name\":\"NOTEID\"},\"a5704eb8-c989-4b19-840f-72f91c66c952\":{\"name\":\"PARTNERID\"},\"b895e6ad-2372-4657-9fba-97de68806668\":{\"name\":\"SALESORG\"},\"e2e3f91a-6261-486d-80ba-d28ff001a6e0\":{\"name\":\"CURRENCY\"},\"f5543c7f-589c-4d5c-ab7a-6e02db8d8704\":{\"name\":\"GROSSAMOUNT\"},\"867cd0a2-0918-4d73-9ce4-ff2f50bec26c\":{\"name\":\"NETAMOUNT\"},\"f05d738b-b99e-4b9d-8500-257c7053f8c6\":{\"name\":\"TAXAMOUNT\"},\"be05d341-bb5f-4ceb-a6eb-b557409427ee\":{\"name\":\"LIFECYCLESTATUS\"},\"e9793cd7-1d1a-4f87-b5a6-2ea89bd1d51c\":{\"name\":\"BILLINGSTATUS\"},\"630547d8-e273-447e-a607-a04b4efcb505\":{\"name\":\"DELIVERYSTATUS\"},\"e3bb02fe-2cf9-442b-9a3c-b001a6520aed\":{\"name\":\"PARTNERROLE\"},\"b65bbe78-79f7-48c7-b9ee-0a194b5c4fc9\":{\"name\":\"EMAILADDRESS\"},\"c5e12b23-fc72-4b06-b86e-4a6dfdf46c41\":{\"name\":\"PHONENUMBER\"},\"0547f5d5-5e5f-4e74-8f3f-44f60d26b885\":{\"name\":\"FAXNUMBER\"},\"4e8157bb-35d1-41a2-9155-4511109af2ea\":{\"name\":\"WEBADDRESS\"},\"6f447169-d478-48e8-ad96-df8e59ca03ec\":{\"name\":\"ADDRESSID\"},\"1286ada8-3cfb-4441-b0d8-cc3f3bd8e075\":{\"name\":\"COMPANYNAME\"},\"706b74ee-6575-4fa1-8c77-d9cb7204b6d5\":{\"name\":\"LEGALFORM\"}},\"associations\":{\"48a37316-ae97-451d-902a-dc322d54ea13\":{\"name\":\"_Addresses\"}}},\"4cec35cb-72e0-4be8-8920-68f9ae5ab8b0\":{\"classDefinition\":\"sap.cdw.querybuilder.Entity\",\"name\":\"SalesOrders\",\"label\":\"SalesOrders\",\"type\":9,\"isPinToMemoryEnabled\":false,\"isAllowConsumption\":false,\"isHiddenInUi\":false,\"modificationDate\":1716473265467,\"deploymentDate\":1716473280923,\"#objectStatus\":\"1\",\"elements\":{\"0c401889-5887-4ddf-bbad-e9abb37edea4\":{\"name\":\"SALESORDERID\"},\"fcca21a0-bc50-44c0-b1ce-7b35b7a9f433\":{\"name\":\"CREATEDBY\"},\"612f37ec-f7d8-4fe4-ac74-6792af2f534d\":{\"name\":\"CREATEDAT\"},\"28d88bec-bae0-4b24-a65d-567e7cea06a9\":{\"name\":\"CHANGEDBY\"},\"3bd20367-3c78-45d3-babc-73c1ae771a74\":{\"name\":\"CHANGEDAT\"},\"c93023e8-a920-406a-904e-36334ce39a6b\":{\"name\":\"FISCVARIANT\"},\"7b9f31f0-5102-4f25-92a0-c11ad5b322be\":{\"name\":\"FISCALYEARPERIOD\"},\"5de74c03-d81d-4dbc-8d88-c900d2e73d95\":{\"name\":\"NOTEID\"},\"5458b955-d29b-442a-a983-df316396b862\":{\"name\":\"PARTNERID\"},\"fa58b655-4c18-4a24-b7e4-b61960f2ac13\":{\"name\":\"SALESORG\"},\"b2493245-45d5-40af-86ee-4f7e2d5e7b22\":{\"name\":\"CURRENCY\"},\"018cbf3c-dd16-4909-b918-d6d3e9558e04\":{\"name\":\"GROSSAMOUNT\"},\"8ed07390-4000-42be-8703-9fd18bde57fc\":{\"name\":\"NETAMOUNT\"},\"c09c0b6b-8064-4016-b646-fa1b1b1f70df\":{\"name\":\"TAXAMOUNT\"},\"8e9effa7-ec2e-4499-84c5-038d56943850\":{\"name\":\"LIFECYCLESTATUS\"},\"aa1cdad8-285a-4d02-8e93-69736070042c\":{\"name\":\"BILLINGSTATUS\"},\"abb948a0-1cf4-4ac8-8ccc-09b5494e05bf\":{\"name\":\"DELIVERYSTATUS\"}},\"successorNode\":\"2f853a4d-5b42-4b65-b3b4-f5d24ae477cc\"},\"3ba7a976-5a15-4708-bcfd-74da01452ef4\":{\"classDefinition\":\"sap.cdw.querybuilder.Entity\",\"name\":\"BusinessPartners\",\"label\":\"BusinessPartners\",\"type\":9,\"isPinToMemoryEnabled\":false,\"isAllowConsumption\":false,\"isHiddenInUi\":false,\"modificationDate\":1716324397768,\"deploymentDate\":1716324405633,\"#objectStatus\":\"1\",\"packageValue\":\"DQMM_GEO\",\"elements\":{\"ab469c07-57be-48d7-859b-9c9818f3f6e8\":{\"name\":\"PARTNERID\"},\"440e4b2b-6541-43c2-9c6f-0117564f150e\":{\"name\":\"PARTNERROLE\"},\"5d4d7a55-a680-4b68-a43c-2da58a8c2342\":{\"name\":\"EMAILADDRESS\"},\"9de6c752-feaf-4cf8-aa8f-e781cfb0332d\":{\"name\":\"PHONENUMBER\"},\"a589cd12-8760-41ed-bb99-31c51ba23d3c\":{\"name\":\"FAXNUMBER\"},\"6913959b-387c-4fef-a06b-302afaf4db98\":{\"name\":\"WEBADDRESS\"},\"518ebaa3-633c-49ac-b645-68d83f910b3f\":{\"name\":\"ADDRESSID\"},\"32cdc810-2038-46a2-906b-a44c948beef7\":{\"name\":\"COMPANYNAME\"},\"3f38e7e2-abc7-48ec-bbea-576e4f433dc6\":{\"name\":\"LEGALFORM\"},\"94779fb6-9711-4f08-8f5f-16d91ed51ebb\":{\"name\":\"CREATEDBY\"},\"106f6631-9c6f-4892-b171-0622988f0a8d\":{\"name\":\"CREATEDAT\"},\"6e1d86e0-e2d8-4a37-b684-a0c642837f34\":{\"name\":\"CHANGEDBY\"},\"1973857d-d6d9-4f1d-826d-1a9be2804bc6\":{\"name\":\"CHANGEDAT\"},\"07cfc577-3746-4151-8f12-8baa262bb599\":{\"name\":\"CURRENCY\"}},\"successorNode\":\"2f853a4d-5b42-4b65-b3b4-f5d24ae477cc\"},\"2f853a4d-5b42-4b65-b3b4-f5d24ae477cc\":{\"classDefinition\":\"sap.cdw.querybuilder.Join\",\"name\":\"Join 1\",\"mappings\":{\"e9876727-c0fd-4c0c-a106-cdf6d44fa185\":{}},\"leftInput\":\"4cec35cb-72e0-4be8-8920-68f9ae5ab8b0\",\"rightInput\":\"3ba7a976-5a15-4708-bcfd-74da01452ef4\",\"elements\":{\"1307979b-666d-4b98-8392-40674d012452\":{\"name\":\"SALESORDERID\"},\"b0ea8b84-99b9-4ce2-8781-446ba4b03e39\":{\"name\":\"CREATEDBY\"},\"1716c8c1-9533-4d19-afbe-71d989c77a63\":{\"name\":\"CREATEDAT\"},\"727393d1-9e3c-4290-b622-972e1de40562\":{\"name\":\"CHANGEDBY\"},\"573ab316-ce85-4cdf-9c9a-0e01935b445d\":{\"name\":\"CHANGEDAT\"},\"81793131-521a-466f-a2cc-2532647f1f13\":{\"name\":\"FISCVARIANT\"},\"37a345f5-d65f-4023-85db-8b70d3e7bfd7\":{\"name\":\"FISCALYEARPERIOD\"},\"c2a2c040-ac28-454f-bfc4-a47778077558\":{\"name\":\"NOTEID\"},\"e7995994-f97f-4f8a-a657-717c9b8791c5\":{\"name\":\"PARTNERID\"},\"c4619bcb-1a18-4338-b32f-8e71732b381d\":{\"name\":\"SALESORG\"},\"fb10cfe6-eae6-41df-ba69-77c764f488cf\":{\"name\":\"CURRENCY\"},\"954db961-c043-41cc-9274-d61a17816090\":{\"name\":\"GROSSAMOUNT\"},\"ab570ee9-af4c-4027-9787-f1ca603ef1d4\":{\"name\":\"NETAMOUNT\"},\"295cf194-851b-461a-9498-1876fad4e231\":{\"name\":\"TAXAMOUNT\"},\"2ea3228b-0cec-4822-8afa-5ca2c089c48b\":{\"name\":\"LIFECYCLESTATUS\"},\"2f63b979-b147-4edc-8529-2965e77cbd5c\":{\"name\":\"BILLINGSTATUS\"},\"1caa7c6f-eb7e-4a9c-a5b2-4410001d07e2\":{\"name\":\"DELIVERYSTATUS\"},\"742d65c7-055f-4f5a-8195-7c665421cf25\":{\"name\":\"PARTNERID\"},\"4cdcad82-b267-44cf-b8cf-9d9a43ff7977\":{\"name\":\"PARTNERROLE\"},\"71a42c4d-3ad5-4b3e-971e-8ad5c7a635b8\":{\"name\":\"EMAILADDRESS\"},\"6e7471f0-39aa-4c85-9e83-c3477db4a924\":{\"name\":\"PHONENUMBER\"},\"70c09acc-245d-4f3a-9aff-40b6ffdda54a\":{\"name\":\"FAXNUMBER\"},\"8ce5d074-d6c0-43a3-9f3d-19216c9f1258\":{\"name\":\"WEBADDRESS\"},\"1271b252-2f62-4fe4-9a53-1c46d5d91073\":{\"name\":\"ADDRESSID\"},\"b1ad29c5-b346-44db-8215-486cd0839fa5\":{\"name\":\"COMPANYNAME\"},\"5808f0b5-03d3-4848-88b3-491f7acbd7e0\":{\"name\":\"LEGALFORM\"},\"0b195477-b34b-4405-b64d-c8bccc520d7f\":{\"name\":\"CREATEDBY\"},\"e3150992-f793-43ea-a6a4-a1978a53c5bc\":{\"name\":\"CREATEDAT\"},\"a0d2ef11-894a-4ab8-a173-f8a04eaf8ebb\":{\"name\":\"CHANGEDBY\"},\"c94b4c94-5d50-4a5d-896c-3a3ddb2032dd\":{\"name\":\"CHANGEDAT\"},\"d2e39912-cf66-48f6-8ffa-80a43a9fdf67\":{\"name\":\"CURRENCY\"}},\"successorNode\":\"63228232-e42b-4beb-9534-f7bd111fa403\"},\"63228232-e42b-4beb-9534-f7bd111fa403\":{\"classDefinition\":\"sap.cdw.querybuilder.RenameElements\",\"_isProjectionNode\":false,\"name\":\"Projection 1\",\"elements\":{\"c4614042-54ac-4c06-b918-1a514fd09064\":{\"name\":\"SALESORDERID\"},\"5caef4f7-b156-43b3-83fc-395f5ced5f3a\":{\"name\":\"CREATEDBY\"},\"77acac3f-4a09-4eab-9fbc-002a4c1fcba4\":{\"name\":\"CREATEDAT\"},\"95eb7e51-1971-4dd1-a8a3-43ac362f4541\":{\"name\":\"CHANGEDBY\"},\"904add28-ad12-465d-a9d1-63ab29b79d3f\":{\"name\":\"CHANGEDAT\"},\"65cc6048-a5ee-465f-8757-862dc7baf4af\":{\"name\":\"FISCVARIANT\"},\"93658763-8d82-40b1-af45-69d48bc76125\":{\"name\":\"FISCALYEARPERIOD\"},\"fe760899-b882-4dd7-bc8c-98fc5ce120d0\":{\"name\":\"NOTEID\"},\"800197e1-c109-4e29-8b0f-80d1ac6abd05\":{\"name\":\"PARTNERID\"},\"04c467e8-17e9-4f5a-a62a-5313dda38a00\":{\"name\":\"SALESORG\"},\"afa63d06-97ca-4dec-a519-2242194bbd09\":{\"name\":\"CURRENCY\"},\"4559c90d-224f-476f-a1c7-ff1f0e540465\":{\"name\":\"GROSSAMOUNT\"},\"7b2ab994-995a-4621-ac8b-b217fbd4ed9d\":{\"name\":\"NETAMOUNT\"},\"29f9e728-4f2f-47c4-afe9-fae4e5ec2097\":{\"name\":\"TAXAMOUNT\"},\"18b603fe-61f7-4027-bd2a-888439f34714\":{\"name\":\"LIFECYCLESTATUS\"},\"f8f9636a-d365-43bd-91d1-b96c746264c7\":{\"name\":\"BILLINGSTATUS\"},\"69b5f157-f9e0-4587-87eb-9a17c0824c9a\":{\"name\":\"DELIVERYSTATUS\"},\"2d591b93-a160-48f8-bf82-7c9c19f0a897\":{\"name\":\"PARTNERID\"},\"cb20d4b3-3a15-4271-952e-621ded2ebb84\":{\"name\":\"PARTNERROLE\"},\"a77b0e4e-0ae0-4cf1-8afd-28ba9bc51cc5\":{\"name\":\"EMAILADDRESS\"},\"5d8691ff-960d-49ef-83b1-5192a885b1b9\":{\"name\":\"PHONENUMBER\"},\"bd2c3370-f71f-4881-86e4-c0d8e47faca8\":{\"name\":\"FAXNUMBER\"},\"f48d9c5b-0140-4274-bf88-d46277296ff3\":{\"name\":\"WEBADDRESS\"},\"30a81feb-d198-401f-8443-1e39a3f97d13\":{\"name\":\"ADDRESSID\"},\"c49efa5b-62d6-4b0e-87be-d3802d05ee9d\":{\"name\":\"COMPANYNAME\"},\"a411f8f2-ff89-4121-afc0-e5ca99bb5a77\":{\"name\":\"LEGALFORM\"},\"6043fb11-58d0-4d10-a818-c573eea06cba\":{\"name\":\"CREATEDBY\"},\"c2e11860-29fe-47df-af07-7835213d345c\":{\"name\":\"CREATEDAT\"},\"0aca42df-02b6-469e-a490-4181f392fa45\":{\"name\":\"CHANGEDBY\"},\"f99c92a2-24cc-4962-bca6-08339257187e\":{\"name\":\"CHANGEDAT\"},\"9ed549cd-7bb4-4442-b672-5eae87cf6252\":{\"name\":\"CURRENCY\"}},\"successorNode\":\"b119b0dc-f919-4bc1-89a0-825de70c29f2\"},\"8a3fae20-07a9-4d1b-bcd4-f805826d30ba\":{\"classDefinition\":\"sap.cdw.querybuilder.DimensionNode\",\"name\":\"Addresses_Location\",\"label\":\"Addresses_Location\",\"type\":\"View (Dimension)\",\"isPinToMemoryEnabled\":false,\"dataCategory\":\"DIMENSION\",\"isAllowConsumption\":false,\"modificationDate\":1716333573771,\"deploymentDate\":1716333592964,\"#objectStatus\":\"1\",\"elements\":{\"bc848aaa-acbe-4196-b86e-d649736b1f7b\":{\"name\":\"ID\"},\"7df03cfe-0d75-48f0-b414-f54af3a37c15\":{\"name\":\"LATLONG\"},\"d97f82b4-bd32-45dd-9a11-9e30629d1973\":{\"name\":\"LATITUDE\"},\"1b96f41e-b60a-4aa4-ad95-5cd4750ba49c\":{\"name\":\"LONGITUDE\"},\"2da08eef-0404-473c-8e3c-36b46da65bc8\":{\"name\":\"GEO_ASMT_LEVEL\"},\"dbb9276c-15f7-4d2a-a9a7-59475c9a1b17\":{\"name\":\"PARTNERID\"},\"bedce3fe-e048-4a44-814e-62b58f27821b\":{\"name\":\"ADDRESSID\"},\"5eed2e6d-2f85-4209-87dc-08e328b03d61\":{\"name\":\"COMPANYNAME\"},\"8b957f44-dd0a-40c9-a258-4fb2c8371dfb\":{\"name\":\"LATLONG_2\"}}},\"48a37316-ae97-451d-902a-dc322d54ea13\":{\"classDefinition\":\"sap.cdw.querybuilder.Association\",\"name\":\"_Addresses\",\"label\":\"View 1 to Addresses_Location\",\"source\":\"b119b0dc-f919-4bc1-89a0-825de70c29f2\",\"target\":\"8a3fae20-07a9-4d1b-bcd4-f805826d30ba\",\"mappings\":{\"db104c01-7768-4298-8a4c-2901b8e3a8d2\":{}}},\"f3f95a78-3a16-4453-9181-3377d2e0c0e6\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.Diagram\",\"symbols\":{\"f1971bc0-2ca9-45f1-8a5d-3c737f18601b\":{},\"76707e03-df10-4b59-9339-ad5b58ea5a84\":{\"name\":\"Entity Symbol 1\"},\"f48ce98a-7b67-4beb-aee1-08e447351623\":{},\"97eeafd0-c558-46bf-b878-afd9e54e7498\":{},\"82c9b01a-fa21-4898-b99f-42d626f6e322\":{\"name\":\"Entity Symbol 2\"},\"b75c3177-2e78-4bb7-b85c-4abcb0577e23\":{},\"18b537ea-c669-4795-9fba-95c8763f8762\":{},\"9ab7ebf8-7d9b-4308-9c85-d51ddb8e1ae3\":{},\"6646b280-3912-4f37-a9fe-00466cd94e3a\":{}}},\"380e087f-95e8-4343-bf96-37d2c5e7067f\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"SALESORDERID\",\"label\":\"SALESORDERID\",\"newName\":\"SALESORDERID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"e8a9643c-1030-4f99-ba98-e5e10ab36d80\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDBY\",\"label\":\"CREATEDBY\",\"newName\":\"CREATEDBY\",\"indexOrder\":1,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"a1f00a77-0287-4438-ae43-99796a8aad04\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDAT\",\"label\":\"CREATEDAT\",\"newName\":\"CREATEDAT\",\"indexOrder\":2,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0},\"a5979023-e141-4085-af73-4598fa65df23\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDBY\",\"label\":\"CHANGEDBY\",\"newName\":\"CHANGEDBY\",\"indexOrder\":3,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"8a566912-d427-4ad6-bdab-915639c4b288\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDAT\",\"label\":\"CHANGEDAT\",\"newName\":\"CHANGEDAT\",\"indexOrder\":4,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0},\"9fa5bed6-bc89-44a7-86de-3626ae345ebc\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FISCVARIANT\",\"label\":\"FISCVARIANT\",\"newName\":\"FISCVARIANT\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0},\"71dd00fc-a42e-4273-8d25-9e52e5e333f6\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FISCALYEARPERIOD\",\"label\":\"FISCALYEARPERIOD\",\"newName\":\"FISCALYEARPERIOD\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"a992e108-9dcb-446b-aca7-fc13bb78c6fa\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"NOTEID\",\"label\":\"NOTEID\",\"newName\":\"NOTEID\",\"indexOrder\":7,\"length\":5000,\"precision\":0,\"scale\":0},\"a5704eb8-c989-4b19-840f-72f91c66c952\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":8,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"b895e6ad-2372-4657-9fba-97de68806668\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"SALESORG\",\"label\":\"SALESORG\",\"newName\":\"SALESORG\",\"indexOrder\":9,\"length\":5000,\"precision\":0,\"scale\":0},\"e2e3f91a-6261-486d-80ba-d28ff001a6e0\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CURRENCY\",\"label\":\"CURRENCY\",\"newName\":\"CURRENCY\",\"indexOrder\":10,\"length\":5000,\"precision\":0,\"scale\":0},\"f5543c7f-589c-4d5c-ab7a-6e02db8d8704\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GROSSAMOUNT\",\"label\":\"GROSSAMOUNT\",\"newName\":\"GROSSAMOUNT\",\"indexOrder\":11,\"defaultAggregation\":\"SUM\",\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"isMeasure\":true},\"867cd0a2-0918-4d73-9ce4-ff2f50bec26c\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"NETAMOUNT\",\"label\":\"NETAMOUNT\",\"newName\":\"NETAMOUNT\",\"indexOrder\":12,\"defaultAggregation\":\"SUM\",\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19,\"isMeasure\":true},\"f05d738b-b99e-4b9d-8500-257c7053f8c6\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"TAXAMOUNT\",\"label\":\"TAXAMOUNT\",\"newName\":\"TAXAMOUNT\",\"indexOrder\":13,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19},\"be05d341-bb5f-4ceb-a6eb-b557409427ee\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LIFECYCLESTATUS\",\"label\":\"LIFECYCLESTATUS\",\"newName\":\"LIFECYCLESTATUS\",\"indexOrder\":14,\"length\":5000,\"precision\":0,\"scale\":0},\"e9793cd7-1d1a-4f87-b5a6-2ea89bd1d51c\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"BILLINGSTATUS\",\"label\":\"BILLINGSTATUS\",\"newName\":\"BILLINGSTATUS\",\"indexOrder\":15,\"length\":5000,\"precision\":0,\"scale\":0},\"630547d8-e273-447e-a607-a04b4efcb505\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"DELIVERYSTATUS\",\"label\":\"DELIVERYSTATUS\",\"newName\":\"DELIVERYSTATUS\",\"indexOrder\":16,\"length\":5000,\"precision\":0,\"scale\":0},\"e3bb02fe-2cf9-442b-9a3c-b001a6520aed\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERROLE\",\"label\":\"PARTNERROLE\",\"newName\":\"PARTNERROLE\",\"indexOrder\":18,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"b65bbe78-79f7-48c7-b9ee-0a194b5c4fc9\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"EMAILADDRESS\",\"label\":\"EMAILADDRESS\",\"newName\":\"EMAILADDRESS\",\"indexOrder\":19,\"length\":5000,\"precision\":0,\"scale\":0},\"c5e12b23-fc72-4b06-b86e-4a6dfdf46c41\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PHONENUMBER\",\"label\":\"PHONENUMBER\",\"newName\":\"PHONENUMBER\",\"indexOrder\":20,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"0547f5d5-5e5f-4e74-8f3f-44f60d26b885\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FAXNUMBER\",\"label\":\"FAXNUMBER\",\"newName\":\"FAXNUMBER\",\"indexOrder\":21,\"length\":5000,\"precision\":0,\"scale\":0},\"4e8157bb-35d1-41a2-9155-4511109af2ea\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"WEBADDRESS\",\"label\":\"WEBADDRESS\",\"newName\":\"WEBADDRESS\",\"indexOrder\":22,\"length\":5000,\"precision\":0,\"scale\":0},\"6f447169-d478-48e8-ad96-df8e59ca03ec\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":23,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"1286ada8-3cfb-4441-b0d8-cc3f3bd8e075\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":24,\"length\":5000,\"precision\":0,\"scale\":0,\"foreignKey\":\"_Addresses\"},\"706b74ee-6575-4fa1-8c77-d9cb7204b6d5\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LEGALFORM\",\"label\":\"LEGALFORM\",\"newName\":\"LEGALFORM\",\"indexOrder\":25,\"length\":5000,\"precision\":0,\"scale\":0},\"f1971bc0-2ca9-45f1-8a5d-3c737f18601b\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.OutputSymbol\",\"x\":154.99999940395355,\"y\":-32.40040876787516,\"width\":140,\"height\":40,\"object\":\"b119b0dc-f919-4bc1-89a0-825de70c29f2\"},\"76707e03-df10-4b59-9339-ad5b58ea5a84\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.EntitySymbol\",\"name\":\"Entity Symbol 1\",\"x\":-270.99999940395355,\"y\":25,\"width\":160,\"displayName\":\"Entity Symbol 1\",\"object\":\"4cec35cb-72e0-4be8-8920-68f9ae5ab8b0\"},\"f48ce98a-7b67-4beb-aee1-08e447351623\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.JoinSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":-41.00000059604645,\"y\":-28.400408767875163,\"object\":\"2f853a4d-5b42-4b65-b3b4-f5d24ae477cc\"},\"97eeafd0-c558-46bf-b878-afd9e54e7498\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"-110.99999940395355,45.000000000000014 -76,45.000000000000014 -76,-7.0670754345418345 -41.00000059604645,-7.0670754345418345\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"76707e03-df10-4b59-9339-ad5b58ea5a84\",\"targetSymbol\":\"f48ce98a-7b67-4beb-aee1-08e447351623\",\"object\":\"2f853a4d-5b42-4b65-b3b4-f5d24ae477cc\"},\"82c9b01a-fa21-4898-b99f-42d626f6e322\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.EntitySymbol\",\"name\":\"Entity Symbol 2\",\"x\":-270.99999940395355,\"y\":-65,\"width\":160,\"displayName\":\"Entity Symbol 2\",\"object\":\"3ba7a976-5a15-4708-bcfd-74da01452ef4\"},\"b75c3177-2e78-4bb7-b85c-4abcb0577e23\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"isLeftInput\":false,\"points\":\"-110.99999940395355,-45 -76,-45 -76,-17.73374210120849 -41.00000059604645,-17.73374210120849\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"82c9b01a-fa21-4898-b99f-42d626f6e322\",\"targetSymbol\":\"f48ce98a-7b67-4beb-aee1-08e447351623\",\"object\":\"2f853a4d-5b42-4b65-b3b4-f5d24ae477cc\"},\"18b537ea-c669-4795-9fba-95c8763f8762\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.RenameSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":56.99999940395355,\"y\":-28.400408767875163,\"object\":\"63228232-e42b-4beb-9534-f7bd111fa403\"},\"9ab7ebf8-7d9b-4308-9c85-d51ddb8e1ae3\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"6.999999403953552,-12.400408767875163 56.99999940395355,-12.400408767875163\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"f48ce98a-7b67-4beb-aee1-08e447351623\",\"targetSymbol\":\"18b537ea-c669-4795-9fba-95c8763f8762\"},\"6646b280-3912-4f37-a9fe-00466cd94e3a\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"104.99999940395355,-12.400408767875163 154.99999940395355,-12.400408767875163\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"18b537ea-c669-4795-9fba-95c8763f8762\",\"targetSymbol\":\"f1971bc0-2ca9-45f1-8a5d-3c737f18601b\"},\"0c401889-5887-4ddf-bbad-e9abb37edea4\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"SALESORDERID\",\"label\":\"SALESORDERID\",\"newName\":\"SALESORDERID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"1307979b-666d-4b98-8392-40674d012452\"},\"fcca21a0-bc50-44c0-b1ce-7b35b7a9f433\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDBY\",\"label\":\"CREATEDBY\",\"newName\":\"CREATEDBY\",\"indexOrder\":1,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"b0ea8b84-99b9-4ce2-8781-446ba4b03e39\"},\"612f37ec-f7d8-4fe4-ac74-6792af2f534d\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDAT\",\"label\":\"CREATEDAT\",\"newName\":\"CREATEDAT\",\"indexOrder\":2,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"1716c8c1-9533-4d19-afbe-71d989c77a63\"},\"28d88bec-bae0-4b24-a65d-567e7cea06a9\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDBY\",\"label\":\"CHANGEDBY\",\"newName\":\"CHANGEDBY\",\"indexOrder\":3,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"727393d1-9e3c-4290-b622-972e1de40562\"},\"3bd20367-3c78-45d3-babc-73c1ae771a74\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDAT\",\"label\":\"CHANGEDAT\",\"newName\":\"CHANGEDAT\",\"indexOrder\":4,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"573ab316-ce85-4cdf-9c9a-0e01935b445d\"},\"c93023e8-a920-406a-904e-36334ce39a6b\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FISCVARIANT\",\"label\":\"FISCVARIANT\",\"newName\":\"FISCVARIANT\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"81793131-521a-466f-a2cc-2532647f1f13\"},\"7b9f31f0-5102-4f25-92a0-c11ad5b322be\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FISCALYEARPERIOD\",\"label\":\"FISCALYEARPERIOD\",\"newName\":\"FISCALYEARPERIOD\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"37a345f5-d65f-4023-85db-8b70d3e7bfd7\"},\"5de74c03-d81d-4dbc-8d88-c900d2e73d95\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"NOTEID\",\"label\":\"NOTEID\",\"newName\":\"NOTEID\",\"indexOrder\":7,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"c2a2c040-ac28-454f-bfc4-a47778077558\"},\"5458b955-d29b-442a-a983-df316396b862\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":8,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"e7995994-f97f-4f8a-a657-717c9b8791c5\"},\"fa58b655-4c18-4a24-b7e4-b61960f2ac13\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"SALESORG\",\"label\":\"SALESORG\",\"newName\":\"SALESORG\",\"indexOrder\":9,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"c4619bcb-1a18-4338-b32f-8e71732b381d\"},\"b2493245-45d5-40af-86ee-4f7e2d5e7b22\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CURRENCY\",\"label\":\"CURRENCY\",\"newName\":\"CURRENCY\",\"indexOrder\":10,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"fb10cfe6-eae6-41df-ba69-77c764f488cf\"},\"018cbf3c-dd16-4909-b918-d6d3e9558e04\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GROSSAMOUNT\",\"label\":\"GROSSAMOUNT\",\"newName\":\"GROSSAMOUNT\",\"indexOrder\":11,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"954db961-c043-41cc-9274-d61a17816090\"},\"8ed07390-4000-42be-8703-9fd18bde57fc\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"NETAMOUNT\",\"label\":\"NETAMOUNT\",\"newName\":\"NETAMOUNT\",\"indexOrder\":12,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19,\"successorElement\":\"ab570ee9-af4c-4027-9787-f1ca603ef1d4\"},\"c09c0b6b-8064-4016-b646-fa1b1b1f70df\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"TAXAMOUNT\",\"label\":\"TAXAMOUNT\",\"newName\":\"TAXAMOUNT\",\"indexOrder\":13,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19,\"successorElement\":\"295cf194-851b-461a-9498-1876fad4e231\"},\"8e9effa7-ec2e-4499-84c5-038d56943850\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LIFECYCLESTATUS\",\"label\":\"LIFECYCLESTATUS\",\"newName\":\"LIFECYCLESTATUS\",\"indexOrder\":14,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"2ea3228b-0cec-4822-8afa-5ca2c089c48b\"},\"aa1cdad8-285a-4d02-8e93-69736070042c\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"BILLINGSTATUS\",\"label\":\"BILLINGSTATUS\",\"newName\":\"BILLINGSTATUS\",\"indexOrder\":15,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"2f63b979-b147-4edc-8529-2965e77cbd5c\"},\"abb948a0-1cf4-4ac8-8ccc-09b5494e05bf\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"DELIVERYSTATUS\",\"label\":\"DELIVERYSTATUS\",\"newName\":\"DELIVERYSTATUS\",\"indexOrder\":16,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"1caa7c6f-eb7e-4a9c-a5b2-4410001d07e2\"},\"ab469c07-57be-48d7-859b-9c9818f3f6e8\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"742d65c7-055f-4f5a-8195-7c665421cf25\"},\"440e4b2b-6541-43c2-9c6f-0117564f150e\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERROLE\",\"label\":\"PARTNERROLE\",\"newName\":\"PARTNERROLE\",\"indexOrder\":1,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"4cdcad82-b267-44cf-b8cf-9d9a43ff7977\"},\"5d4d7a55-a680-4b68-a43c-2da58a8c2342\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"EMAILADDRESS\",\"label\":\"EMAILADDRESS\",\"newName\":\"EMAILADDRESS\",\"indexOrder\":2,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"71a42c4d-3ad5-4b3e-971e-8ad5c7a635b8\"},\"9de6c752-feaf-4cf8-aa8f-e781cfb0332d\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PHONENUMBER\",\"label\":\"PHONENUMBER\",\"newName\":\"PHONENUMBER\",\"indexOrder\":3,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"6e7471f0-39aa-4c85-9e83-c3477db4a924\"},\"a589cd12-8760-41ed-bb99-31c51ba23d3c\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FAXNUMBER\",\"label\":\"FAXNUMBER\",\"newName\":\"FAXNUMBER\",\"indexOrder\":4,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"70c09acc-245d-4f3a-9aff-40b6ffdda54a\"},\"6913959b-387c-4fef-a06b-302afaf4db98\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"WEBADDRESS\",\"label\":\"WEBADDRESS\",\"newName\":\"WEBADDRESS\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"8ce5d074-d6c0-43a3-9f3d-19216c9f1258\"},\"518ebaa3-633c-49ac-b645-68d83f910b3f\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"1271b252-2f62-4fe4-9a53-1c46d5d91073\"},\"32cdc810-2038-46a2-906b-a44c948beef7\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":7,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"b1ad29c5-b346-44db-8215-486cd0839fa5\"},\"3f38e7e2-abc7-48ec-bbea-576e4f433dc6\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LEGALFORM\",\"label\":\"LEGALFORM\",\"newName\":\"LEGALFORM\",\"indexOrder\":8,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"5808f0b5-03d3-4848-88b3-491f7acbd7e0\"},\"94779fb6-9711-4f08-8f5f-16d91ed51ebb\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDBY\",\"label\":\"CREATEDBY\",\"newName\":\"CREATEDBY\",\"indexOrder\":9,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"0b195477-b34b-4405-b64d-c8bccc520d7f\"},\"106f6631-9c6f-4892-b171-0622988f0a8d\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDAT\",\"label\":\"CREATEDAT\",\"newName\":\"CREATEDAT\",\"indexOrder\":10,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"e3150992-f793-43ea-a6a4-a1978a53c5bc\"},\"6e1d86e0-e2d8-4a37-b684-a0c642837f34\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDBY\",\"label\":\"CHANGEDBY\",\"newName\":\"CHANGEDBY\",\"indexOrder\":11,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"a0d2ef11-894a-4ab8-a173-f8a04eaf8ebb\"},\"1973857d-d6d9-4f1d-826d-1a9be2804bc6\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDAT\",\"label\":\"CHANGEDAT\",\"newName\":\"CHANGEDAT\",\"indexOrder\":12,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"c94b4c94-5d50-4a5d-896c-3a3ddb2032dd\"},\"07cfc577-3746-4151-8f12-8baa262bb599\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CURRENCY\",\"label\":\"CURRENCY\",\"newName\":\"CURRENCY\",\"indexOrder\":13,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"d2e39912-cf66-48f6-8ffa-80a43a9fdf67\"},\"e9876727-c0fd-4c0c-a106-cdf6d44fa185\":{\"classDefinition\":\"sap.cdw.commonmodel.ElementMapping\",\"source\":\"5458b955-d29b-442a-a983-df316396b862\",\"target\":\"ab469c07-57be-48d7-859b-9c9818f3f6e8\"},\"1307979b-666d-4b98-8392-40674d012452\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"SALESORDERID\",\"label\":\"SALESORDERID\",\"newName\":\"SALESORDERID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"c4614042-54ac-4c06-b918-1a514fd09064\"},\"b0ea8b84-99b9-4ce2-8781-446ba4b03e39\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDBY\",\"label\":\"CREATEDBY\",\"newName\":\"CREATEDBY\",\"indexOrder\":2,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"5caef4f7-b156-43b3-83fc-395f5ced5f3a\"},\"1716c8c1-9533-4d19-afbe-71d989c77a63\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDAT\",\"label\":\"CREATEDAT\",\"newName\":\"CREATEDAT\",\"indexOrder\":4,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"77acac3f-4a09-4eab-9fbc-002a4c1fcba4\"},\"727393d1-9e3c-4290-b622-972e1de40562\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDBY\",\"label\":\"CHANGEDBY\",\"newName\":\"CHANGEDBY\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"95eb7e51-1971-4dd1-a8a3-43ac362f4541\"},\"573ab316-ce85-4cdf-9c9a-0e01935b445d\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDAT\",\"label\":\"CHANGEDAT\",\"newName\":\"CHANGEDAT\",\"indexOrder\":8,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"904add28-ad12-465d-a9d1-63ab29b79d3f\"},\"81793131-521a-466f-a2cc-2532647f1f13\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FISCVARIANT\",\"label\":\"FISCVARIANT\",\"newName\":\"FISCVARIANT\",\"indexOrder\":10,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"65cc6048-a5ee-465f-8757-862dc7baf4af\"},\"37a345f5-d65f-4023-85db-8b70d3e7bfd7\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FISCALYEARPERIOD\",\"label\":\"FISCALYEARPERIOD\",\"newName\":\"FISCALYEARPERIOD\",\"indexOrder\":12,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"93658763-8d82-40b1-af45-69d48bc76125\"},\"c2a2c040-ac28-454f-bfc4-a47778077558\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"NOTEID\",\"label\":\"NOTEID\",\"newName\":\"NOTEID\",\"indexOrder\":14,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"fe760899-b882-4dd7-bc8c-98fc5ce120d0\"},\"e7995994-f97f-4f8a-a657-717c9b8791c5\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":16,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"800197e1-c109-4e29-8b0f-80d1ac6abd05\"},\"c4619bcb-1a18-4338-b32f-8e71732b381d\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"SALESORG\",\"label\":\"SALESORG\",\"newName\":\"SALESORG\",\"indexOrder\":18,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"04c467e8-17e9-4f5a-a62a-5313dda38a00\"},\"fb10cfe6-eae6-41df-ba69-77c764f488cf\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CURRENCY\",\"label\":\"CURRENCY\",\"newName\":\"CURRENCY\",\"indexOrder\":20,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"afa63d06-97ca-4dec-a519-2242194bbd09\"},\"954db961-c043-41cc-9274-d61a17816090\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GROSSAMOUNT\",\"label\":\"GROSSAMOUNT\",\"newName\":\"GROSSAMOUNT\",\"indexOrder\":22,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"4559c90d-224f-476f-a1c7-ff1f0e540465\"},\"ab570ee9-af4c-4027-9787-f1ca603ef1d4\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"NETAMOUNT\",\"label\":\"NETAMOUNT\",\"newName\":\"NETAMOUNT\",\"indexOrder\":24,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19,\"successorElement\":\"7b2ab994-995a-4621-ac8b-b217fbd4ed9d\"},\"295cf194-851b-461a-9498-1876fad4e231\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"TAXAMOUNT\",\"label\":\"TAXAMOUNT\",\"newName\":\"TAXAMOUNT\",\"indexOrder\":26,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19,\"successorElement\":\"29f9e728-4f2f-47c4-afe9-fae4e5ec2097\"},\"2ea3228b-0cec-4822-8afa-5ca2c089c48b\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LIFECYCLESTATUS\",\"label\":\"LIFECYCLESTATUS\",\"newName\":\"LIFECYCLESTATUS\",\"indexOrder\":28,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"18b603fe-61f7-4027-bd2a-888439f34714\"},\"2f63b979-b147-4edc-8529-2965e77cbd5c\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"BILLINGSTATUS\",\"label\":\"BILLINGSTATUS\",\"newName\":\"BILLINGSTATUS\",\"indexOrder\":29,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"f8f9636a-d365-43bd-91d1-b96c746264c7\"},\"1caa7c6f-eb7e-4a9c-a5b2-4410001d07e2\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"DELIVERYSTATUS\",\"label\":\"DELIVERYSTATUS\",\"newName\":\"DELIVERYSTATUS\",\"indexOrder\":30,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"69b5f157-f9e0-4587-87eb-9a17c0824c9a\"},\"742d65c7-055f-4f5a-8195-7c665421cf25\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":1,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"2d591b93-a160-48f8-bf82-7c9c19f0a897\"},\"4cdcad82-b267-44cf-b8cf-9d9a43ff7977\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERROLE\",\"label\":\"PARTNERROLE\",\"newName\":\"PARTNERROLE\",\"indexOrder\":3,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"cb20d4b3-3a15-4271-952e-621ded2ebb84\"},\"71a42c4d-3ad5-4b3e-971e-8ad5c7a635b8\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"EMAILADDRESS\",\"label\":\"EMAILADDRESS\",\"newName\":\"EMAILADDRESS\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"a77b0e4e-0ae0-4cf1-8afd-28ba9bc51cc5\"},\"6e7471f0-39aa-4c85-9e83-c3477db4a924\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PHONENUMBER\",\"label\":\"PHONENUMBER\",\"newName\":\"PHONENUMBER\",\"indexOrder\":7,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"5d8691ff-960d-49ef-83b1-5192a885b1b9\"},\"70c09acc-245d-4f3a-9aff-40b6ffdda54a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FAXNUMBER\",\"label\":\"FAXNUMBER\",\"newName\":\"FAXNUMBER\",\"indexOrder\":9,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"bd2c3370-f71f-4881-86e4-c0d8e47faca8\"},\"8ce5d074-d6c0-43a3-9f3d-19216c9f1258\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"WEBADDRESS\",\"label\":\"WEBADDRESS\",\"newName\":\"WEBADDRESS\",\"indexOrder\":11,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"f48d9c5b-0140-4274-bf88-d46277296ff3\"},\"1271b252-2f62-4fe4-9a53-1c46d5d91073\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":13,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"30a81feb-d198-401f-8443-1e39a3f97d13\"},\"b1ad29c5-b346-44db-8215-486cd0839fa5\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":15,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"c49efa5b-62d6-4b0e-87be-d3802d05ee9d\"},\"5808f0b5-03d3-4848-88b3-491f7acbd7e0\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LEGALFORM\",\"label\":\"LEGALFORM\",\"newName\":\"LEGALFORM\",\"indexOrder\":17,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"a411f8f2-ff89-4121-afc0-e5ca99bb5a77\"},\"0b195477-b34b-4405-b64d-c8bccc520d7f\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDBY\",\"label\":\"CREATEDBY\",\"newName\":\"CREATEDBY\",\"indexOrder\":19,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"6043fb11-58d0-4d10-a818-c573eea06cba\"},\"e3150992-f793-43ea-a6a4-a1978a53c5bc\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDAT\",\"label\":\"CREATEDAT\",\"newName\":\"CREATEDAT\",\"indexOrder\":21,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"c2e11860-29fe-47df-af07-7835213d345c\"},\"a0d2ef11-894a-4ab8-a173-f8a04eaf8ebb\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDBY\",\"label\":\"CHANGEDBY\",\"newName\":\"CHANGEDBY\",\"indexOrder\":23,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"0aca42df-02b6-469e-a490-4181f392fa45\"},\"c94b4c94-5d50-4a5d-896c-3a3ddb2032dd\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDAT\",\"label\":\"CHANGEDAT\",\"newName\":\"CHANGEDAT\",\"indexOrder\":25,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"f99c92a2-24cc-4962-bca6-08339257187e\"},\"d2e39912-cf66-48f6-8ffa-80a43a9fdf67\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CURRENCY\",\"label\":\"CURRENCY\",\"newName\":\"CURRENCY\",\"indexOrder\":27,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"9ed549cd-7bb4-4442-b672-5eae87cf6252\"},\"c4614042-54ac-4c06-b918-1a514fd09064\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"SALESORDERID\",\"label\":\"SALESORDERID\",\"newName\":\"SALESORDERID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"380e087f-95e8-4343-bf96-37d2c5e7067f\"},\"5caef4f7-b156-43b3-83fc-395f5ced5f3a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDBY\",\"label\":\"CREATEDBY\",\"newName\":\"CREATEDBY\",\"indexOrder\":1,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"e8a9643c-1030-4f99-ba98-e5e10ab36d80\"},\"77acac3f-4a09-4eab-9fbc-002a4c1fcba4\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDAT\",\"label\":\"CREATEDAT\",\"newName\":\"CREATEDAT\",\"indexOrder\":2,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"a1f00a77-0287-4438-ae43-99796a8aad04\"},\"95eb7e51-1971-4dd1-a8a3-43ac362f4541\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDBY\",\"label\":\"CHANGEDBY\",\"newName\":\"CHANGEDBY\",\"indexOrder\":3,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"a5979023-e141-4085-af73-4598fa65df23\"},\"904add28-ad12-465d-a9d1-63ab29b79d3f\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDAT\",\"label\":\"CHANGEDAT\",\"newName\":\"CHANGEDAT\",\"indexOrder\":4,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"8a566912-d427-4ad6-bdab-915639c4b288\"},\"65cc6048-a5ee-465f-8757-862dc7baf4af\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FISCVARIANT\",\"label\":\"FISCVARIANT\",\"newName\":\"FISCVARIANT\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"9fa5bed6-bc89-44a7-86de-3626ae345ebc\"},\"93658763-8d82-40b1-af45-69d48bc76125\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FISCALYEARPERIOD\",\"label\":\"FISCALYEARPERIOD\",\"newName\":\"FISCALYEARPERIOD\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"71dd00fc-a42e-4273-8d25-9e52e5e333f6\"},\"fe760899-b882-4dd7-bc8c-98fc5ce120d0\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"NOTEID\",\"label\":\"NOTEID\",\"newName\":\"NOTEID\",\"indexOrder\":7,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"a992e108-9dcb-446b-aca7-fc13bb78c6fa\"},\"800197e1-c109-4e29-8b0f-80d1ac6abd05\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":8,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"a5704eb8-c989-4b19-840f-72f91c66c952\"},\"04c467e8-17e9-4f5a-a62a-5313dda38a00\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"SALESORG\",\"label\":\"SALESORG\",\"newName\":\"SALESORG\",\"indexOrder\":9,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"b895e6ad-2372-4657-9fba-97de68806668\"},\"afa63d06-97ca-4dec-a519-2242194bbd09\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CURRENCY\",\"label\":\"CURRENCY\",\"newName\":\"CURRENCY\",\"indexOrder\":10,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"e2e3f91a-6261-486d-80ba-d28ff001a6e0\"},\"4559c90d-224f-476f-a1c7-ff1f0e540465\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GROSSAMOUNT\",\"label\":\"GROSSAMOUNT\",\"newName\":\"GROSSAMOUNT\",\"indexOrder\":11,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"f5543c7f-589c-4d5c-ab7a-6e02db8d8704\"},\"7b2ab994-995a-4621-ac8b-b217fbd4ed9d\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"NETAMOUNT\",\"label\":\"NETAMOUNT\",\"newName\":\"NETAMOUNT\",\"indexOrder\":12,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19,\"successorElement\":\"867cd0a2-0918-4d73-9ce4-ff2f50bec26c\"},\"29f9e728-4f2f-47c4-afe9-fae4e5ec2097\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"TAXAMOUNT\",\"label\":\"TAXAMOUNT\",\"newName\":\"TAXAMOUNT\",\"indexOrder\":13,\"dataType\":\"cds.Decimal\",\"length\":0,\"precision\":38,\"scale\":19,\"successorElement\":\"f05d738b-b99e-4b9d-8500-257c7053f8c6\"},\"18b603fe-61f7-4027-bd2a-888439f34714\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LIFECYCLESTATUS\",\"label\":\"LIFECYCLESTATUS\",\"newName\":\"LIFECYCLESTATUS\",\"indexOrder\":14,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"be05d341-bb5f-4ceb-a6eb-b557409427ee\"},\"f8f9636a-d365-43bd-91d1-b96c746264c7\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"BILLINGSTATUS\",\"label\":\"BILLINGSTATUS\",\"newName\":\"BILLINGSTATUS\",\"indexOrder\":15,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"e9793cd7-1d1a-4f87-b5a6-2ea89bd1d51c\"},\"69b5f157-f9e0-4587-87eb-9a17c0824c9a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"DELIVERYSTATUS\",\"label\":\"DELIVERYSTATUS\",\"newName\":\"DELIVERYSTATUS\",\"indexOrder\":16,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"630547d8-e273-447e-a607-a04b4efcb505\"},\"2d591b93-a160-48f8-bf82-7c9c19f0a897\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"isRemoved\":true,\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"cb20d4b3-3a15-4271-952e-621ded2ebb84\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERROLE\",\"label\":\"PARTNERROLE\",\"newName\":\"PARTNERROLE\",\"indexOrder\":1,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"e3bb02fe-2cf9-442b-9a3c-b001a6520aed\"},\"a77b0e4e-0ae0-4cf1-8afd-28ba9bc51cc5\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"EMAILADDRESS\",\"label\":\"EMAILADDRESS\",\"newName\":\"EMAILADDRESS\",\"indexOrder\":2,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"b65bbe78-79f7-48c7-b9ee-0a194b5c4fc9\"},\"5d8691ff-960d-49ef-83b1-5192a885b1b9\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PHONENUMBER\",\"label\":\"PHONENUMBER\",\"newName\":\"PHONENUMBER\",\"indexOrder\":3,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"c5e12b23-fc72-4b06-b86e-4a6dfdf46c41\"},\"bd2c3370-f71f-4881-86e4-c0d8e47faca8\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"FAXNUMBER\",\"label\":\"FAXNUMBER\",\"newName\":\"FAXNUMBER\",\"indexOrder\":4,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"0547f5d5-5e5f-4e74-8f3f-44f60d26b885\"},\"f48d9c5b-0140-4274-bf88-d46277296ff3\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"WEBADDRESS\",\"label\":\"WEBADDRESS\",\"newName\":\"WEBADDRESS\",\"indexOrder\":5,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"4e8157bb-35d1-41a2-9155-4511109af2ea\"},\"30a81feb-d198-401f-8443-1e39a3f97d13\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"6f447169-d478-48e8-ad96-df8e59ca03ec\"},\"c49efa5b-62d6-4b0e-87be-d3802d05ee9d\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":7,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"1286ada8-3cfb-4441-b0d8-cc3f3bd8e075\"},\"a411f8f2-ff89-4121-afc0-e5ca99bb5a77\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LEGALFORM\",\"label\":\"LEGALFORM\",\"newName\":\"LEGALFORM\",\"indexOrder\":8,\"length\":5000,\"precision\":0,\"scale\":0,\"successorElement\":\"706b74ee-6575-4fa1-8c77-d9cb7204b6d5\"},\"6043fb11-58d0-4d10-a818-c573eea06cba\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDBY\",\"label\":\"CREATEDBY\",\"newName\":\"CREATEDBY\",\"isRemoved\":true,\"indexOrder\":9,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"c2e11860-29fe-47df-af07-7835213d345c\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CREATEDAT\",\"label\":\"CREATEDAT\",\"newName\":\"CREATEDAT\",\"isRemoved\":true,\"indexOrder\":10,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0},\"0aca42df-02b6-469e-a490-4181f392fa45\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDBY\",\"label\":\"CHANGEDBY\",\"newName\":\"CHANGEDBY\",\"isRemoved\":true,\"indexOrder\":11,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"f99c92a2-24cc-4962-bca6-08339257187e\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CHANGEDAT\",\"label\":\"CHANGEDAT\",\"newName\":\"CHANGEDAT\",\"isRemoved\":true,\"indexOrder\":12,\"dataType\":\"cds.Date\",\"length\":0,\"precision\":0,\"scale\":0},\"9ed549cd-7bb4-4442-b672-5eae87cf6252\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"CURRENCY\",\"label\":\"CURRENCY\",\"newName\":\"CURRENCY\",\"isRemoved\":true,\"indexOrder\":13,\"length\":5000,\"precision\":0,\"scale\":0},\"a780c45f-6ecb-429b-ba52-297572017c17\":{\"classDefinition\":\"sap.cdw.commonmodel.ElementMapping\",\"source\":\"fcca21a0-bc50-44c0-b1ce-7b35b7a9f433\",\"target\":\"94779fb6-9711-4f08-8f5f-16d91ed51ebb\"},\"bc848aaa-acbe-4196-b86e-d649736b1f7b\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ID\",\"label\":\"ID\",\"newName\":\"ID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"7df03cfe-0d75-48f0-b414-f54af3a37c15\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATLONG\",\"label\":\"LATLONG\",\"newName\":\"LATLONG\",\"indexOrder\":1,\"dataType\":\"cds.hana.ST_GEOMETRY\",\"length\":0,\"precision\":0,\"scale\":0,\"srid\":3857,\"isDimension\":true},\"d97f82b4-bd32-45dd-9a11-9e30629d1973\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATITUDE\",\"label\":\"LATITUDE\",\"newName\":\"LATITUDE\",\"indexOrder\":2,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0},\"1b96f41e-b60a-4aa4-ad95-5cd4750ba49c\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LONGITUDE\",\"label\":\"LONGITUDE\",\"newName\":\"LONGITUDE\",\"indexOrder\":3,\"dataType\":\"cds.Double\",\"length\":0,\"precision\":0,\"scale\":0},\"2da08eef-0404-473c-8e3c-36b46da65bc8\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GEO_ASMT_LEVEL\",\"label\":\"GEO_ASMT_LEVEL\",\"newName\":\"GEO_ASMT_LEVEL\",\"indexOrder\":4,\"length\":4,\"precision\":0,\"scale\":0,\"isDimension\":true},\"dbb9276c-15f7-4d2a-a9a7-59475c9a1b17\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"PARTNERID\",\"label\":\"PARTNERID\",\"newName\":\"PARTNERID\",\"indexOrder\":5,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"bedce3fe-e048-4a44-814e-62b58f27821b\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDRESSID\",\"label\":\"ADDRESSID\",\"newName\":\"ADDRESSID\",\"indexOrder\":6,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"5eed2e6d-2f85-4209-87dc-08e328b03d61\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"COMPANYNAME\",\"label\":\"COMPANYNAME\",\"newName\":\"COMPANYNAME\",\"indexOrder\":7,\"isKey\":true,\"length\":5000,\"precision\":0,\"scale\":0,\"isDimension\":true,\"isNotNull\":true},\"8b957f44-dd0a-40c9-a258-4fb2c8371dfb\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"LATLONG_2\",\"label\":\"LATLONG_2\",\"newName\":\"LATLONG_2\",\"indexOrder\":8,\"dataType\":\"cds.hana.ST_GEOMETRY\",\"length\":0,\"precision\":0,\"scale\":0},\"db104c01-7768-4298-8a4c-2901b8e3a8d2\":{\"classDefinition\":\"sap.cdw.commonmodel.ElementMapping\",\"source\":\"1286ada8-3cfb-4441-b0d8-cc3f3bd8e075\",\"target\":\"5eed2e6d-2f85-4209-87dc-08e328b03d61\"}}}"
+    }
+  },
+  "$version": "1.0"
+}

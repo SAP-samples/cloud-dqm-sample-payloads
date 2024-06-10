@@ -1,0 +1,46 @@
+{
+  "definitions": {
+    "Addresses_View_GEO": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "ID"
+        },
+        "LATLONG": {
+          "type": "cds.hana.ST_GEOMETRY",
+          "srid": 3857,
+          "@EndUserText.label": "LATLONG"
+        },
+        "LATITUDE": {
+          "type": "cds.Double",
+          "@EndUserText.label": "LATITUDE"
+        },
+        "LONGITUDE": {
+          "type": "cds.Double",
+          "@EndUserText.label": "LONGITUDE"
+        },
+        "GEO_ASMT_LEVEL": {
+          "type": "cds.String",
+          "length": 4,
+          "@EndUserText.label": "GEO_ASMT_LEVEL"
+        }
+      },
+      "@DataWarehouse.external.schema": "HN_RMS#DQMM",
+      "@DataWarehouse.external.entity": "Addresses_View_GEO",
+      "@EndUserText.label": "Addresses_View_GEO",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}
