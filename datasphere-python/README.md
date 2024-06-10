@@ -103,6 +103,11 @@ Alternatively, you can export the service key JSON into a file, rename it to ser
 
 ## Process Data
 
+Perform the following steps to process your data.
+
+An example of this process can be found at [dsp](dsp).
+
+
 ### Create a view in your space to project the data to service-related input fields
 
 The view accomplishes two things. The first is to make the data accessible outside of the space. When creating a view, enable **<em>Expose for Consumption</em>** so that the view can be accessed using the database user.

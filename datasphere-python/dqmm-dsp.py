@@ -81,8 +81,8 @@ headers = {
 request = {
     "addressInput": [{}],
     "outputFields": ["geo_asmt_level",
-                        "addr_latitude", 
-                        "addr_longitude"
+                     "addr_latitude", 
+                     "addr_longitude"
                     ],
     "addressSettings": {
         "processingMode": "geoOnly"
@@ -125,7 +125,7 @@ while res:
         if result['addr_latitude'] == None:
             insert = "INSERT INTO \"{}\" VALUES ('{}', null, null, null, null)".format(outputTable, idVal);
         else:
-            insert = "INSERT INTO \"{}\" VALUES ('{}', ST_GeomFromText('POINT({} {})', 4326).ST_TRANSFORM(3857), {}, {}, '{}')".format(outputTable, idVal,
+            insert = "INSERT INTO \"{}\" VALUES ('{}', ST_GeomFromText('POINT({} {})', 3857), {}, {}, '{}')".format(outputTable, idVal,
                     result['addr_longitude'],
                     result['addr_latitude'],
                     result['addr_latitude'],
