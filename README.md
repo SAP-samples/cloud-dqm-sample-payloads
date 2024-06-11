@@ -1,3 +1,4 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-dqm-sample-payloads)](https://api.reuse.software/info/github.com/SAP-samples/cloud-dqm-sample-payloads)
 
 # Samples for Data Quality Management microservices
 
