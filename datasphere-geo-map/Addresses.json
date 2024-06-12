@@ -1,0 +1,89 @@
+{
+  "definitions": {
+    "Addresses": {
+      "kind": "entity",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.dataSource.schema": "HN_RMS#WRG_HYE65HAQ94CFXBYU",
+      "@DataWarehouse.dataSource.entity": "sap.dataset.conf_834055ae-e096-4a94-8a60-4d1993ec9921_view",
+      "@EndUserText.label": "Addresses",
+      "elements": {
+        "ADDRESSID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "ADDRESSID"
+        },
+        "CITY": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "CITY"
+        },
+        "POSTALCODE": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "POSTALCODE"
+        },
+        "STREET": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "STREET"
+        },
+        "BUILDING": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "BUILDING"
+        },
+        "COUNTRY": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "COUNTRY"
+        },
+        "REGION": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "REGION"
+        },
+        "ADDRESSTYPE": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "ADDRESSTYPE"
+        },
+        "VALIDITY_STARTDATE": {
+          "type": "cds.Date",
+          "@EndUserText.label": "VALIDITY_STARTDATE"
+        },
+        "VALIDITY_ENDDATE": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "VALIDITY_ENDDATE"
+        },
+        "LATITUDE": {
+          "type": "cds.Decimal",
+          "precision": 38,
+          "scale": 19,
+          "@EndUserText.label": "LATITUDE"
+        },
+        "LONGITUDE": {
+          "type": "cds.Decimal",
+          "precision": 38,
+          "scale": 19,
+          "@EndUserText.label": "LONGITUDE"
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}

@@ -1,0 +1,94 @@
+{
+  "definitions": {
+    "BusinessPartners": {
+      "kind": "entity",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.dataSource.schema": "HN_RMS#WRG_HYE65HAQ94CFXBYU",
+      "@DataWarehouse.dataSource.entity": "sap.dataset.conf_b8feaf71-2460-4cbe-8978-4411a1f62ed3_view",
+      "@EndUserText.label": "BusinessPartners",
+      "elements": {
+        "PARTNERID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "PARTNERID"
+        },
+        "PARTNERROLE": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "PARTNERROLE"
+        },
+        "EMAILADDRESS": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "EMAILADDRESS"
+        },
+        "PHONENUMBER": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "PHONENUMBER"
+        },
+        "FAXNUMBER": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "FAXNUMBER"
+        },
+        "WEBADDRESS": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "WEBADDRESS"
+        },
+        "ADDRESSID": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "ADDRESSID"
+        },
+        "COMPANYNAME": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "COMPANYNAME"
+        },
+        "LEGALFORM": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "LEGALFORM"
+        },
+        "CREATEDBY": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "CREATEDBY"
+        },
+        "CREATEDAT": {
+          "type": "cds.Date",
+          "@EndUserText.label": "CREATEDAT"
+        },
+        "CHANGEDBY": {
+          "type": "cds.Integer64",
+          "@EndUserText.label": "CHANGEDBY"
+        },
+        "CHANGEDAT": {
+          "type": "cds.Date",
+          "@EndUserText.label": "CHANGEDAT"
+        },
+        "CURRENCY": {
+          "type": "cds.String",
+          "length": 5000,
+          "@EndUserText.label": "CURRENCY"
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}
