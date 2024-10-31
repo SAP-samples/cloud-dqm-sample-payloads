@@ -1,0 +1,71 @@
+{
+  "definitions": {
+    "DQMSampleData": {
+      "kind": "entity",
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "elements": {
+        "ID": {
+          "@EndUserText.label": "ID",
+          "type": "cds.Integer64"
+        },
+        "STD_ADDR_COUNTRY_3CHAR": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_3CHAR",
+          "type": "cds.String",
+          "length": 3
+        },
+        "STD_ADDR_COUNTRY_NAME": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_NAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "ADDR_ASMT_INFO": {
+          "@EndUserText.label": "ADDR_ASMT_INFO",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ADDR_ASMT_LEVEL": {
+          "@EndUserText.label": "ADDR_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 2
+        },
+        "ADDR_INFO_CODE": {
+          "@EndUserText.label": "ADDR_INFO_CODE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ADDR_INFO_CODE_MSG": {
+          "@EndUserText.label": "ADDR_INFO_CODE_MSG",
+          "type": "cds.String",
+          "length": 1024
+        },
+        "GEO_ASMT_LEVEL": {
+          "@EndUserText.label": "GEO_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 4
+        }
+      },
+      "@EndUserText.label": "DQMSampleData",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@DataWarehouse.dataSource.schema": "HN_RMS#WRG_PPXJF7W6BNFLYLMV",
+      "@DataWarehouse.dataSource.entity": "sap.dataset.conf_54b7ccff-c7b5-4f3b-8e0e-9f7730e7240e_view",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}

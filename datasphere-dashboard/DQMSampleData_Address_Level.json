@@ -1,0 +1,549 @@
+{
+  "definitions": {
+    "DQMSampleData_Address_Level": {
+      "kind": "entity",
+      "elements": {
+        "ADDR_ASMT_LEVEL": {
+          "@EndUserText.label": "ADDR_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 2,
+          "key": true,
+          "notNull": true,
+          "@Analytics.dimension": true
+        },
+        "Address_Level": {
+          "@EndUserText.label": "Address_Level",
+          "type": "cds.String",
+          "length": 10,
+          "@Analytics.dimension": true
+        }
+      },
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "DQMSampleData_SQL"
+            ]
+          },
+          "columns": [
+            {
+              "key": true,
+              "ref": [
+                "ADDR_ASMT_LEVEL"
+              ]
+            },
+            {
+              "ref": [
+                "Address_Level"
+              ]
+            }
+          ]
+        }
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "ANALYTICAL_DIMENSION"
+        }
+      ],
+      "@EndUserText.label": "DQMSampleData_Address_Level",
+      "@ObjectModel.modelingPattern": {
+        "#": "ANALYTICAL_DIMENSION"
+      },
+      "@Hierarchy.leveled": [
+        {
+          "name": "Hierarchy",
+          "label": "Hierarchy",
+          "levels": [
+            {
+              "element": {
+                "=": "Address_Level"
+              }
+            },
+            {
+              "element": {
+                "=": "ADDR_ASMT_LEVEL"
+              }
+            }
+          ]
+        }
+      ],
+      "@DataWarehouse.consumption.external": false,
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "DQMSampleData": {
+      "kind": "entity",
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "elements": {
+        "ID": {
+          "@EndUserText.label": "ID",
+          "type": "cds.Integer64"
+        },
+        "STD_ADDR_COUNTRY_3CHAR": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_3CHAR",
+          "type": "cds.String",
+          "length": 3
+        },
+        "STD_ADDR_COUNTRY_NAME": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_NAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "ADDR_ASMT_INFO": {
+          "@EndUserText.label": "ADDR_ASMT_INFO",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ADDR_ASMT_LEVEL": {
+          "@EndUserText.label": "ADDR_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 2
+        },
+        "ADDR_INFO_CODE": {
+          "@EndUserText.label": "ADDR_INFO_CODE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ADDR_INFO_CODE_MSG": {
+          "@EndUserText.label": "ADDR_INFO_CODE_MSG",
+          "type": "cds.String",
+          "length": 1024
+        },
+        "GEO_ASMT_LEVEL": {
+          "@EndUserText.label": "GEO_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 4
+        }
+      },
+      "@EndUserText.label": "DQMSampleData",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@DataWarehouse.dataSource.schema": "HN_RMS#WRG_PPXJF7W6BNFLYLMV",
+      "@DataWarehouse.dataSource.entity": "sap.dataset.conf_54b7ccff-c7b5-4f3b-8e0e-9f7730e7240e_view",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "DQMSampleData_SQL": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "@EndUserText.label": "ID",
+          "type": "cds.Integer64"
+        },
+        "STD_ADDR_COUNTRY_3CHAR": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_3CHAR",
+          "type": "cds.String",
+          "length": 3
+        },
+        "STD_ADDR_COUNTRY_NAME": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_NAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "ADDR_ASMT_INFO": {
+          "@EndUserText.label": "ADDR_ASMT_INFO",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ADDR_ASMT_LEVEL": {
+          "@EndUserText.label": "ADDR_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 2
+        },
+        "ADDR_INFO_CODE": {
+          "@EndUserText.label": "ADDR_INFO_CODE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ADDR_INFO_CODE_MSG": {
+          "@EndUserText.label": "ADDR_INFO_CODE_MSG",
+          "type": "cds.String",
+          "length": 1024
+        },
+        "GEO_ASMT_LEVEL": {
+          "@EndUserText.label": "GEO_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 4
+        },
+        "Address_Validity": {
+          "@EndUserText.label": "Address_Validity",
+          "type": "cds.String",
+          "length": 7
+        },
+        "Address_Level": {
+          "@EndUserText.label": "Address_Level",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Geocode_Level": {
+          "@EndUserText.label": "Geocode_Level",
+          "type": "cds.String",
+          "length": 10
+        }
+      },
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "DQMSampleData"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "ID"
+              ]
+            },
+            {
+              "ref": [
+                "STD_ADDR_COUNTRY_3CHAR"
+              ]
+            },
+            {
+              "ref": [
+                "STD_ADDR_COUNTRY_NAME"
+              ]
+            },
+            {
+              "ref": [
+                "ADDR_ASMT_INFO"
+              ]
+            },
+            {
+              "ref": [
+                "ADDR_ASMT_LEVEL"
+              ]
+            },
+            {
+              "ref": [
+                "ADDR_INFO_CODE"
+              ]
+            },
+            {
+              "ref": [
+                "ADDR_INFO_CODE_MSG"
+              ]
+            },
+            {
+              "ref": [
+                "GEO_ASMT_LEVEL"
+              ]
+            },
+            {
+              "xpr": [
+                "case",
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_INFO"
+                  ]
+                },
+                "=",
+                {
+                  "val": "V"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_INFO"
+                  ]
+                },
+                "=",
+                {
+                  "val": "C"
+                },
+                "then",
+                {
+                  "val": "Valid"
+                },
+                "else",
+                {
+                  "val": "Invalid"
+                },
+                "end"
+              ],
+              "as": "Address_Validity"
+            },
+            {
+              "xpr": [
+                "case",
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "S"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PR"
+                },
+                "then",
+                {
+                  "val": "Premise"
+                },
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PN"
+                },
+                "then",
+                {
+                  "val": "Street"
+                },
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L4"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L3"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L2"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L1"
+                },
+                "then",
+                {
+                  "val": "City"
+                },
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "R"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "C"
+                },
+                "then",
+                {
+                  "val": "Region"
+                },
+                "else",
+                {
+                  "val": "Unassigned"
+                },
+                "end"
+              ],
+              "as": "Address_Level"
+            },
+            {
+              "xpr": [
+                "case",
+                "when",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PRE"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PRI"
+                },
+                "then",
+                {
+                  "val": "Premise"
+                },
+                "when",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PN"
+                },
+                "then",
+                {
+                  "val": "Street"
+                },
+                "when",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PF"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "P2P"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "P1"
+                },
+                "then",
+                {
+                  "val": "Postcode"
+                },
+                "when",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L3"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L2"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L1"
+                },
+                "then",
+                {
+                  "val": "City"
+                },
+                "else",
+                {
+                  "val": "Unassigned"
+                },
+                "end"
+              ],
+              "as": "Geocode_Level"
+            }
+          ]
+        }
+      },
+      "@EndUserText.label": "DQMSampleData_SQL",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.consumption.external": false,
+      "@DataWarehouse.sqlEditor.query": "SELECT \"ID\",\"STD_ADDR_COUNTRY_3CHAR\",\"STD_ADDR_COUNTRY_NAME\",\"ADDR_ASMT_INFO\", \"ADDR_ASMT_LEVEL\", \"ADDR_INFO_CODE\",\r\n\"ADDR_INFO_CODE_MSG\", \"GEO_ASMT_LEVEL\",\r\n(CASE \r\n  WHEN \"ADDR_ASMT_INFO\" = 'V' OR \"ADDR_ASMT_INFO\" = 'C' THEN 'Valid' \r\n  ELSE 'Invalid' END) AS \"Address_Validity\",\r\n(CASE \r\n  WHEN \"ADDR_ASMT_LEVEL\" = 'S' OR \"ADDR_ASMT_LEVEL\" = 'PR' THEN 'Premise'\r\n  WHEN \"ADDR_ASMT_LEVEL\" = 'PN' THEN 'Street'\r\n  WHEN \"ADDR_ASMT_LEVEL\" = 'L4' OR \"ADDR_ASMT_LEVEL\" = 'L3' OR \"ADDR_ASMT_LEVEL\" = 'L2' OR \"ADDR_ASMT_LEVEL\" = 'L1' THEN 'City'\r\n  WHEN \"ADDR_ASMT_LEVEL\" = 'R' OR \"ADDR_ASMT_LEVEL\" = 'C' THEN 'Region'\r\n  ELSE 'Unassigned' END) AS \"Address_Level\",\r\n(CASE WHEN \"GEO_ASMT_LEVEL\" = 'PRE' OR \"GEO_ASMT_LEVEL\" = 'PRI' THEN 'Premise'\r\n  WHEN \"GEO_ASMT_LEVEL\" = 'PN' THEN 'Street'\r\n  WHEN \"GEO_ASMT_LEVEL\" = 'PF' OR \"GEO_ASMT_LEVEL\" = 'P2P' OR \"GEO_ASMT_LEVEL\" = 'P1' THEN 'Postcode'\r\n  WHEN \"GEO_ASMT_LEVEL\" = 'L3' OR \"GEO_ASMT_LEVEL\" = 'L2' OR \"GEO_ASMT_LEVEL\" = 'L1' THEN 'City'\r\n  ELSE 'Unassigned' END) AS \"Geocode_Level\"\r\nFROM \"DQMSampleData\"",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "editorSettings": {
+    "DQMSampleData_Address_Level": {
+      "editor": {
+        "lastModifier": "GRAPHICALVIEWBUILDER",
+        "default": "GRAPHICALVIEWBUILDER"
+      },
+      "uiModel": "{\"contents\":{\"cbd639bb-8d40-4f05-9191-6b40be10ecd2\":{\"classDefinition\":\"sap.cdw.querybuilder.Model\",\"name\":\"DQMSampleData_Address_Level\",\"label\":\"DQMSampleData_Address_Level\",\"modificationDate\":1730311516821,\"deploymentDate\":0,\"#objectStatus\":\"0\",\"output\":\"aedb3a85-2c7e-4378-8fe9-a2332af9b189\",\"nodes\":{\"aedb3a85-2c7e-4378-8fe9-a2332af9b189\":{\"name\":\"DQMSampleData_Address_Level\"},\"8a6b39f6-b41a-4d1d-8cfb-83a2e9ace9ca\":{\"name\":\"DQMSampleData_SQL\"},\"6dc9f9f5-21f8-4b95-bf05-542467e89a77\":{\"name\":\"Projection 1\"}},\"diagrams\":{\"a9de44ea-f5b2-4a9e-aa07-7653c94d7726\":{}}},\"aedb3a85-2c7e-4378-8fe9-a2332af9b189\":{\"classDefinition\":\"sap.cdw.querybuilder.Output\",\"name\":\"DQMSampleData_Address_Level\",\"type\":\"graphicView\",\"isPinToMemoryEnabled\":false,\"dataCategory\":\"DIMENSION\",\"isAllowConsumption\":false,\"modificationDate\":1730311516821,\"deploymentDate\":0,\"#objectStatus\":\"0\",\"elements\":{\"87177194-d9f9-4c6a-8707-24b9aa4869e8\":{\"name\":\"ADDR_ASMT_LEVEL\"},\"8132ab22-30ec-45df-8dcf-cae7caea0912\":{\"name\":\"Address_Level\"}},\"hierarchies\":{\"d8334197-7074-4be7-b7ef-64a35f1f1e9c\":{\"name\":\"Hierarchy\"}}},\"8a6b39f6-b41a-4d1d-8cfb-83a2e9ace9ca\":{\"classDefinition\":\"sap.cdw.querybuilder.Entity\",\"name\":\"DQMSampleData_SQL\",\"label\":\"DQMSampleData_SQL\",\"type\":3,\"isPinToMemoryEnabled\":false,\"isAllowConsumption\":false,\"isHiddenInUi\":false,\"modificationDate\":1730311410512,\"deploymentDate\":1730311431905,\"#objectStatus\":\"1\",\"elements\":{\"634b12b7-df30-4558-88e3-ff1ba6387718\":{\"name\":\"ID\"},\"ae9e4a19-fe6e-4352-876f-4ac2bd45cec5\":{\"name\":\"STD_ADDR_COUNTRY_3CHAR\"},\"2f71525f-fbda-4ee7-9859-e1085bcf1ecc\":{\"name\":\"STD_ADDR_COUNTRY_NAME\"},\"bc277c82-e5aa-4f1f-97b3-773f9211cd78\":{\"name\":\"ADDR_ASMT_INFO\"},\"d300e098-b0b5-462d-a7fe-b78d697d955f\":{\"name\":\"ADDR_ASMT_LEVEL\"},\"23fe2efd-3713-4cf4-9cf4-fcda73bf9ddb\":{\"name\":\"ADDR_INFO_CODE\"},\"cf0050f2-7d90-44b7-b536-2460e12c72f4\":{\"name\":\"ADDR_INFO_CODE_MSG\"},\"ed6a0728-f1dc-4cf0-ad87-f4bdf6c27650\":{\"name\":\"GEO_ASMT_LEVEL\"},\"bb472c18-c04f-4aae-92a7-d7ef898a38e3\":{\"name\":\"Address_Validity\"},\"32b2fe72-fe97-42e9-8380-2f53141b7bd8\":{\"name\":\"Address_Level\"},\"d44aadaa-3eb5-4519-beb1-41387f26a5bd\":{\"name\":\"Geocode_Level\"}},\"successorNode\":\"6dc9f9f5-21f8-4b95-bf05-542467e89a77\"},\"6dc9f9f5-21f8-4b95-bf05-542467e89a77\":{\"classDefinition\":\"sap.cdw.querybuilder.RenameElements\",\"_isProjectionNode\":false,\"name\":\"Projection 1\",\"elements\":{\"26002623-a8fa-4ade-8c22-0582e937041a\":{\"name\":\"ID\"},\"29951bd5-ec2d-4a37-9f46-9cac890c4c43\":{\"name\":\"STD_ADDR_COUNTRY_3CHAR\"},\"2cb29d02-51e9-4a00-aa9d-45fd56fd3e28\":{\"name\":\"STD_ADDR_COUNTRY_NAME\"},\"fe595d5d-1662-4832-9696-fc84c08af74a\":{\"name\":\"ADDR_ASMT_INFO\"},\"acf3b8bb-c248-4389-8676-ee3b4c8bd7a4\":{\"name\":\"ADDR_ASMT_LEVEL\"},\"7e1156e1-1c02-4e8b-9d90-69eb2a9d4a01\":{\"name\":\"ADDR_INFO_CODE\"},\"bfd4ec42-b76c-4539-80fc-8b93356d3b5a\":{\"name\":\"ADDR_INFO_CODE_MSG\"},\"3f56c41a-00c2-48ea-9ae9-b62835ab3fa1\":{\"name\":\"GEO_ASMT_LEVEL\"},\"9325b17f-ff89-4c30-a5e0-11563dc0bdb4\":{\"name\":\"Address_Validity\"},\"82cb96ed-c683-4c8a-a834-c5cea8e0e2c0\":{\"name\":\"Address_Level\"},\"c81060fd-edbe-4ba9-bcdd-f10dc4ae0c7a\":{\"name\":\"Geocode_Level\"}},\"successorNode\":\"aedb3a85-2c7e-4378-8fe9-a2332af9b189\"},\"a9de44ea-f5b2-4a9e-aa07-7653c94d7726\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.Diagram\",\"symbols\":{\"5d83b8b5-e366-444d-bc61-b90bedddb5bc\":{},\"2b0d1bc5-8551-4019-865c-2452ed7a8721\":{\"name\":\"Entity Symbol 1\"},\"a8c87d25-eef0-4287-aac8-ffe96ce592ab\":{},\"5f885257-8661-42a0-a0d9-9637daa8ce21\":{},\"f11d8054-e420-4a6e-b501-5c917fab03eb\":{}}},\"87177194-d9f9-4c6a-8707-24b9aa4869e8\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDR_ASMT_LEVEL\",\"label\":\"ADDR_ASMT_LEVEL\",\"newName\":\"ADDR_ASMT_LEVEL\",\"indexOrder\":4,\"isKey\":true,\"length\":2,\"precision\":0,\"scale\":0,\"isDimension\":true,\"isNotNull\":true},\"8132ab22-30ec-45df-8dcf-cae7caea0912\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"Address_Level\",\"label\":\"Address_Level\",\"newName\":\"Address_Level\",\"indexOrder\":9,\"length\":10,\"precision\":0,\"scale\":0,\"isDimension\":true},\"5d83b8b5-e366-444d-bc61-b90bedddb5bc\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.OutputSymbol\",\"x\":96,\"y\":-20,\"width\":140,\"height\":40,\"object\":\"aedb3a85-2c7e-4378-8fe9-a2332af9b189\"},\"2b0d1bc5-8551-4019-865c-2452ed7a8721\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.EntitySymbol\",\"name\":\"Entity Symbol 1\",\"x\":-212,\"y\":-20,\"width\":160,\"displayName\":\"Entity Symbol 1\",\"object\":\"8a6b39f6-b41a-4d1d-8cfb-83a2e9ace9ca\"},\"a8c87d25-eef0-4287-aac8-ffe96ce592ab\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.RenameSymbol\",\"font\":\"bold 11px \\\"72\\\",\\\"72full\\\",Arial,Helvetica,sans-serif\",\"x\":-2,\"y\":-16,\"object\":\"6dc9f9f5-21f8-4b95-bf05-542467e89a77\"},\"5f885257-8661-42a0-a0d9-9637daa8ce21\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"-52,0 -2,0\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"2b0d1bc5-8551-4019-865c-2452ed7a8721\",\"targetSymbol\":\"a8c87d25-eef0-4287-aac8-ffe96ce592ab\"},\"f11d8054-e420-4a6e-b501-5c917fab03eb\":{\"classDefinition\":\"sap.cdw.querybuilder.ui.AssociationSymbol\",\"points\":\"46,0 96,0\",\"contentOffsetX\":5,\"contentOffsetY\":5,\"sourceSymbol\":\"a8c87d25-eef0-4287-aac8-ffe96ce592ab\",\"targetSymbol\":\"5d83b8b5-e366-444d-bc61-b90bedddb5bc\"},\"634b12b7-df30-4558-88e3-ff1ba6387718\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ID\",\"label\":\"ID\",\"newName\":\"ID\",\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0,\"successorElement\":\"26002623-a8fa-4ade-8c22-0582e937041a\"},\"ae9e4a19-fe6e-4352-876f-4ac2bd45cec5\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"STD_ADDR_COUNTRY_3CHAR\",\"label\":\"STD_ADDR_COUNTRY_3CHAR\",\"newName\":\"STD_ADDR_COUNTRY_3CHAR\",\"indexOrder\":1,\"length\":3,\"precision\":0,\"scale\":0,\"successorElement\":\"29951bd5-ec2d-4a37-9f46-9cac890c4c43\"},\"2f71525f-fbda-4ee7-9859-e1085bcf1ecc\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"STD_ADDR_COUNTRY_NAME\",\"label\":\"STD_ADDR_COUNTRY_NAME\",\"newName\":\"STD_ADDR_COUNTRY_NAME\",\"indexOrder\":2,\"length\":100,\"precision\":0,\"scale\":0,\"successorElement\":\"2cb29d02-51e9-4a00-aa9d-45fd56fd3e28\"},\"bc277c82-e5aa-4f1f-97b3-773f9211cd78\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDR_ASMT_INFO\",\"label\":\"ADDR_ASMT_INFO\",\"newName\":\"ADDR_ASMT_INFO\",\"indexOrder\":3,\"length\":1,\"precision\":0,\"scale\":0,\"successorElement\":\"fe595d5d-1662-4832-9696-fc84c08af74a\"},\"d300e098-b0b5-462d-a7fe-b78d697d955f\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDR_ASMT_LEVEL\",\"label\":\"ADDR_ASMT_LEVEL\",\"newName\":\"ADDR_ASMT_LEVEL\",\"indexOrder\":4,\"length\":2,\"precision\":0,\"scale\":0,\"successorElement\":\"acf3b8bb-c248-4389-8676-ee3b4c8bd7a4\"},\"23fe2efd-3713-4cf4-9cf4-fcda73bf9ddb\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDR_INFO_CODE\",\"label\":\"ADDR_INFO_CODE\",\"newName\":\"ADDR_INFO_CODE\",\"indexOrder\":5,\"length\":4,\"precision\":0,\"scale\":0,\"successorElement\":\"7e1156e1-1c02-4e8b-9d90-69eb2a9d4a01\"},\"cf0050f2-7d90-44b7-b536-2460e12c72f4\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDR_INFO_CODE_MSG\",\"label\":\"ADDR_INFO_CODE_MSG\",\"newName\":\"ADDR_INFO_CODE_MSG\",\"indexOrder\":6,\"length\":1024,\"precision\":0,\"scale\":0,\"successorElement\":\"bfd4ec42-b76c-4539-80fc-8b93356d3b5a\"},\"ed6a0728-f1dc-4cf0-ad87-f4bdf6c27650\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GEO_ASMT_LEVEL\",\"label\":\"GEO_ASMT_LEVEL\",\"newName\":\"GEO_ASMT_LEVEL\",\"indexOrder\":7,\"length\":4,\"precision\":0,\"scale\":0,\"successorElement\":\"3f56c41a-00c2-48ea-9ae9-b62835ab3fa1\"},\"bb472c18-c04f-4aae-92a7-d7ef898a38e3\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"Address_Validity\",\"label\":\"Address_Validity\",\"newName\":\"Address_Validity\",\"indexOrder\":8,\"length\":7,\"precision\":0,\"scale\":0,\"successorElement\":\"9325b17f-ff89-4c30-a5e0-11563dc0bdb4\"},\"32b2fe72-fe97-42e9-8380-2f53141b7bd8\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"Address_Level\",\"label\":\"Address_Level\",\"newName\":\"Address_Level\",\"indexOrder\":9,\"length\":10,\"precision\":0,\"scale\":0,\"successorElement\":\"82cb96ed-c683-4c8a-a834-c5cea8e0e2c0\"},\"d44aadaa-3eb5-4519-beb1-41387f26a5bd\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"Geocode_Level\",\"label\":\"Geocode_Level\",\"newName\":\"Geocode_Level\",\"indexOrder\":10,\"length\":10,\"precision\":0,\"scale\":0,\"successorElement\":\"c81060fd-edbe-4ba9-bcdd-f10dc4ae0c7a\"},\"26002623-a8fa-4ade-8c22-0582e937041a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ID\",\"label\":\"ID\",\"newName\":\"ID\",\"isRemoved\":true,\"indexOrder\":0,\"dataType\":\"cds.Integer64\",\"length\":0,\"precision\":0,\"scale\":0},\"29951bd5-ec2d-4a37-9f46-9cac890c4c43\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"STD_ADDR_COUNTRY_3CHAR\",\"label\":\"STD_ADDR_COUNTRY_3CHAR\",\"newName\":\"STD_ADDR_COUNTRY_3CHAR\",\"isRemoved\":true,\"indexOrder\":1,\"length\":3,\"precision\":0,\"scale\":0},\"2cb29d02-51e9-4a00-aa9d-45fd56fd3e28\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"STD_ADDR_COUNTRY_NAME\",\"label\":\"STD_ADDR_COUNTRY_NAME\",\"newName\":\"STD_ADDR_COUNTRY_NAME\",\"isRemoved\":true,\"indexOrder\":2,\"length\":100,\"precision\":0,\"scale\":0},\"fe595d5d-1662-4832-9696-fc84c08af74a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDR_ASMT_INFO\",\"label\":\"ADDR_ASMT_INFO\",\"newName\":\"ADDR_ASMT_INFO\",\"isRemoved\":true,\"indexOrder\":3,\"length\":1,\"precision\":0,\"scale\":0},\"acf3b8bb-c248-4389-8676-ee3b4c8bd7a4\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDR_ASMT_LEVEL\",\"label\":\"ADDR_ASMT_LEVEL\",\"newName\":\"ADDR_ASMT_LEVEL\",\"indexOrder\":4,\"length\":2,\"precision\":0,\"scale\":0,\"successorElement\":\"87177194-d9f9-4c6a-8707-24b9aa4869e8\"},\"7e1156e1-1c02-4e8b-9d90-69eb2a9d4a01\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDR_INFO_CODE\",\"label\":\"ADDR_INFO_CODE\",\"newName\":\"ADDR_INFO_CODE\",\"isRemoved\":true,\"indexOrder\":5,\"length\":4,\"precision\":0,\"scale\":0},\"bfd4ec42-b76c-4539-80fc-8b93356d3b5a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"ADDR_INFO_CODE_MSG\",\"label\":\"ADDR_INFO_CODE_MSG\",\"newName\":\"ADDR_INFO_CODE_MSG\",\"isRemoved\":true,\"indexOrder\":6,\"length\":1024,\"precision\":0,\"scale\":0},\"3f56c41a-00c2-48ea-9ae9-b62835ab3fa1\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"GEO_ASMT_LEVEL\",\"label\":\"GEO_ASMT_LEVEL\",\"newName\":\"GEO_ASMT_LEVEL\",\"isRemoved\":true,\"indexOrder\":7,\"length\":4,\"precision\":0,\"scale\":0},\"9325b17f-ff89-4c30-a5e0-11563dc0bdb4\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"Address_Validity\",\"label\":\"Address_Validity\",\"newName\":\"Address_Validity\",\"isRemoved\":true,\"indexOrder\":8,\"length\":7,\"precision\":0,\"scale\":0},\"82cb96ed-c683-4c8a-a834-c5cea8e0e2c0\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"Address_Level\",\"label\":\"Address_Level\",\"newName\":\"Address_Level\",\"indexOrder\":9,\"length\":10,\"precision\":0,\"scale\":0,\"successorElement\":\"8132ab22-30ec-45df-8dcf-cae7caea0912\"},\"c81060fd-edbe-4ba9-bcdd-f10dc4ae0c7a\":{\"classDefinition\":\"sap.cdw.querybuilder.Element\",\"name\":\"Geocode_Level\",\"label\":\"Geocode_Level\",\"newName\":\"Geocode_Level\",\"isRemoved\":true,\"indexOrder\":10,\"length\":10,\"precision\":0,\"scale\":0},\"d8334197-7074-4be7-b7ef-64a35f1f1e9c\":{\"classDefinition\":\"sap.cdw.commonmodel.LevelBasedHierarchy\",\"name\":\"Hierarchy\",\"label\":\"Hierarchy\",\"levels\":{\"3e6fcdfa-5003-4e84-bad7-aaa1ebf045f9\":{},\"ed2976af-8fd5-4625-b7fc-8416fbd34b6e\":{}}},\"3e6fcdfa-5003-4e84-bad7-aaa1ebf045f9\":{\"classDefinition\":\"sap.cdw.commonmodel.LevelElement\",\"indexOrder\":0,\"element\":\"8132ab22-30ec-45df-8dcf-cae7caea0912\"},\"ed2976af-8fd5-4625-b7fc-8416fbd34b6e\":{\"classDefinition\":\"sap.cdw.commonmodel.LevelElement\",\"indexOrder\":1,\"element\":\"87177194-d9f9-4c6a-8707-24b9aa4869e8\"}}}"
+    }
+  },
+  "$version": "1.0"
+}

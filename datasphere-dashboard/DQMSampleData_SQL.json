@@ -1,0 +1,466 @@
+{
+  "definitions": {
+    "DQMSampleData_SQL": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "@EndUserText.label": "ID",
+          "type": "cds.Integer64"
+        },
+        "STD_ADDR_COUNTRY_3CHAR": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_3CHAR",
+          "type": "cds.String",
+          "length": 3
+        },
+        "STD_ADDR_COUNTRY_NAME": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_NAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "ADDR_ASMT_INFO": {
+          "@EndUserText.label": "ADDR_ASMT_INFO",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ADDR_ASMT_LEVEL": {
+          "@EndUserText.label": "ADDR_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 2
+        },
+        "ADDR_INFO_CODE": {
+          "@EndUserText.label": "ADDR_INFO_CODE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ADDR_INFO_CODE_MSG": {
+          "@EndUserText.label": "ADDR_INFO_CODE_MSG",
+          "type": "cds.String",
+          "length": 1024
+        },
+        "GEO_ASMT_LEVEL": {
+          "@EndUserText.label": "GEO_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 4
+        },
+        "Address_Validity": {
+          "@EndUserText.label": "Address_Validity",
+          "type": "cds.String",
+          "length": 7
+        },
+        "Address_Level": {
+          "@EndUserText.label": "Address_Level",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Geocode_Level": {
+          "@EndUserText.label": "Geocode_Level",
+          "type": "cds.String",
+          "length": 10
+        }
+      },
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "DQMSampleData"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "ID"
+              ]
+            },
+            {
+              "ref": [
+                "STD_ADDR_COUNTRY_3CHAR"
+              ]
+            },
+            {
+              "ref": [
+                "STD_ADDR_COUNTRY_NAME"
+              ]
+            },
+            {
+              "ref": [
+                "ADDR_ASMT_INFO"
+              ]
+            },
+            {
+              "ref": [
+                "ADDR_ASMT_LEVEL"
+              ]
+            },
+            {
+              "ref": [
+                "ADDR_INFO_CODE"
+              ]
+            },
+            {
+              "ref": [
+                "ADDR_INFO_CODE_MSG"
+              ]
+            },
+            {
+              "ref": [
+                "GEO_ASMT_LEVEL"
+              ]
+            },
+            {
+              "xpr": [
+                "case",
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_INFO"
+                  ]
+                },
+                "=",
+                {
+                  "val": "V"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_INFO"
+                  ]
+                },
+                "=",
+                {
+                  "val": "C"
+                },
+                "then",
+                {
+                  "val": "Valid"
+                },
+                "else",
+                {
+                  "val": "Invalid"
+                },
+                "end"
+              ],
+              "as": "Address_Validity"
+            },
+            {
+              "xpr": [
+                "case",
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "S"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PR"
+                },
+                "then",
+                {
+                  "val": "Premise"
+                },
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PN"
+                },
+                "then",
+                {
+                  "val": "Street"
+                },
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L4"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L3"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L2"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L1"
+                },
+                "then",
+                {
+                  "val": "City"
+                },
+                "when",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "R"
+                },
+                "or",
+                {
+                  "ref": [
+                    "ADDR_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "C"
+                },
+                "then",
+                {
+                  "val": "Region"
+                },
+                "else",
+                {
+                  "val": "Unassigned"
+                },
+                "end"
+              ],
+              "as": "Address_Level"
+            },
+            {
+              "xpr": [
+                "case",
+                "when",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PRE"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PRI"
+                },
+                "then",
+                {
+                  "val": "Premise"
+                },
+                "when",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PN"
+                },
+                "then",
+                {
+                  "val": "Street"
+                },
+                "when",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "PF"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "P2P"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "P1"
+                },
+                "then",
+                {
+                  "val": "Postcode"
+                },
+                "when",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L3"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L2"
+                },
+                "or",
+                {
+                  "ref": [
+                    "GEO_ASMT_LEVEL"
+                  ]
+                },
+                "=",
+                {
+                  "val": "L1"
+                },
+                "then",
+                {
+                  "val": "City"
+                },
+                "else",
+                {
+                  "val": "Unassigned"
+                },
+                "end"
+              ],
+              "as": "Geocode_Level"
+            }
+          ]
+        }
+      },
+      "@EndUserText.label": "DQMSampleData_SQL",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.consumption.external": false,
+      "@DataWarehouse.sqlEditor.query": "SELECT \"ID\",\"STD_ADDR_COUNTRY_3CHAR\",\"STD_ADDR_COUNTRY_NAME\",\"ADDR_ASMT_INFO\", \"ADDR_ASMT_LEVEL\", \"ADDR_INFO_CODE\",\r\n\"ADDR_INFO_CODE_MSG\", \"GEO_ASMT_LEVEL\",\r\n(CASE \r\n  WHEN \"ADDR_ASMT_INFO\" = 'V' OR \"ADDR_ASMT_INFO\" = 'C' THEN 'Valid' \r\n  ELSE 'Invalid' END) AS \"Address_Validity\",\r\n(CASE \r\n  WHEN \"ADDR_ASMT_LEVEL\" = 'S' OR \"ADDR_ASMT_LEVEL\" = 'PR' THEN 'Premise'\r\n  WHEN \"ADDR_ASMT_LEVEL\" = 'PN' THEN 'Street'\r\n  WHEN \"ADDR_ASMT_LEVEL\" = 'L4' OR \"ADDR_ASMT_LEVEL\" = 'L3' OR \"ADDR_ASMT_LEVEL\" = 'L2' OR \"ADDR_ASMT_LEVEL\" = 'L1' THEN 'City'\r\n  WHEN \"ADDR_ASMT_LEVEL\" = 'R' OR \"ADDR_ASMT_LEVEL\" = 'C' THEN 'Region'\r\n  ELSE 'Unassigned' END) AS \"Address_Level\",\r\n(CASE WHEN \"GEO_ASMT_LEVEL\" = 'PRE' OR \"GEO_ASMT_LEVEL\" = 'PRI' THEN 'Premise'\r\n  WHEN \"GEO_ASMT_LEVEL\" = 'PN' THEN 'Street'\r\n  WHEN \"GEO_ASMT_LEVEL\" = 'PF' OR \"GEO_ASMT_LEVEL\" = 'P2P' OR \"GEO_ASMT_LEVEL\" = 'P1' THEN 'Postcode'\r\n  WHEN \"GEO_ASMT_LEVEL\" = 'L3' OR \"GEO_ASMT_LEVEL\" = 'L2' OR \"GEO_ASMT_LEVEL\" = 'L1' THEN 'City'\r\n  ELSE 'Unassigned' END) AS \"Geocode_Level\"\r\nFROM \"DQMSampleData\"",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "DQMSampleData": {
+      "kind": "entity",
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "elements": {
+        "ID": {
+          "@EndUserText.label": "ID",
+          "type": "cds.Integer64"
+        },
+        "STD_ADDR_COUNTRY_3CHAR": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_3CHAR",
+          "type": "cds.String",
+          "length": 3
+        },
+        "STD_ADDR_COUNTRY_NAME": {
+          "@EndUserText.label": "STD_ADDR_COUNTRY_NAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "ADDR_ASMT_INFO": {
+          "@EndUserText.label": "ADDR_ASMT_INFO",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ADDR_ASMT_LEVEL": {
+          "@EndUserText.label": "ADDR_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 2
+        },
+        "ADDR_INFO_CODE": {
+          "@EndUserText.label": "ADDR_INFO_CODE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ADDR_INFO_CODE_MSG": {
+          "@EndUserText.label": "ADDR_INFO_CODE_MSG",
+          "type": "cds.String",
+          "length": 1024
+        },
+        "GEO_ASMT_LEVEL": {
+          "@EndUserText.label": "GEO_ASMT_LEVEL",
+          "type": "cds.String",
+          "length": 4
+        }
+      },
+      "@EndUserText.label": "DQMSampleData",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@DataWarehouse.dataSource.schema": "HN_RMS#WRG_PPXJF7W6BNFLYLMV",
+      "@DataWarehouse.dataSource.entity": "sap.dataset.conf_54b7ccff-c7b5-4f3b-8e0e-9f7730e7240e_view",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}
