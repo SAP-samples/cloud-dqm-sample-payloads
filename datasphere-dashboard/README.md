@@ -6,7 +6,7 @@ This sample demonstrates an example of creating a Data Quality dashboard using t
 ## SAP Datasphere
 
 In this example, we will use the sample output data that was previously processed from SAP DQM microservices. Sample python code can be seen here.
-- https://github.com/SAP-samples/cloud-dqm-sample-payloads/blob/main/datasphere-python/dqmm-dsp-dashboard.py
+- https://github.com/SAP-samples/cloud-dqm-sample-payloads/blob/main/datasphere-dashboard/dqmm-dsp-dashboard.py
 
 ### Import the sample data
 
@@ -142,5 +142,5 @@ Go to Story and create a new Story
 
 ## Licensing
 
-Copyright (c) 2024 SAP SE or an SAP affiliate company and dqmm-dsp-python-sample contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available via the REUSE tool (link to https://api.reuse.software/info/github.com/SAP/dqmm-dsp-python-sample).
+Copyright (c) 2024 SAP SE or an SAP affiliate company and dqmm-dsp-python-sample contributors. Please see our [LICENSE](/LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available via the REUSE tool (link to https://api.reuse.software/info/github.com/SAP/dqmm-dsp-python-sample).
 
