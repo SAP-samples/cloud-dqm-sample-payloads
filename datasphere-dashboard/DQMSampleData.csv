@@ -1,262 +1,101 @@
-﻿ID,STD_ADDR_COUNTRY_3CHAR,STD_ADDR_COUNTRY_NAME,ADDR_ASMT_INFO,ADDR_ASMT_LEVEL,ADDR_INFO_CODE,ADDR_INFO_CODE_MSG,GEO_ASMT_LEVEL
-1,ARE,United Arab Emirates,C,L1,,,PRI
-2,ARE,United Arab Emirates,I,L1,,,PN
-3,AGO,Angola,I,C,2050,"City, region, and postcode matches are too close to choose one",L1
-4,ARG,Argentina,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",
-5,ARG,Argentina,C,PR,,,PRE
-6,AUT,Österreich,C,PR,,,PRE
-7,AUT,Österreich,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-8,AUS,Australia,V,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-9,AUS,Australia,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-10,AUS,Australia,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-11,AUS,Australia,V,PR,4000,The secondary address information is missing on input or not in the directory,
-12,AUS,Australia,V,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-13,AUS,Australia,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-14,AZE,Azerbaijan,C,L1,,,L1
-15,BEL,België,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",PF
-16,BEL,België,C,PR,,,PRE
-17,BGR,Bălgarija,C,PR,,,PRE
-18,BHR,Bahrain,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",L1
-19,BRA,Brasil,C,PR,,,PRE
-20,BRA,Brasil,V,PR,,,PRI
-21,BRA,Brasil,C,PR,,,PRE
-22,CAN,Canada,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
-23,CAN,Canada,C,S,,,PRE
-24,CAN,Canada,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-25,CAN,Canada,C,PR,,,PF
-26,CAN,Canada,C,PR,,,PRE
-27,CAN,Canada,V,PR,,,PRE
-28,CHE,Schweiz,C,PR,,,PRE
-29,CHE,Schweiz,C,PR,,,PRE
-30,CHE,Suisse,C,PR,,,PRE
-31,CHE,Suisse,C,PR,,,PRE
-32,CHE,Schweiz,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",
-33,CHL,Chile,C,PR,,,PRI
-34,CHN,China,C,PR,,,PRI
-35,CHN,China,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",PF
-36,CHN,China,I,PN,3030,House number is missing on input or not in the directory,
-37,CHN,China,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",PF
-38,CHN,China,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",PF
-39,CHN,China,C,PR,,,PRI
-40,CHN,China,I,L2,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRI
-41,CHN,China,C,PN,,,PRI
-42,CHN,China,I,L1,3090,An invalid or missing city is preventing address cleansing,PF
-43,CHN,China,I,C,2020,"Unable to identify postcode, and invalid city is preventing address cleansing",
-44,CHN,China,C,PR,,,PRI
-45,CHN,China,C,PR,,,PRI
-46,CHN,China,C,PR,,,PRI
-47,CHN,China,C,PR,,,PRI
-48,CHN,China,C,PR,,,PRI
-49,CHN,China,C,PR,,,PRI
-50,CHN,China,C,PR,,,PRI
-51,CHN,China,C,PR,,,PRI
-52,CHN,Zhongguo,C,PR,,,PRI
-53,COL,Colombia,I,PN,3030,House number is missing on input or not in the directory,
-54,COL,Colombia,C,PR,,,PRE
-55,CRI,Costa Rica,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",L1
-56,CYP,Cyprus,C,L1,,,PRE
-57,CZE,Česká Republika,C,PR,,,PRE
-58,CZE,Česká Republika,C,PR,,,PRE
-59,DEU,Deutschland,C,PR,,,PRE
-60,DEU,Deutschland,C,PR,,,PRE
-61,DEU,Deutschland,C,PR,,,PRE
-62,DEU,Deutschland,C,PR,,,PRE
-63,DEU,Deutschland,C,PR,,,PRE
-64,DEU,Deutschland,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",PF
-65,DEU,Deutschland,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",PF
-66,DEU,Deutschland,C,PR,,,PRE
-67,DEU,Deutschland,C,PR,,,PRE
-68,DEU,Deutschland,C,PR,,,PRE
-69,DEU,Deutschland,I,PN,3030,House number is missing on input or not in the directory,PN
-70,DEU,Deutschland,C,PR,,,PRE
-71,DEU,Deutschland,V,PR,,,PRE
-72,DEU,Deutschland,C,PR,,,PRE
-73,DEU,Deutschland,C,PR,,,PRE
-74,DEU,Deutschland,C,PR,,,PRE
-75,DEU,Deutschland,C,PR,,,PRE
-76,DEU,Deutschland,C,PR,,,PRE
-77,DEU,Deutschland,C,PR,,,PRE
-78,DEU,Deutschland,C,PR,,,PRE
-79,DEU,Deutschland,C,PR,,,PRE
-80,DEU,Deutschland,C,PR,,,PRE
-81,DEU,Deutschland,C,PR,,,PRE
-82,DEU,Deutschland,C,PR,,,PRE
-83,DEU,Deutschland,C,PR,,,PRE
-84,DEU,Deutschland,C,PR,,,PRE
-85,DEU,Deutschland,C,PR,,,PRE
-86,DEU,Deutschland,C,PR,,,PRE
-87,DEU,Deutschland,C,PR,,,PRE
-88,DEU,Deutschland,C,PR,,,PRE
-89,DEU,Deutschland,C,PR,,,PRI
-90,DEU,Deutschland,C,PR,,,PRE
-91,DEU,Deutschland,V,PR,,,PRE
-92,DEU,Deutschland,V,PR,,,PRE
-93,DEU,Deutschland,V,PR,,,PRE
-94,DEU,Deutschland,V,PR,,,PRE
-95,DEU,Deutschland,V,PR,,,PRI
-96,DEU,Deutschland,V,PR,,,PRE
-97,DEU,Deutschland,V,PR,,,PRE
-98,DEU,Deutschland,V,PR,,,PRE
-99,DEU,Deutschland,V,PR,,,PRE
-100,DEU,Deutschland,V,PR,,,PRE
-101,DEU,Deutschland,V,PR,,,PRI
-102,DEU,Deutschland,I,PN,3030,House number is missing on input or not in the directory,PN
-103,DEU,Deutschland,I,PN,3030,House number is missing on input or not in the directory,PN
-104,DNK,Danmark,C,PR,,,PRE
-105,ECU,Ecuador,I,PN,3030,House number is missing on input or not in the directory,
-106,EST,Eesti,C,PR,,,PRE
-107,EGY,Egypt,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",L1
-108,ESP,Espanya,C,PR,,,PRE
-109,ESP,España,C,PR,,,PRE
-110,ESP,España,C,PR,,,PRE
-111,FIN,Suomi,C,PR,,,PRE
-112,FRA,France,C,PR,,,PRE
-113,FRA,France,C,PR,4500,The organization is missing on input or not in the directory,PRE
-114,FRA,France,C,PR,4500,The organization is missing on input or not in the directory,PRE
-115,FRA,France,C,PR,4500,The organization is missing on input or not in the directory,PRE
-116,FRA,France,C,PR,,,PRE
-117,GBR,United Kingdom,I,PN,4500,The organization is missing on input or not in the directory,PN
-118,GBR,United Kingdom,C,PN,,,
-119,GBR,United Kingdom,C,PR,4500,The organization is missing on input or not in the directory,PRI
-120,GBR,United Kingdom,I,PN,4500,The organization is missing on input or not in the directory,PN
-121,GBR,United Kingdom,C,PR,,,
-122,GRC,Ellás,C,PR,,,PRE
-123,GUM,Guam,I,C,2030,Invalid city and postcode are preventing address cleansing,
-124,HRV,Croatia,I,L1,,,
-125,HUN,Magyarország,C,PR,,,PRE
-126,IDN,Indonesia,C,L3,,,
-127,IRL,Ireland,I,PN,3080,An invalid or missing postcode is preventing address cleansing,PN
-128,IRL,Ireland,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",
-129,ISR,Israel,C,L1,,,PF
-130,ISR,Israel,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",PRE
-131,IND,India,I,L3,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
-132,IND,India,I,L3,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
-133,IND,India,I,L2,3000,"City, region, and postcode are valid, but unable to identify the street address",L2
-134,IND,India,I,L1,3090,An invalid or missing city is preventing address cleansing,PN
-135,IND,India,I,L1,2050,"City, region, and postcode matches are too close to choose one",L2
-136,IND,India,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",L2
-137,IND,India,C,PR,,,PN
-138,IND,India,C,PN,,,PN
-139,IND,India,I,L2,3000,"City, region, and postcode are valid, but unable to identify the street address",L2
-140,IND,India,C,PR,,,PRI
-141,IND,India,I,L2,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRI
-142,IND,India,I,L2,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
-143,IND,India,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",PF
-144,IND,India,I,C,2050,"City, region, and postcode matches are too close to choose one",
-145,IND,India,I,L2,3000,"City, region, and postcode are valid, but unable to identify the street address",L2
-146,IND,India,C,PN,,,PN
-147,ITA,Italia,C,PR,,,PRI
-148,ITA,Italia,C,PR,,,PRE
-149,ITA,Italia,C,PR,,,PRE
-150,ITA,Italia,C,PR,,,PRI
-151,JPN,Japan,C,PR,,,PRE
-152,JPN,Japan,C,PR,,,PRE
-153,JPN,Japan,I,PN,3030,House number is missing on input or not in the directory,PN
-154,JPN,Japan,C,PR,,,PRE
-155,JPN,Japan,C,PR,,,PRE
-156,JPN,Japan,C,PR,,,PRE
-157,JPN,Nippon,I,L2,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
-158,JPN,Japan,C,PR,,,PRE
-159,KEN,Kenya,C,L1,,,
-160,KOR,Republic of Korea,C,PR,,,
-161,KOR,Republic of Korea,C,PR,,,
-162,KOR,Republic of Korea,C,PR,,,
-163,KWT,Kuwait,I,L1,,,PN
-164,KAZ,Kazakhstan,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",
-165,KAZ,Kazakhstan,I,C,2050,"City, region, and postcode matches are too close to choose one",PF
-166,LTU,Lietuva,C,PR,,,PRE
-167,LUX,Luxembourg,C,PR,,,PRE
-168,LVA,Latvija,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-169,MAR,Maroc,C,L1,,,L1
-170,MEX,México,I,C,2030,Invalid city and postcode are preventing address cleansing,PRE
-171,MEX,México,C,PR,,,PRE
-172,MEX,México,C,PR,,,PRE
-173,MYS,Malaysia,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",
-174,NGA,Nigeria,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",PN
-175,NLD,Nederland,V,PR,,,PRE
-176,NLD,Nederland,C,PR,,,PRE
-177,NLD,Nederland,C,PR,,,PRE
-178,NOR,Norge,C,PR,,,PRE
-179,NOR,Norge,C,PR,,,PRE
-180,NZL,New Zealand,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-181,NZL,New Zealand,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-182,OMN,’umān,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",
-183,PAN,Panamá,I,L1,,,PN
-184,PER,Perú,I,PN,3030,House number is missing on input or not in the directory,PN
-185,PER,Perú,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",
-186,PHL,Philippines,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",
-187,PHL,Philippines,I,L1,,,
-188,PHL,Philippines,I,L1,,,PRI
-189,PAK,Pakistan,I,L1,,,L1
-190,PAK,Pakistan,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",L1
-191,POL,Polska,C,PR,,,PRI
-192,POL,Polska,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",PF
-193,POL,Polska,C,PR,,,PRE
-194,POL,Polska,I,PN,3030,House number is missing on input or not in the directory,PRE
-195,PRI,Puerto Rico,I,PN,3200,The building is missing on input or not in the directory,
-196,PRT,Portugal,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",
-197,QAT,Qatar,C,L1,,,L1
-198,ROU,Romănia,C,L1,,,PRI
-199,ROU,Romania,I,L1,,,PF
-200,ROU,Romănia,C,L1,,,PRI
-201,SRB,Serbia,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",
-202,RUS,Rossiya,C,PR,,,PRE
-203,SAU,Saudi Arabia,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",
-204,SAU,Saudi Arabia,I,L1,,,L1
-205,SAU,Al-’arabīyah As-Sa’ūdīyah,I,L1,3000,"City, region, and postcode are valid, but unable to identify the street address",L1
-206,SWE,Sverige,C,PR,,,PRE
-207,SWE,Sverige,C,PR,,,
-208,SWE,Sverige,C,PR,,,PRE
-209,SGP,Singapore,V,PR,,,PRE
-210,SVN,Slovenija,I,L2,,,L2
-211,SVN,Slovenija,I,C,2030,Invalid city and postcode are preventing address cleansing,
-212,SVN,Slovenija,C,L1,,,PRE
-213,SVN,Slovenija,C,L1,,,PRE
-214,THA,Thailand,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",PN
-215,TUR,Türkiye,I,PN,3090,An invalid or missing city is preventing address cleansing,PRE
-216,TUR,Türkiye,C,PR,,,PRI
-217,TUR,Türkiye,C,PR,,,PRE
-218,TWN,Taiwan,C,PR,,,PRE
-219,TWN,Taiwan,C,PR,,,PRE
-220,UKR,Ukraine,C,L1,,,PRE
-221,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-222,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-223,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-224,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-225,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-226,USA,United States,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
-227,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-228,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-229,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-230,USA,United States,C,PR,,,PRE
-231,USA,United States,C,PR,,,PRE
-232,USA,United States,I,L1,3050,An invalid or missing street type is preventing address cleansing,
-233,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-234,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-235,USA,United States,I,L1,3070,An invalid or missing prefix/suffix is preventing address cleansing,
-236,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-237,USA,United States,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
-238,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-239,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-240,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-241,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-242,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-243,USA,United States,C,PR,,,PRE
-244,USA,United States,C,PR,,,PRE
-245,USA,United States,C,PR,,,PRE
-246,USA,United States,C,PR,,,PRI
-247,USA,United States,C,S,,,PRE
-248,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-249,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-250,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-251,USA,United States,C,S,,,PRE
-252,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
-253,USA,United States,C,PR,,,PRI
-254,USA,United States,C,PR,,,PRE
-255,USA,United States,C,S,,,PRE
-256,VEN,Venezuela,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",
-257,VNM,Viet Nam,C,L1,,,PRE
-258,VNM,Viet Nam,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",L1
-259,VNM,Việt Nam,V,L1,,,L1
-260,ZAF,South Africa,I,C,2030,Invalid city and postcode are preventing address cleansing,
-261,ZAF,South Africa,I,L1,,,
+﻿ID,std_addr_country_3char,std_addr_country_name,addr_asmt_info,addr_asmt_level,addr_info_code,addr_info_code_msg,geo_asmt_level
+1,ARG,Argentina,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",
+2,ARG,Argentina,C,PR,,,PRE
+3,AUT,Österreich,C,PR,,,PRE
+4,AUT,Österreich,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
+5,AUS,Australia,V,S,,,PRE
+6,AUS,Australia,C,PR,4010,Possible secondary address matches are too close to choose one,PRE
+7,AUS,Australia,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
+8,AUS,Australia,V,S,,,
+9,AUS,Australia,V,S,,,PRE
+10,AUS,Australia,C,S,,,PRE
+11,BRA,Brasil,C,PR,,,PRE
+12,BRA,Brasil,V,PR,,,PRI
+13,BRA,Brasil,C,PR,,,PRE
+14,CAN,Canada,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
+15,CAN,Canada,C,S,,,PRE
+16,CAN,Canada,C,S,,,PRE
+17,CAN,Canada,I,PN,3250,The house number or building is missing on input or both are not in the directory,PRE
+18,CAN,Canada,C,PR,,,PRE
+19,CAN,Canada,V,PR,,,PRE
+20,CHE,Schweiz,C,PR,,,PRE
+21,CHE,Suisse,C,PR,,,PRE
+22,CHE,Suisse,C,PR,,,PRE
+23,CHN,China,C,PR,,,PRI
+24,CHN,China,I,PN,3030,House number is missing on input or not in the directory,
+25,CHN,China,C,PR,,,PRI
+26,CHN,China,C,PR,,,PRI
+27,CHN,China,C,PR,,,PRI
+28,CHN,China,C,PR,,,PRI
+29,CHN,China,C,PR,,,PRI
+30,CHN,China,C,PR,,,PRI
+31,COL,Colombia,C,PN,,,
+32,COL,Colombia,C,PR,,,PRE
+33,DEU,Deutschland,C,PR,,,PRE
+34,DEU,Deutschland,C,PR,,,PRE
+35,DEU,Deutschland,C,PR,,,PRE
+36,DEU,Deutschland,C,PR,,,PRE
+37,DEU,Deutschland,C,PR,,,PRE
+38,DEU,Deutschland,C,PR,,,PRE
+39,DEU,Deutschland,C,PR,,,PRE
+40,DEU,Deutschland,C,PR,,,PRE
+41,DEU,Deutschland,C,PR,,,PRE
+42,DEU,Deutschland,C,PR,,,PRE
+43,DEU,Deutschland,V,PR,,,PRE
+44,ESP,Espanya,C,PR,,,PRE
+45,ESP,España,C,PR,,,PRE
+46,ESP,España,C,PR,,,PRE
+47,FRA,France,C,PR,,,PRE
+48,FRA,France,C,PR,,,PRE
+49,FRA,France,C,PR,4500,The organization is missing on input or not in the directory,PRE
+50,FRA,France,C,PR,,,PRE
+51,FRA,France,C,PR,,,PRE
+52,GBR,United Kingdom,I,PN,4500,The organization is missing on input or not in the directory,PN
+53,GBR,United Kingdom,C,PN,,,
+54,GBR,United Kingdom,C,PR,,,PRI
+55,GBR,United Kingdom,C,PR,,,
+56,IND,India,I,L3,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
+57,IND,India,I,L1,3090,An invalid or missing city is preventing address cleansing,PN
+58,IND,India,C,PR,,,PN
+59,IND,India,C,PN,,,PN
+60,IND,India,C,PR,,,PRI
+61,IND,India,I,L2,3000,"City, region, and postcode are valid, but unable to identify the street address",L2
+62,IND,India,C,PN,,,PN
+63,ITA,Italia,C,PR,,,PRI
+64,ITA,Italia,C,PR,,,PRE
+65,ITA,Italia,C,PR,,,PRE
+66,JPN,Japan,I,PN,3030,House number is missing on input or not in the directory,PN
+67,JPN,Japan,C,PR,,,PRE
+68,JPN,Japan,C,PR,,,PRE
+69,JPN,Japan,C,PR,,,PRE
+70,KOR,Republic of Korea,C,PR,,,
+71,KOR,Republic of Korea,C,PR,,,
+72,MEX,México,I,C,2030,Invalid city and postcode are preventing address cleansing,PRE
+73,MEX,México,C,PR,,,PRE
+74,MEX,México,C,PR,,,PRE
+75,NLD,Nederland,V,PR,,,PRE
+76,NLD,Nederland,C,PR,,,PRE
+77,NLD,Nederland,C,PR,,,PRE
+78,POL,Polska,C,PR,,,PRI
+79,POL,Polska,C,PR,,,PRE
+80,POL,Polska,I,PN,3030,House number is missing on input or not in the directory,PRE
+81,ROU,Romănia,C,L1,,,PRI
+82,ROU,Romănia,C,L1,,,PRI
+83,SWE,Sverige,C,PR,,,PRE
+84,SWE,Sverige,C,PR,,,PRE
+85,SGP,Singapore,V,PR,,,PRE
+86,THA,Thailand,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",PN
+87,TUR,Türkiye,C,PR,,,PRI
+88,TUR,Türkiye,C,PR,,,PRE
+89,TWN,Taiwan,C,PR,,,PRE
+90,TWN,Taiwan,C,PR,,,PRE
+91,USA,United States,C,S,,,PRE
+92,USA,United States,C,S,,,PRE
+93,USA,United States,C,S,,,PRE
+94,USA,United States,I,L1,3050,An invalid or missing street type is preventing address cleansing,
+95,USA,United States,C,S,,,PRE
+96,USA,United States,C,S,,,PRE
+97,USA,United States,C,S,,,PRE
+98,USA,United States,C,S,,,PRE
+99,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
+100,USA,United States,C,PR,,,PRE
