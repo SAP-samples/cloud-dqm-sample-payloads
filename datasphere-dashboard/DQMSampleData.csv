@@ -1,0 +1,101 @@
+﻿ID,std_addr_country_3char,std_addr_country_name,addr_asmt_info,addr_asmt_level,addr_info_code,addr_info_code_msg,geo_asmt_level
+1,ARG,Argentina,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",
+2,ARG,Argentina,C,PR,,,PRE
+3,AUT,Österreich,C,PR,,,PRE
+4,AUT,Österreich,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
+5,AUS,Australia,V,S,,,PRE
+6,AUS,Australia,C,PR,4010,Possible secondary address matches are too close to choose one,PRE
+7,AUS,Australia,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
+8,AUS,Australia,V,S,,,
+9,AUS,Australia,V,S,,,PRE
+10,AUS,Australia,C,S,,,PRE
+11,BRA,Brasil,C,PR,,,PRE
+12,BRA,Brasil,V,PR,,,PRI
+13,BRA,Brasil,C,PR,,,PRE
+14,CAN,Canada,I,L1,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
+15,CAN,Canada,C,S,,,PRE
+16,CAN,Canada,C,S,,,PRE
+17,CAN,Canada,I,PN,3250,The house number or building is missing on input or both are not in the directory,PRE
+18,CAN,Canada,C,PR,,,PRE
+19,CAN,Canada,V,PR,,,PRE
+20,CHE,Schweiz,C,PR,,,PRE
+21,CHE,Suisse,C,PR,,,PRE
+22,CHE,Suisse,C,PR,,,PRE
+23,CHN,China,C,PR,,,PRI
+24,CHN,China,I,PN,3030,House number is missing on input or not in the directory,
+25,CHN,China,C,PR,,,PRI
+26,CHN,China,C,PR,,,PRI
+27,CHN,China,C,PR,,,PRI
+28,CHN,China,C,PR,,,PRI
+29,CHN,China,C,PR,,,PRI
+30,CHN,China,C,PR,,,PRI
+31,COL,Colombia,C,PN,,,
+32,COL,Colombia,C,PR,,,PRE
+33,DEU,Deutschland,C,PR,,,PRE
+34,DEU,Deutschland,C,PR,,,PRE
+35,DEU,Deutschland,C,PR,,,PRE
+36,DEU,Deutschland,C,PR,,,PRE
+37,DEU,Deutschland,C,PR,,,PRE
+38,DEU,Deutschland,C,PR,,,PRE
+39,DEU,Deutschland,C,PR,,,PRE
+40,DEU,Deutschland,C,PR,,,PRE
+41,DEU,Deutschland,C,PR,,,PRE
+42,DEU,Deutschland,C,PR,,,PRE
+43,DEU,Deutschland,V,PR,,,PRE
+44,ESP,Espanya,C,PR,,,PRE
+45,ESP,España,C,PR,,,PRE
+46,ESP,España,C,PR,,,PRE
+47,FRA,France,C,PR,,,PRE
+48,FRA,France,C,PR,,,PRE
+49,FRA,France,C,PR,4500,The organization is missing on input or not in the directory,PRE
+50,FRA,France,C,PR,,,PRE
+51,FRA,France,C,PR,,,PRE
+52,GBR,United Kingdom,I,PN,4500,The organization is missing on input or not in the directory,PN
+53,GBR,United Kingdom,C,PN,,,
+54,GBR,United Kingdom,C,PR,,,PRI
+55,GBR,United Kingdom,C,PR,,,
+56,IND,India,I,L3,3010,"City, region, and postcode are valid, but unable to match street name to directory",PRE
+57,IND,India,I,L1,3090,An invalid or missing city is preventing address cleansing,PN
+58,IND,India,C,PR,,,PN
+59,IND,India,C,PN,,,PN
+60,IND,India,C,PR,,,PRI
+61,IND,India,I,L2,3000,"City, region, and postcode are valid, but unable to identify the street address",L2
+62,IND,India,C,PN,,,PN
+63,ITA,Italia,C,PR,,,PRI
+64,ITA,Italia,C,PR,,,PRE
+65,ITA,Italia,C,PR,,,PRE
+66,JPN,Japan,I,PN,3030,House number is missing on input or not in the directory,PN
+67,JPN,Japan,C,PR,,,PRE
+68,JPN,Japan,C,PR,,,PRE
+69,JPN,Japan,C,PR,,,PRE
+70,KOR,Republic of Korea,C,PR,,,
+71,KOR,Republic of Korea,C,PR,,,
+72,MEX,México,I,C,2030,Invalid city and postcode are preventing address cleansing,PRE
+73,MEX,México,C,PR,,,PRE
+74,MEX,México,C,PR,,,PRE
+75,NLD,Nederland,V,PR,,,PRE
+76,NLD,Nederland,C,PR,,,PRE
+77,NLD,Nederland,C,PR,,,PRE
+78,POL,Polska,C,PR,,,PRI
+79,POL,Polska,C,PR,,,PRE
+80,POL,Polska,I,PN,3030,House number is missing on input or not in the directory,PRE
+81,ROU,Romănia,C,L1,,,PRI
+82,ROU,Romănia,C,L1,,,PRI
+83,SWE,Sverige,C,PR,,,PRE
+84,SWE,Sverige,C,PR,,,PRE
+85,SGP,Singapore,V,PR,,,PRE
+86,THA,Thailand,I,L1,2070,"City is valid, but multiple possible postcodes prevent choosing one",PN
+87,TUR,Türkiye,C,PR,,,PRI
+88,TUR,Türkiye,C,PR,,,PRE
+89,TWN,Taiwan,C,PR,,,PRE
+90,TWN,Taiwan,C,PR,,,PRE
+91,USA,United States,C,S,,,PRE
+92,USA,United States,C,S,,,PRE
+93,USA,United States,C,S,,,PRE
+94,USA,United States,I,L1,3050,An invalid or missing street type is preventing address cleansing,
+95,USA,United States,C,S,,,PRE
+96,USA,United States,C,S,,,PRE
+97,USA,United States,C,S,,,PRE
+98,USA,United States,C,S,,,PRE
+99,USA,United States,C,PR,4000,The secondary address information is missing on input or not in the directory,PRE
+100,USA,United States,C,PR,,,PRE

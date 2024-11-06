@@ -1,7 +1,7 @@
 # Datasphere Sample Objects
 
 ## Description
-This sample demonstrates how to create the objects in Datasphere using the geo location data that was populated by SAP DQM micorservices and to create a Geo Map story in SAP Analytics Cloud.
+This sample demonstrates how to create the objects in Datasphere using the geo location data that was populated by SAP DQM micorservices and to create a GeoMap story in SAP Analytics Cloud.
 
 ## SAP Datasphere
 
@@ -51,9 +51,9 @@ Create a View on top of the Addresses table
 
 ### Run the Python script to get the Geo Location data from SAP DQM microservices
 
-Run the Python script as described in the README at [datasphere-python](../datasphere-python)
-
-> python3 dqmm-dsp.py Addresses_View
+Run the Python script as described in the main README
+- https://github.wdf.sap.corp/dqmm/dqmm-dsp-python-sample/blob/main/README.md
+- python3 dqmm-dsp.py Addresses_View
 
 | Input Table | Output Table | Sample JSON |
 | --------- | ----------- | ----------- |
@@ -65,9 +65,9 @@ The output table is created in your Open SQL Schema
 
 ### Create a Dimension with the Location data
 
-Use the following steps to create a Dimension View with the Location data and select which column to be the Key field to be used in Geo Map.
+Create a Dimension View with the Location data and select which column to be the Key field to be used in GeoMap.
 
-You have two options for which geocoordinates to use.
+You have two options
 1. Use the Geo Location column from SAP DQM microservices directly
 2. Use the Latitude and Longitude columns from SAP DQM microservices to create a Geo-Coordinates Column in Datasphere
 
@@ -135,15 +135,15 @@ Navigate to SAP Analytics Cloud
 
 ### Create a Story
 
-Go to Story and create a new Story with Geo Map.
+Go to Story and create a new Story with GeoMap.
 
 - Create a new Responsive Story
-- Add a Geo Map widget to a new Story
+- Add a GeoMap widget to a new Story
 - Add a Layer
 - Select the Analytic Model from Datasphere (the Select Model icon at the top of Builder)
 - Select Location Dimension to the location column in the Analytic Model
-- Optionally style the Geo Map with your preference such as Base Layer Style
-- Save and Deploy
+- Optionally style the GeoMap with your preference such as Base Layer Style
+- Save the story
 
 ![Alt text](resources/sac-story-geomap.png?raw=true "Create a Story with GeoMap")
 
@@ -151,5 +151,5 @@ Go to Story and create a new Story with Geo Map.
 
 ## Licensing
 
-Copyright (c) 2024 SAP SE or an SAP affiliate company and dqmm-dsp-python-sample contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available via the REUSE tool (link to https://api.reuse.software/info/github.com/SAP-samples/cloud-dqm-sample-payloads).
+Copyright (c) 2024 SAP SE or an SAP affiliate company and dqmm-dsp-python-sample contributors. Please see our [LICENSE](/LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available via the REUSE tool (link to https://api.reuse.software/info/github.com/SAP/dqmm-dsp-python-sample).
 
