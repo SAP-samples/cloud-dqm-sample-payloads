@@ -10,6 +10,7 @@ This repository contains samples for using Data Quality Management microservices
 
 | Name | Description |
 | ---- | ----------- |
+| [datasphere-dashboard](datasphere-dashboard) | An example of using assignment codes to create a data quality dashboard in SAP Analytics Cloud. |
 | [datasphere-geo-map](datasphere-geo-map) | An example of using the datasphere-python sample to generate geocodes and use them in a Geo Map control in SAP Analytics Cloud. |
 | [datasphere-python](datasphere-python) | Use Python to enrich data within Datasphere with geocodes using Data Quality Management microservices. |
 | [postman-collections](postman-collections) | Postman Collections as examples for testing Data Quality Management microservices. |
