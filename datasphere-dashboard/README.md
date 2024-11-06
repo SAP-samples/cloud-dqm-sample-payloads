@@ -141,5 +141,5 @@ Go to Story and create a new Story
 
 ## Licensing
 
-Copyright (c) 2024 SAP SE or an SAP affiliate company and dqmm-dsp-python-sample contributors. Please see our [LICENSE](/LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available via the REUSE tool (link to https://api.reuse.software/info/github.com/SAP/cloud-dqm-sample-payloads).
+Copyright (c) 2024 SAP SE or an SAP affiliate company and dqmm-dsp-python-sample contributors. Please see our [LICENSE](/LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available via the REUSE tool (link to https://api.reuse.software/info/github.com/SAP-samples/cloud-dqm-sample-payloads).
 
